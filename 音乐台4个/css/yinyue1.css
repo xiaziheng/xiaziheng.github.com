@@ -1,0 +1,1478 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.box {
+  width: 1007px;
+  height: 2782px;
+  background: pink;
+  margin: 0 auto;
+}
+.box .box1 {
+  width: 1007px;
+  height: 41px;
+  background: #1a1a1a;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.box .box1 .logo {
+  float: left;
+}
+.box .box1 .jia {
+  width: 54px;
+  height: 16px;
+  float: left;
+  border-right: 1px dotted #717171;
+  overflow: hidden;
+  margin-top: 13px;
+  margin-left: 30px;
+  margin-right: 8px;
+}
+.box .box1 .jia .zi {
+  font-size: 12px;
+  width: 37px;
+  color: #ccc;
+  display: block;
+  float: left;
+  margin-top: 1px;
+}
+.box .box1 .jia .jiao {
+  flaot: left;
+  margin-top: 6px;
+  margin-right: 8px;
+  display: block;
+}
+.box .box1 .font {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-left: 8px;
+  margin-right: 16px;
+}
+.box .box1 .font a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .div1 {
+  height: 41px;
+  float: left;
+  margin-right: 16px;
+}
+.box .box1 .div1 .zi1 {
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-right: 3px;
+}
+.box .box1 .div1 .zi1 a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .div1 .zi1 a:hover {
+  color: red;
+}
+.box .box1 .div1 .biao {
+  display: block;
+  float: left;
+  margin-top: 19px;
+}
+.box .box1 input {
+  border: none;
+  width: 131px;
+  height: 29px;
+  float: left;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 45px;
+  background: #d8d8d8;
+  border-radius: 15px;
+}
+.box .box1 .jing {
+  position: absolute;
+  top: 13px;
+  right: 227px;
+}
+.box .box1 .deng {
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+  margin-left: 80px;
+  margin-top: 15px;
+}
+.box .box1 .deng a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .deng a:hover {
+  color: red;
+}
+.box .box1 .zhuce {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+.box .box1 .zhuce a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .zhuce a:hover {
+  color: red;
+}
+.box .box2 {
+  width: 1007px;
+  height: 82px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #efefef;
+}
+.box .box2 .zuo {
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  color: #669900;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+.box .box2 .you1 {
+  font-size: 16px;
+  float: right;
+  color: #333;
+  margin-top: 36px;
+  margin-right: 51px;
+}
+.box .box2 .shu {
+  float: right;
+  margin-right: 17px;
+  margin-top: 40px;
+}
+.box .box2 .you2 {
+  font-size: 16px;
+  float: right;
+  margin-top: 36px;
+  color: #333;
+  margin-right: 17px;
+}
+.box .box2 .shu1 {
+  float: right;
+  margin-right: 17px;
+  margin-top: 40px;
+}
+.box .box2 .you3 {
+  font-size: 16px;
+  float: right;
+  margin-top: 36px;
+  color: #333;
+  margin-right: 17px;
+}
+.box .box2 .lv {
+  width: 54px;
+  height: 2px;
+  background: #669900;
+  position: absolute;
+  top: 64px;
+  right: 213px;
+}
+.box .box3 {
+  width: 1007px -11px;
+  height: 599px;
+  background: #fff;
+  overflow: hidden;
+  border-left: 4px solid #efefef;
+  padding-left: 11px;
+}
+.box .box3 .div1 {
+  width: 323px;
+  height: 599px;
+  margin-right: 5px;
+  float: left;
+}
+.box .box3 .div1 .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 329px;
+  height: 99px;
+  float: left;
+}
+.box .box3 .div1 .top .r {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+.box .box3 .div1 .top .r1 {
+  font-size: 24px;
+  color: #669900;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 39px;
+}
+.box .box3 .div1 .bottom {
+  width: 322px;
+  height: 498px;
+  float: left;
+  border: 1px solid #ebebeb;
+}
+.box .box3 .div1 .bottom .s {
+  width: 321px;
+  height: 105px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box3 .div1 .bottom .s .kuang {
+  width: 132px;
+  height: 77px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+.box .box3 .div1 .bottom .s .s1 {
+  position: absolute;
+  top: 13px;
+  left: 21px;
+}
+.box .box3 .div1 .bottom .s .s2 {
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.box .box3 .div1 .bottom .s .s3 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 11px;
+  left: 161px;
+}
+.box .box3 .div1 .bottom .s .s4 {
+  font-size: 12px;
+  color: #7d9927;
+  position: absolute;
+  top: 31px;
+  left: 162px;
+}
+.box .box3 .div1 .bottom .x {
+  width: 321px;
+  height: 341px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.box .box3 .div1 .bottom .x .li {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box3 .div1 .bottom .x .li .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #e35b72;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box3 .div1 .bottom .x .li .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box3 .div1 .bottom .x .li .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box3 .div1 .bottom .x .li .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box3 .div1 .bottom .x .li1 {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box3 .div1 .bottom .x .li1 .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666666;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box3 .div1 .bottom .x .li1 .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box3 .div1 .bottom .x .li1 .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box3 .div1 .bottom .x .li1 .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box3 .div1 .bottom .di {
+  width: 321px;
+  height: 51px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box3 .div1 .bottom .di .d1 {
+  width: 111px;
+  height: 25px;
+  background: #f2f7e8;
+  border: 1px solid #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box3 .div1 .bottom .di .d2 {
+  width: 46px;
+  height: 27px;
+  background: #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box3 .div1 .bottom .di .d3 {
+  position: absolute;
+  top: 16px;
+  left: 43px;
+}
+.box .box3 .div1 .bottom .di .d4 {
+  font-size: 13px;
+  position: absolute;
+  top: 18px;
+  left: 77px;
+  color: #669900;
+}
+.box .box3 .div1 .bottom .di .d5 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.box .box3 .div3 {
+  width: 305px;
+  height: 648px;
+  border-right: 3px solid #efefef;
+  float: left;
+  margin-left: 28px;
+}
+.box .box3 .div3 .s {
+  width: 305px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box3 .div3 .s .s1 {
+  font-size: 18px;
+  color: #336633;
+  position: absolute;
+  top: 46px;
+  left: 18px;
+}
+.box .box3 .div3 .s .s2 {
+  width: 266px;
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  top: 80px;
+  left: 15px;
+}
+.box .box3 .div3 .s .s3 {
+  width: 266px;
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  top: 82px;
+  left: 15px;
+}
+.box .box3 .div3 .x {
+  width: 305px;
+  height: 499px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box3 .div3 .x .div1 {
+  width: 305px;
+  height: 94px;
+  overflow: hidden;
+}
+.box .box3 .div3 .x .div1 .x1 {
+  float: left;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+.box .box3 .div3 .x .div1 .x2 {
+  font-size: 14px;
+  color: #9f9f9f;
+  display: block;
+  width: 260px;
+  float: left;
+  margin-bottom: 17px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+.box .box3 .div3 .x .div1 .ul {
+  width: 283px;
+  height: 58px;
+  display: block;
+  overflow: hidden;
+  padding-left: 17px;
+}
+.box .box3 .div3 .x .div1 .ul li {
+  font-size: 12px;
+  color: #666;
+  float: left;
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 18px;
+}
+.box .box3 .div3 .x .div2 {
+  width: 305px;
+  height: 66px;
+  overflow: hidden;
+}
+.box .box3 .div3 .x .div2 .x1 {
+  float: left;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+.box .box3 .div3 .x .div2 .x2 {
+  font-size: 14px;
+  color: #9f9f9f;
+  display: block;
+  width: 260px;
+  float: left;
+  margin-bottom: 17px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+.box .box3 .div3 .x .div2 .ul {
+  width: 283px;
+  height: 58px;
+  display: block;
+  overflow: hidden;
+  padding-left: 17px;
+}
+.box .box3 .div3 .x .div2 .ul li {
+  font-size: 12px;
+  color: #666;
+  float: left;
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 18px;
+}
+.box .box3 .div3 .x .cu {
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+}
+.box .box4 {
+  width: 1007px -11px;
+  height: 605px;
+  background: #fff;
+  border-left: 4px solid #efefef;
+  padding-left: 11px;
+}
+.box .box4 .div1 {
+  width: 323px;
+  height: 599px;
+  margin-right: 5px;
+  float: left;
+}
+.box .box4 .div1 .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 329px;
+  height: 99px;
+  float: left;
+}
+.box .box4 .div1 .top .r {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+.box .box4 .div1 .top .r1 {
+  font-size: 24px;
+  color: #669900;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 39px;
+}
+.box .box4 .div1 .bottom {
+  width: 322px;
+  height: 498px;
+  float: left;
+  border: 1px solid #ebebeb;
+}
+.box .box4 .div1 .bottom .s {
+  width: 321px;
+  height: 105px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box4 .div1 .bottom .s .kuang {
+  width: 132px;
+  height: 77px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+.box .box4 .div1 .bottom .s .s1 {
+  position: absolute;
+  top: 13px;
+  left: 21px;
+}
+.box .box4 .div1 .bottom .s .s2 {
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.box .box4 .div1 .bottom .s .s3 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 11px;
+  left: 161px;
+}
+.box .box4 .div1 .bottom .s .s4 {
+  font-size: 12px;
+  color: #7d9927;
+  position: absolute;
+  top: 31px;
+  left: 162px;
+}
+.box .box4 .div1 .bottom .x {
+  width: 321px;
+  height: 341px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.box .box4 .div1 .bottom .x .li {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box4 .div1 .bottom .x .li .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #e35b72;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box4 .div1 .bottom .x .li .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box4 .div1 .bottom .x .li .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box4 .div1 .bottom .x .li .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box4 .div1 .bottom .x .li1 {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box4 .div1 .bottom .x .li1 .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666666;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box4 .div1 .bottom .x .li1 .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box4 .div1 .bottom .x .li1 .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box4 .div1 .bottom .x .li1 .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box4 .div1 .bottom .di {
+  width: 321px;
+  height: 51px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box4 .div1 .bottom .di .d1 {
+  width: 111px;
+  height: 25px;
+  background: #f2f7e8;
+  border: 1px solid #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box4 .div1 .bottom .di .d2 {
+  width: 46px;
+  height: 27px;
+  background: #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box4 .div1 .bottom .di .d3 {
+  position: absolute;
+  top: 16px;
+  left: 43px;
+}
+.box .box4 .div1 .bottom .di .d4 {
+  font-size: 13px;
+  position: absolute;
+  top: 18px;
+  left: 77px;
+  color: #669900;
+}
+.box .box4 .div1 .bottom .di .d5 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.box .box4 {
+  width: 1007px -11px;
+  height: 605px;
+  background: #fff;
+  border-left: 4px solid #efefef;
+  padding-left: 11px;
+}
+.box .box4 .div1 {
+  width: 323px;
+  height: 599px;
+  margin-right: 5px;
+  float: left;
+}
+.box .box4 .div1 .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 329px;
+  height: 99px;
+  float: left;
+}
+.box .box4 .div1 .top .r {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+.box .box4 .div1 .top .r1 {
+  font-size: 24px;
+  color: #669900;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 39px;
+}
+.box .box4 .div1 .bottom {
+  width: 322px;
+  height: 498px;
+  float: left;
+  border: 1px solid #ebebeb;
+}
+.box .box4 .div1 .bottom .s {
+  width: 321px;
+  height: 105px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box4 .div1 .bottom .s .kuang {
+  width: 132px;
+  height: 77px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+.box .box4 .div1 .bottom .s .s1 {
+  position: absolute;
+  top: 13px;
+  left: 21px;
+}
+.box .box4 .div1 .bottom .s .s2 {
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.box .box4 .div1 .bottom .s .s3 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 11px;
+  left: 161px;
+}
+.box .box4 .div1 .bottom .s .s4 {
+  font-size: 12px;
+  color: #7d9927;
+  position: absolute;
+  top: 31px;
+  left: 162px;
+}
+.box .box4 .div1 .bottom .x {
+  width: 321px;
+  height: 341px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.box .box4 .div1 .bottom .x .li {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box4 .div1 .bottom .x .li .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #e35b72;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box4 .div1 .bottom .x .li .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box4 .div1 .bottom .x .li .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box4 .div1 .bottom .x .li .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box4 .div1 .bottom .x .li1 {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box4 .div1 .bottom .x .li1 .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666666;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box4 .div1 .bottom .x .li1 .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box4 .div1 .bottom .x .li1 .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box4 .div1 .bottom .x .li1 .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box4 .div1 .bottom .di {
+  width: 321px;
+  height: 51px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box4 .div1 .bottom .di .d1 {
+  width: 111px;
+  height: 25px;
+  background: #f2f7e8;
+  border: 1px solid #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box4 .div1 .bottom .di .d2 {
+  width: 46px;
+  height: 27px;
+  background: #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box4 .div1 .bottom .di .d3 {
+  position: absolute;
+  top: 16px;
+  left: 43px;
+}
+.box .box4 .div1 .bottom .di .d4 {
+  font-size: 13px;
+  position: absolute;
+  top: 18px;
+  left: 77px;
+  color: #669900;
+}
+.box .box4 .div1 .bottom .di .d5 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.box .box4 .you {
+  width: 332px;
+  height: 556px;
+  float: left;
+  overflow: hidden;
+}
+.box .box4 .you .s {
+  width: 332px;
+  height: 56px;
+  margin-top: 42px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box4 .you .s .s1 {
+  position: absolute;
+  top: 0;
+  let: 0;
+}
+.box .box4 .you .s .s2 {
+  font-size: 24px;
+  color: #669900;
+  position: absolute;
+  top: 4px;
+  left: 47px;
+}
+.box .box4 .you .x {
+  width: 321px;
+  height: 119px;
+  margin-bottom: 6px;
+}
+.box .box4 .you .x .x1 {
+  border: 1px solid #cecece;
+  float: left;
+  width: 109px;
+  height: 110px;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+.box .box4 .you .x .div1 {
+  width: 170px;
+  height: 37px;
+  float: left;
+  overflow: hidden;
+}
+.box .box4 .you .x .div1 .x2 {
+  font-size: 13px;
+  display: inline-block;
+  float: left;
+  color: #669900;
+  margin-top: 14px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+.box .box4 .you .x .div1 .x3 {
+  float: left;
+  margin-left: 31px;
+  margin-top: 11px;
+}
+.box .box4 .you .x .div1 .x4 {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 6px;
+}
+.box .box4 .you .x .div1 .x5 {
+  width: 4px;
+  height: 4px;
+  background: #ccc;
+  float: left;
+}
+.box .box4 .you .x .div2 {
+  width: 190px;
+  height: 87px;
+  float: right;
+  margin-bottom: 6px;
+}
+.box .box4 .you .x .div2 .d {
+  width: 190px;
+  height: 14px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  overflow: hidden;
+}
+.box .box4 .you .x .div2 .d .d1 {
+  width: 4px;
+  height: 4px;
+  background: #ccc;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.box .box4 .you .x .div2 .d .d2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666;
+  margin-left: 5px;
+}
+.box .box4 .you .x .div2 .d .d3 {
+  float: right;
+  margin-right: 12px;
+}
+.box .box4 .you .x .div2 .d .d4 {
+  float: right;
+  margin-right: 8px;
+}
+.box .box5 {
+  width: 1000px;
+  height: 604px;
+  border-left: 4px solid #efefef;
+  border-right: 3px solid #efefef;
+  background: #fff;
+}
+.box .box5 .div1 {
+  width: 323px;
+  height: 599px;
+  margin-right: 5px;
+  float: left;
+}
+.box .box5 .div1 .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 329px;
+  height: 99px;
+  float: left;
+}
+.box .box5 .div1 .top .r {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+.box .box5 .div1 .top .r1 {
+  font-size: 24px;
+  color: #669900;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 39px;
+}
+.box .box5 .div1 .bottom {
+  width: 322px;
+  height: 498px;
+  float: left;
+  border: 1px solid #ebebeb;
+}
+.box .box5 .div1 .bottom .s {
+  width: 321px;
+  height: 105px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box5 .div1 .bottom .s .kuang {
+  width: 132px;
+  height: 77px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+.box .box5 .div1 .bottom .s .s1 {
+  position: absolute;
+  top: 13px;
+  left: 21px;
+}
+.box .box5 .div1 .bottom .s .s2 {
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.box .box5 .div1 .bottom .s .s3 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 11px;
+  left: 161px;
+}
+.box .box5 .div1 .bottom .s .s4 {
+  font-size: 12px;
+  color: #7d9927;
+  position: absolute;
+  top: 31px;
+  left: 162px;
+}
+.box .box5 .div1 .bottom .x {
+  width: 321px;
+  height: 341px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.box .box5 .div1 .bottom .x .li {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box5 .div1 .bottom .x .li .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #e35b72;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box5 .div1 .bottom .x .li .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box5 .div1 .bottom .x .li .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box5 .div1 .bottom .x .li .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box5 .div1 .bottom .x .li1 {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box5 .div1 .bottom .x .li1 .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666666;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box5 .div1 .bottom .x .li1 .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box5 .div1 .bottom .x .li1 .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box5 .div1 .bottom .x .li1 .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box5 .div1 .bottom .di {
+  width: 321px;
+  height: 51px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box5 .div1 .bottom .di .d1 {
+  width: 111px;
+  height: 25px;
+  background: #f2f7e8;
+  border: 1px solid #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box5 .div1 .bottom .di .d2 {
+  width: 46px;
+  height: 27px;
+  background: #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box5 .div1 .bottom .di .d3 {
+  position: absolute;
+  top: 16px;
+  left: 43px;
+}
+.box .box5 .div1 .bottom .di .d4 {
+  font-size: 13px;
+  position: absolute;
+  top: 18px;
+  left: 77px;
+  color: #669900;
+}
+.box .box5 .div1 .bottom .di .d5 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.box .box6 {
+  width: 1000px;
+  height: 604px;
+  margin-bottom: 49px;
+  border-left: 4px solid #efefef;
+  border-right: 3px solid #efefef;
+  background: #fff;
+}
+.box .box6 .div1 {
+  width: 323px;
+  height: 599px;
+  margin-right: 5px;
+  float: left;
+}
+.box .box6 .div1 .top {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 329px;
+  height: 99px;
+  float: left;
+}
+.box .box6 .div1 .top .r {
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+.box .box6 .div1 .top .r1 {
+  font-size: 24px;
+  color: #669900;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 39px;
+}
+.box .box6 .div1 .bottom {
+  width: 322px;
+  height: 498px;
+  float: left;
+  border: 1px solid #ebebeb;
+}
+.box .box6 .div1 .bottom .s {
+  width: 321px;
+  height: 105px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box6 .div1 .bottom .s .kuang {
+  width: 132px;
+  height: 77px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+.box .box6 .div1 .bottom .s .s1 {
+  position: absolute;
+  top: 13px;
+  left: 21px;
+}
+.box .box6 .div1 .bottom .s .s2 {
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.box .box6 .div1 .bottom .s .s3 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 11px;
+  left: 161px;
+}
+.box .box6 .div1 .bottom .s .s4 {
+  font-size: 12px;
+  color: #7d9927;
+  position: absolute;
+  top: 31px;
+  left: 162px;
+}
+.box .box6 .div1 .bottom .x {
+  width: 321px;
+  height: 341px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.box .box6 .div1 .bottom .x .li {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box6 .div1 .bottom .x .li .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #e35b72;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box6 .div1 .bottom .x .li .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box6 .div1 .bottom .x .li .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box6 .div1 .bottom .x .li .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box6 .div1 .bottom .x .li1 {
+  height: 37px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  width: 321px;
+}
+.box .box6 .div1 .bottom .x .li1 .x1 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #666666;
+  margin-left: 23px;
+  margin-top: 14px;
+}
+.box .box6 .div1 .bottom .x .li1 .x2 {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 13px;
+  margin-left: 5px;
+  color: #666666;
+}
+.box .box6 .div1 .bottom .x .li1 .x3 {
+  font-size: 12px;
+  color: #669900;
+  display: block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 26px;
+}
+.box .box6 .div1 .bottom .x .li1 .x4 {
+  float: right;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+.box .box6 .div1 .bottom .di {
+  width: 321px;
+  height: 51px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.box .box6 .div1 .bottom .di .d1 {
+  width: 111px;
+  height: 25px;
+  background: #f2f7e8;
+  border: 1px solid #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box6 .div1 .bottom .di .d2 {
+  width: 46px;
+  height: 27px;
+  background: #669900;
+  border-radius: 15px;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+.box .box6 .div1 .bottom .di .d3 {
+  position: absolute;
+  top: 16px;
+  left: 43px;
+}
+.box .box6 .div1 .bottom .di .d4 {
+  font-size: 13px;
+  position: absolute;
+  top: 18px;
+  left: 77px;
+  color: #669900;
+}
+.box .box6 .div1 .bottom .di .d5 {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+}
+.box .box7 {
+  width: 1000px;
+  height: 30px;
+  background: #efefef;
+  border-left: 4px solid #efefef;
+  border-right: 4px solid #efefef;
+}
+.box .box8 {
+  width: 1007px;
+  height: 150px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #fff;
+  overflow: hidden;
+}
+.box .box8 .ul {
+  width: 740px;
+  height: 14px;
+  float: right;
+  margin-left: 262px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.box .box8 .ul li {
+  float: left;
+  overflow: hidden;
+  margin-right: 13px;
+}
+.box .box8 .ul li .p1 {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  float: left;
+  margin-right: 12px;
+}
+.box .box8 .ul li .shu {
+  float: left;
+}
+.box .box8 .wei {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #999;
+  margin-top: 30px;
+  margin-left: 183px;
+}
+.box .box8 .wei1 {
+  font-size: 12px;
+  color: #999;
+  float: left;
+  display: block;
+  margin-top: 10px;
+  margin-left: 95px;
+}
+.box .box8 .wei2 {
+  position: absolute;
+  top: 77px;
+  right: 65px;
+}

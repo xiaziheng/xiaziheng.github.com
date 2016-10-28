@@ -1,0 +1,10 @@
+ADFHOST59="http://snim.allyes.com";
+ADFCID59=31;
+ADFBID59=59;
+ADFLOC='CNBJ0000';
+ADFUSER59="http://snim.allyes.com/c?d=snim&i=z31,10002972,59,181&rf=&a=ddAWvmX880BTexp75zEQaSMHE&u=";
+ALLYESID4="9d+UI0A70Nb2EbdQ";
+ADFPGC="4,6,31,0,60,59,181,10002972";
+
+document.write("<iframe scrolling=\"no\" frameborder=\"0\" src=\"http://ads.zhiziyun.com/640_100_v2.do?width=640&height=100&creativeid=M1aZ2009q7K&unit=M19Bc04Ntwk&channel=zz_snpmp&zsaclickurl=&encodetype=0&useownimgserver=false&pub_domain=&slot=&bid=&showlogo=false&tencentclick=&ext=\" marginwidth=\"0\" marginheight=\"0\" style=\"width:640px;height:100px;\"></iframe>");
+

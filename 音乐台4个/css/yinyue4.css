@@ -1,0 +1,672 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.box {
+  width: 1007px;
+  height: 1521px;
+  background: #fff;
+  margin: 0 auto;
+}
+.box .box1 {
+  width: 1007px;
+  height: 41px;
+  background: #1a1a1a;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.box .box1 .logo {
+  float: left;
+}
+.box .box1 .jia {
+  width: 54px;
+  height: 16px;
+  float: left;
+  border-right: 1px dotted #717171;
+  overflow: hidden;
+  margin-top: 13px;
+  margin-left: 30px;
+  margin-right: 8px;
+}
+.box .box1 .jia .zi {
+  font-size: 12px;
+  width: 37px;
+  color: #ccc;
+  display: block;
+  float: left;
+  margin-top: 1px;
+}
+.box .box1 .jia .jiao {
+  flaot: left;
+  margin-top: 6px;
+  margin-right: 8px;
+  display: block;
+}
+.box .box1 .font {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-left: 8px;
+  margin-right: 16px;
+}
+.box .box1 .font a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .div1 {
+  height: 41px;
+  float: left;
+  margin-right: 16px;
+}
+.box .box1 .div1 .zi1 {
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-right: 3px;
+}
+.box .box1 .div1 .zi1 a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .div1 .zi1 a:hover {
+  color: red;
+}
+.box .box1 .div1 .biao {
+  display: block;
+  float: left;
+  margin-top: 19px;
+}
+.box .box1 input {
+  border: none;
+  width: 131px;
+  height: 29px;
+  float: left;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 45px;
+  background: #d8d8d8;
+  border-radius: 15px;
+}
+.box .box1 .jing {
+  position: absolute;
+  top: 13px;
+  right: 227px;
+}
+.box .box1 .deng {
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+  margin-left: 80px;
+  margin-top: 15px;
+}
+.box .box1 .deng a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .deng a:hover {
+  color: red;
+}
+.box .box1 .zhuce {
+  font-size: 12px;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+.box .box1 .zhuce a {
+  text-decoration: none;
+  color: #ccc;
+}
+.box .box1 .zhuce a:hover {
+  color: red;
+}
+.box .box2 {
+  width: 1007px;
+  height: 82px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #efefef;
+}
+.box .box2 .zuo {
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  color: #669900;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+.box .box2 .you1 {
+  font-size: 16px;
+  float: right;
+  color: #333;
+  margin-top: 36px;
+  margin-right: 51px;
+}
+.box .box2 .shu {
+  float: right;
+  margin-right: 17px;
+  margin-top: 40px;
+}
+.box .box2 .you2 {
+  font-size: 16px;
+  float: right;
+  margin-top: 36px;
+  color: #333;
+  margin-right: 17px;
+}
+.box .box2 .shu1 {
+  float: right;
+  margin-right: 17px;
+  margin-top: 40px;
+}
+.box .box2 .you3 {
+  font-size: 16px;
+  float: right;
+  margin-top: 36px;
+  color: #333;
+  margin-right: 17px;
+}
+.box .box2 .lv {
+  width: 54px;
+  height: 2px;
+  background: #669900;
+  position: absolute;
+  top: 64px;
+  right: 213px;
+}
+.box .box3 {
+  width: 1000px;
+  height: 1245px;
+  border-left: 4px solid #f5f5f5;
+  border-right: 3px solid #f5f5f5;
+  overflow: hidden;
+  background: #fff;
+}
+.box .box3 .left {
+  width: 216px;
+  height: 1245px;
+  border-right: 1px solid #d8d9da;
+  border-left: 1px solid #d8d9da;
+  float: left;
+  padding-right: 23px;
+}
+.box .box3 .left .left1 {
+  font-size: 18px;
+  color: #999;
+  font-weight: bold;
+  width: 239px;
+  height: 52px;
+  border-bottom: 1px solid #d8d9da;
+  text-align: center;
+  line-height: 52px;
+}
+.box .box3 .left .left2 {
+  width: 239;
+  height: 179px;
+  overflow: hidden;
+}
+.box .box3 .left .left2 span {
+  font-size: 18px;
+  color: #ccc;
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 17px;
+  margin-left: 25px;
+}
+.box .box3 .left .left2 input {
+  width: 38px;
+  height: 18px;
+  background: #6ca620;
+  border: none;
+  border: 1px solid #41810a;
+  display: block;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  margin-top: 16px;
+  margin-left: 25px;
+}
+.box .box3 .left .left2 .ul {
+  width: 80px;
+  height: 110px;
+  float: right;
+  margin-top: 0;
+  margin-right: 24px;
+}
+.box .box3 .left .left2 .ul li {
+  line-height: 20px;
+  font-size: 12px;
+  color: #333;
+}
+.box .box3 .left .left2 .ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.box .box3 .left .left2 .ul li a:hover {
+  color: red;
+}
+.box .box3 .left .left2 .ul1 {
+  width: 80px;
+  height: 107px;
+  float: right;
+  margin-top: 0;
+  margin-right: 0px;
+}
+.box .box3 .left .left2 .ul1 li {
+  line-height: 20px;
+  font-size: 12px;
+  color: #333;
+}
+.box .box3 .left .left2 .ul1 li a {
+  text-decoration: none;
+  color: #333;
+}
+.box .box3 .left .left2 .ul1 li a:hover {
+  color: red;
+}
+.box .box3 .left .left3 {
+  width: 239;
+  height: 600px;
+  overflow: hidden;
+}
+.box .box3 .left .left3 span {
+  font-size: 18px;
+  color: #ccc;
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 17px;
+  margin-left: 25px;
+}
+.box .box3 .left .left3 input {
+  width: 38px;
+  height: 18px;
+  background: #6ca620;
+  border: none;
+  border: 1px solid #41810a;
+  display: block;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  margin-top: 16px;
+  margin-left: 25px;
+}
+.box .box3 .left .left3 .ul {
+  width: 80px;
+  height: 400px;
+  float: right;
+  margin-top: 0;
+  margin-right: 24px;
+}
+.box .box3 .left .left3 .ul li {
+  line-height: 20px;
+  font-size: 12px;
+  color: #333;
+}
+.box .box3 .left .left3 .ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.box .box3 .left .left3 .ul li a:hover {
+  color: red;
+}
+.box .box3 .left .left3 .ul1 {
+  width: 80px;
+  height: 400px;
+  float: right;
+  margin-top: 0;
+  margin-right: 0px;
+}
+.box .box3 .left .left3 .ul1 li {
+  line-height: 20px;
+  font-size: 12px;
+  color: #333;
+}
+.box .box3 .left .left3 .ul1 li a {
+  text-decoration: none;
+  color: #333;
+}
+.box .box3 .left .left3 .ul1 li a:hover {
+  color: red;
+}
+.box .box3 .right {
+  width: 759px;
+  height: 1245px;
+  position: relative;
+  float: left;
+}
+.box .box3 .right .right1 {
+  width: 759px;
+  height: 160px;
+  padding-top: 48px;
+}
+.box .box3 .right .right1 .div1 {
+  width: 759px;
+  height: 40px;
+  overflow: hidden;
+}
+.box .box3 .right .right1 .div1 .p1 {
+  font-size: 13px;
+  color: #000;
+  display: block;
+  float: left;
+  margin-top: 16px;
+  margin-left: 50px;
+}
+.box .box3 .right .right1 .div1 .p11 {
+  font-size: 13px;
+  color: #000;
+  display: block;
+  float: left;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+.box .box3 .right .right1 .div1 input {
+  width: 38px;
+  height: 18px;
+  background: #6ca620;
+  border: none;
+  border: 1px solid #41810a;
+  display: block;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  margin-top: 13px;
+  margin-left: 32px;
+}
+.box .box3 .right .right1 .div1 .ul {
+  width: 600px;
+  height: 40px;
+  float: left;
+  line-height: 40px;
+  margin-left: 11px;
+  overflow: hidden;
+}
+.box .box3 .right .right1 .div1 .ul li {
+  float: left;
+  font-size: 12px;
+}
+.box .box3 .right .right1 .div1 .ul li a {
+  text-decoration: none;
+  color: #666;
+  margin-right: 15px;
+  margin-top: 30px;
+}
+.box .box3 .right .right1 .div1 .ul li a:hover {
+  color: red;
+}
+.box .box3 .right .right1 .div1 .ul1 {
+  width: 600px;
+  height: 40px;
+  float: left;
+  line-height: 40px;
+  margin-left: 11px;
+  overflow: hidden;
+}
+.box .box3 .right .right1 .div1 .ul1 li {
+  float: left;
+  font-size: 12px;
+  line-height: 40px;
+}
+.box .box3 .right .right1 .div1 .ul1 li a {
+  text-decoration: none;
+  color: #666;
+  margin-right: 15px;
+}
+.box .box3 .right .right1 .div1 .ul1 li a:hover {
+  color: red;
+}
+.box .box3 .right .right2 {
+  width: 759px;
+  height: 1037px;
+}
+.box .box3 .right .right2 .top {
+  width: 759px;
+  height: 43px;
+  overflow: hidden;
+}
+.box .box3 .right .right2 .top .font {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  float: left;
+  line-height: 42px;
+  border-top: 1px solid #666;
+}
+.box .box3 .right .right2 .top .list {
+  width: 500px;
+  height: 43px;
+  float: left;
+  overflow: hidden;
+}
+.box .box3 .right .right2 .top .list li {
+  height: 42px;
+  line-height: 42px;
+  font-size: 12px;
+  float: left;
+  color: #666;
+  border-top: 1px solid #666;
+}
+.box .box3 .right .right2 .top .list li img {
+  display: block;
+  float: left;
+  margin-top: 15px;
+}
+.box .box3 .right .right2 .top .list li a {
+  display: block;
+  float: left;
+  color: #666;
+}
+.box .box3 .right .right2 .top .list li a:hover {
+  color: #669900;
+}
+.box .box3 .right .right2 .top .list li:hover {
+  background: #f7fcf0;
+  border-top: 2px solid #5b8f0a;
+}
+.box .box3 .right .right2 .top .tu {
+  float: left;
+  margin-top: 8px;
+}
+.box .box3 .right .right2 .top .tu img {
+  float: right;
+}
+.box .box3 .right .right2 .bottom {
+  padding-left: 35px;
+  padding-top: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.box .box3 .right .right2 .bottom .div {
+  width: 128px;
+  height: 141px;
+  float: left;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 25px;
+}
+.box .box3 .right .right2 .bottom .div .kuang {
+  width: 126px;
+  height: 73px;
+  border: 1px solid #666;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box .box3 .right .right2 .bottom .div .s1 {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 124px;
+  height: 68px;
+}
+.box .box3 .right .right2 .bottom .div .qing {
+  width: 50px;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box .box3 .right .right2 .bottom .div i {
+  width: 44px;
+  height: 18px;
+  background: #000;
+  opacity: 0.6;
+  position: absolute;
+  top: 53px;
+  left: 4px;
+}
+.box .box3 .right .right2 .bottom .div .p1 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 56px;
+  left: 8px;
+}
+.box .box3 .right .right2 .bottom .div .p2 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #669900;
+  position: absolute;
+  top: 84px;
+  left: 1px;
+}
+.box .box3 .right .right2 .bottom .div .p3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  position: absolute;
+  top: 107px;
+  left: 1px;
+}
+.box .box3 .right .right2 .bottom .div .p3 .p4 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+.box .box3 .right .right2 .bottom .div .liang {
+  position: absolute;
+  top: 130px;
+  left: 2px;
+}
+.box .box3 .right .right2 .bottom .div .p5 {
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  top: 128px;
+  left: 20px;
+}
+.box .box3 .right .shuzi {
+  width: 190px;
+  height: 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 140px;
+}
+.box .box3 .right .shuzi li {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: #fff;
+  border: 1px solid #666;
+  font-size: 12px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 20px;
+  color: #666;
+}
+.box .box3 .right .shuzi li:hover {
+  background: #669900;
+  border: 1px solid red;
+}
+.box .box3 .right .xia {
+  width: 61px;
+  height: 21px;
+  border: none;
+  border: 1px solid #666;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  line-height: 21px;
+  position: absolute;
+  bottom: 48px;
+  right: 84px;
+}
+.box .box3 .right .gong {
+  font-size: 13px;
+  color: #999;
+  position: absolute;
+  bottom: 52px;
+  right: 20px;
+}
+.box .box4 {
+  width: 1007px;
+  height: 150px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #fff;
+  overflow: hidden;
+}
+.box .box4 .ul {
+  width: 740px;
+  height: 14px;
+  float: right;
+  margin-left: 262px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.box .box4 .ul li {
+  float: left;
+  overflow: hidden;
+  margin-right: 13px;
+}
+.box .box4 .ul li .p1 {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  float: left;
+  margin-right: 12px;
+}
+.box .box4 .ul li .shu {
+  float: left;
+}
+.box .box4 .wei {
+  font-size: 12px;
+  display: block;
+  float: left;
+  color: #999;
+  margin-top: 30px;
+  margin-left: 183px;
+}
+.box .box4 .wei1 {
+  font-size: 12px;
+  color: #999;
+  float: left;
+  display: block;
+  margin-top: 10px;
+  margin-left: 95px;
+}
+.box .box4 .wei2 {
+  position: absolute;
+  top: 77px;
+  right: 65px;
+}

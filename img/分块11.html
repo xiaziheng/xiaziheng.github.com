@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+#box{ width:700px; height:400px; background:url(img/0.jpg) no-repeat; margin:20px auto; position:relative;}
+#box span{ position:absolute; background:url(img/0.jpg) no-repeat;}
+</style>
+<script src="move.js"></script>
+<script>
+	window.onload=function(){
+		var oBtn=document.getElementById("btn1");
+		var oBox=document.getElementById("box");
+		var R=4;
+		var C=7;
+		for(var r=0;r<R;r++){
+			for(var c=0;c<C;c++){
+				var oSpan=document.createElement("span");
+				oSpan.style.width=oBox.offsetWidth/C+"px";
+				oSpan.style.height=oBox.offsetHeight/R+"px";
+				oBox.appendChild(oSpan);
+				oSpan.style.left=c*oSpan.offsetWidth+"px";
+				oSpan.style.top=r*oSpan.offsetHeight+"px";
+				oSpan.style.backgroundPosition="-"+c*oSpan.offsetWidth+"px -"+r*oSpan.offsetHeight+"px";
+				oSpan.r=r;
+				oSpan.c=c;
+			}
+			}
+			var timer=null;
+			var iNow=0;var bReady=true;
+			oBtn.onclick=function(){
+				if(!bReady){
+					return
+				}
+				bReady=false;
+				var aSpan=oBox.children;iNow++;
+				for(var i=0;i<aSpan.length;i++){
+					(function(index){
+						setTimeout(function(){
+							aSpan[index].style.backgroundImage="url(img/"+iNow%3+".jpg)";
+							aSpan[index].style.opacity=0;
+							startMove(aSpan[index],{opacity:1});
+							if(aSpan[index].r==R-1&&aSpan[index].c==C-1){
+								bReady=true
+							}
+						},100*(aSpan[index].r+aSpan[index].c)
+					)
+				})(i)
+			}
+		}
+	};
+
+</script>
+</head>
+
+<body>
+<input type="button" value="走一个" id="btn1">
+<div id="box">
+
+</div>
+</body>
+</html>
