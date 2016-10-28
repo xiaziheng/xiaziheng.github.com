@@ -1,0 +1,732 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小米</title>
+<style>
+	* {margin:0; padding:0;}
+	li{list-style:none;}
+	.box{width:1007px; height:5172px; background:#fff; margin:0 auto; overflow:hidden;}
+	.box1{width:1007px; height:36px; background:#FAFAFA; border-bottom:1px solid #DFDFDF;}
+	.box1 .left{width:634px; height:36px; padding-left:26px; float:left;}
+	.box1 .left ul{overflow:hidden;}
+	.box1 .left ul li{float:left;}
+	.box1 .left ul li a{text-decoration:none; color:#D0D0D0; font-size:12px; line-height:36px; margin:0 6px;}
+	.box1 .right{width:310px; height:36px; float:right; padding-right:37px;}
+	.box1 .right ul{overflow:hidden;}
+	.box1 .right ul li{float:right;}
+	.box1 .right ul li a{text-decoration:none; color:#D0D0D0; font-size:12px; line-height:36px; margin:0 6px;}
+	.box2{width:1007px; height:110px; background:#FFF; position:relative; top:0; left:0;}
+	.box2 img{position:absolute; top:25px; left:39px;}
+	.box2 i{width:424px; height:40px; background:url(img/lan.png) no-repeat; position:absolute; bottom:15px; right:175px;}
+	.box2 div{width:126px; height:40px; background:#FFDB3D; position:absolute; bottom:15px; right:38px; overflow:hidden; font-size:13px; color:#333;}
+	.box2 div a{width:109px; height:40px; background:url(img/gouwuche.png) no-repeat left center; padding-left:17px; font-size:13px; color:#333; display:inline-block; line-height:40px; float:left; text-decoration:none; margin-left:34px; }
+	.box2 b{position:absolute; bottom:71px; right:167px; width:15px; height:16px; background:url(img/biao1.png) no-repeat;}
+	.box span{position:absolute; right:39px; top:25px; font-size:12px; color:#AFAFAF;}
+	.box3{width:930px; height:642px; margin:0 auto; overflow:hidden;}
+	.box3 .left{width:248px; height:642px; background:#FFF; float:left;}
+	.box3 .left h2{width:228px; height:50px; background:#FF4A00; font-size:16px; color:#FFF; line-height:50px; padding-left:20px;}
+	.box3 .left ul{width:246px; height:591px; }
+	.box3 .left ul li{width:226px; height:59px; border:1px solid #DFDFDF; border-top:none; padding-top:14px; padding-left:20px;}
+	.box3 .left ul li a{text-decoration:none; font-size:14px; color:#FF4A00; line-height:22px; }
+	.box3 .left ul li a.zi{ color:#6D6D6D;text-decoration:none; font-size:14px; line-height:22px;}
+	.box3 .right{width:682px; height:642px;float:left; overflow:hidden;}
+	.box3 .right .list1{width:671px; height:50px;background:#404144; overflow:hidden; float:left; padding-left:11px;}
+	.box3 .right .list1 li{float:left; margin-right:22px;}
+	.box3 .right .list1 li a{text-decoration:none; font-size:16px; color:#FFF; line-height:50px;}
+	.box3 .right .right2{width:682px; height:420px; position:relative; top:0; left:0; float:left;}
+	.box3 .right .right2 img{position:absolute; top:0px; left:0px;}
+	.box3 .right .right2 .list{ position:absolute; bottom:15px; right:14px; width:150px; height:20px;padding-left:10px;}
+	.box3 .right .right2 .list li{width:28px; height:18px;float:left; position:relative; top:0; left:0; border:1px solid #E56553;margin-right:6px;}
+	.box3 .right .right2 .list li a{text-decoration:none; color:#fff; font-size:12px; text-align:center; position:absolute; top:2px; left:12px;z-index:1;}
+	.box3 .right .right2 .list li b{width:28px; height:18px; background:#000; position:absolute; top:0; left:0; opacity:0.3;}
+	.box3 .right .right3{width:681px; height:170px; background:#F3F3F3;float:left; border:1px solid #E2E2E2; border-right:none;}
+	.box3 .right .right3 ul{overflow:hidden;}
+	.box3 .right .right3 ul li{width:226px; height:170px; float:left; position:relative; top:0; left:0; border-right:1px solid #DFDFDF;}
+	.box3 .right .right3 ul li a{text-decoration:none;}
+	.box3 .right .right3 ul li a img{position:absolute; left:63px; bottom:0;}
+	.box3 .right .right3 ul li a .zi1{font-size:16px; font-weight:bold; color:#050505; position:absolute; top:26px; left:55px;}
+	.box3 .right .right3 ul li a .zi2{font-size:12px; color:#A4A4A4; position:absolute; top:51px; left:54px;}
+	.box4{width:930px; height:60px; background:#FFF; position:relative; top:0; left:0;}
+	.box4 .zi1{font-size:17px; font-weight:bold; color:#494949; position:absolute; top:26px; left:40px;}
+	.box4 .zi2{font-size:14px; color:#9D9D9D; position:absolute; top:29px; left:158px;}
+	.box .div1{width:28px; height:18px; border:1px solid #DFDFDF; position:absolute; top:30px; right:-10px; text-align:center;}
+	.box .div1 a{text-decoration:none;}
+	.box .div2{width:28px; height:18px; border:1px solid #DFDFDF; border-left:none; position:absolute; top:30px; right:-40px; text-align:center;}
+	.box .div2 a{text-decoration:none;}
+	.box5{width:930px; height:308px; border:1px solid #E3E3E3; border-right:none; margin:0 auto;}
+	.box5 ul{overflow:hidden;}
+	.box5 ul li{width:309px; height:308px; float:left; position:relative; top:0; left:0; border-right:1px solid #E3E3E3;}
+	.box5 ul li a{text-decoration:none;}
+	.box5 ul li a img{position:absolute; top:47px; left:55px;}
+	.box5 ul li a .p1{font-size:17px; font-weight:bold; color:#000; display:inline-block; position:absolute; bottom:50px; right:85px;}
+	.box5 ul li a .p2{font-size:12px; color:#B5B5B5; position:absolute; bottom:31px; right:53px;}
+	.box6{width:930px; height:66px; position:relative; top:0; left:0; margin:0 auto;}
+	.box6 span{font-size:17px; color:#4F4F4F; position:absolute; top:32px; left:0px;}
+	.box6 a{font-size:13px; color:#333; position:absolute; top:34px; right:3px; text-decoration:none;}
+	.box7{width:930px; height:931px; border:1px solid #DFDFDF; margin:0 auto;overflow:hidden;}
+	.box7 .left{width:620px; height:931px; float:left; overflow:hidden;}
+	.box7 .left .left1{width:619px; height:309px; position:relative; top:0; left:0; border-bottom:1px solid #DFDFDF; border-right:1px solid #DFDFDF;}
+	.box7 .left .left1 img{position:absolute; top:90px; right:27px;}
+	.box7 .left .left1 .h1{font-size:33px; font-weight:bold; color:#353535; position:absolute; top:66px; left:30px;}
+	.box7 .left .left1 .h2{font-size:13px; color:#6A6A6A; position:absolute; top:111px; left:27px;}
+	.box7 .left .left1 .h3{font-size:22px;  color:#353535; position:absolute; top:153px; left:33px;}
+	.box7 .left .left2{width:620px; height:309px; float:left; border-bottom:1px solid #DFDFDF;}
+	.box7 .left .left2 .left2-1{width:309px; height:309px; position:relative; top:0; left:0; border-right:1px solid #DFDFDF; float:left;}
+	.box7 .left .left2 .left2-1 img{position:absolute; top:91px; left:77px;}
+	.box7 .left .left2 .left2-1 .yi1{font-size:14px; color:#262626; font-weight:bold; position:absolute; top:33px; left:31px;}
+	.box7 .left .left2 .left2-1 .yi2{font-size:12px; color:#555; position:absolute; top:55px; left:30px;}
+	.box7 .left .left2 .left2-1 .yi3{font-size:13px; color:#8C8C8C; position:absolute; top:55px; left:67px; text-decoration:line-through;}
+	.box7 .left .left2 .left2-1 div{width:70px; height:20px; background:#F32F39; text-align:center; line-height:20px; font-size:13px; color:#FFF; position:absolute; top:0; right:26px;}
+	.box7 .left .left2 .left2-2{width:309px; height:154px; border-bottom:1px solid #DFDFDF; float:left; position:relative; top:0; left:0; border-right:1px solid #DFDFDF;}
+	.box7 .left .left2 .left2-2 img{position:absolute; top:16px; left:197px;}
+	.box7 .left .left2 .left2-2 .zi1{font-size:13px; color:#111; font-weight:bold; position:absolute; top:32px; left:31px;}
+	.box7 .left .left2 .left2-2 .zi2{font-size:13px; color:#111; font-weight:bold; position:absolute; top:55px; left:31px;}
+	.box7 .right{width:308px; height:931px; float:left;}
+	.box7 .right ul.u1{width:308px; height:380px; background:#FAF9F8;}
+	.box7 .right ul.u1 li{width:308px; height:125px; position:relative; top:0; left:0; border-bottom:1px solid #DFDFDF;}
+	.box7 .right ul.u1 li img{position:absolute; top:40px; right:19px; }
+	.box7 .right ul.u1 li .font1{font-size:17px; color:#333; font-weight:bold; position:absolute; top:35px; left:31px;}
+	.box7 .right ul.u1 li .font2{font-size:12px; color:#6C6C6C; position:absolute; top:61px; left:31px;}
+	.box7 .right ul.u1 li .font3{font-size:12px; color:#6C6C6C; position:absolute; top:80px; left:31px;}
+	.box7 .right .center{width:308px; height:279px; position:relative; top:0;left:0; border-bottom:1px solid #DFDFDF; background:#FAF9F8;}
+	.box7 .right .center .font1-1{font-size:17px; font-weight:bold; color:#333; position:absolute; top:30px; left:31px;}
+	.box7 .right .center .div1{width:116px; height:38px; background:#FFF; border:1px solid #E0E0E0; position:absolute; left:31px; top:61px; font-size:16px; color:#DEDEDE; line-height:38px; padding-right:130px;}
+	.box7 .right .center .div2{width:246px; height:38px; background:#FFF; border:1px solid #E0E0E0; position:absolute; left:31px; top:113px; }
+	.box7 .right .center .div2 span{dispaly:inline-block; font-size:16px; color:#DEDEDE; line-height:38px; position:absolute; top:2px; left:15px; text-align:left;}
+	.box7 .right .center .div2 img{position:absolute; top:17px; right:9px;}
+	.box7 .right .center .font1-2{font-size:16px; color:#6C6C6C; position:absolute; top:170px; left:26px;}
+	.box7 .right .center .div3{width:249px; height:40px; background:#DBDDE3; position:absolute; top:209px; left:31px; font-size:14px; color:#FFF; line-height:40px; display:inline-block; text-align:center;}
+	.box7 .right .bottom{width:308px; height:269px; background:#FAF9F8; position:relative; left:0; top:0;}
+	.box7 .right .bottom .h2{font-size:17px; color:#333; font-weight:bold; position:absolute; top:30px; left:31px;}
+	.box7 .right .bottom ul.u2{width:246px; height:184px; position:absolute; top:57px; left:31px;}
+	.box7 .right .bottom ul.u2 li{width:246px; height:45px; border-bottom:1px solid #E6E7E6; position:relative; top:0; left:0;}
+	.box7 .right .bottom ul.u2 li span{font-size:13px; color:#333; position:absolute; left:16px; top:15px;}
+	.box7 .right .bottom ul.u2 li div{width:2px; height:2px; background:#000; position:absolute; top:21px; left:5px;}
+	.box7 .right .bottom ul.u2 li img{position:absolute; top:17px; right:2px;}
+	.box8{width:930px; height:65px; position:relative; top:0; left:0; margin:0 auto;}
+	.box8 span{font-size:18px; color:#333; position:absolute; top:32px; left:0px;}
+	.box9{width:930px; height:620px; margin:0 auto; border:1px solid #DFDFDF; overflow:hidden;}
+	.box9 .left{width:620px; height:620px; float:left; overflow:hidden;}
+	.box9 .left .left1{width:619px; height:310px; border-bottom:1px solid #DFDFDF; border-right:1px solid #DFDFDF; position:relative; top:0; left:0; float:left;}
+	.box9 .left .left1 img{position:absolute; top:19px; right:32px;}
+	.box9 .left .left1 .mi1{font-size:34px; font-weight:bold; color:#353535; position:absolute; top:65px; left:29px;}
+	.box9 .left .left1 .mi2{font-size:13px; color:#8E8E8E; position:absolute; top:112px; left:31px;}
+	.box9 .left .left1 .mi3{font-size:23px; color:#353535; font-weight:bold; position:absolute; top:153px; left:30px;}
+	.box9 .left .left2{width:309px; height:309px; border-right:1px solid #DFDFDF; position:relative; top:0; left:0; float:left;}
+	.box9 .left .left2 img{position:absolute; top:92px; left:83px;}
+	.box9 .left .left2 .xianfeng1{font-size:14px; color:#020203; position:absolute; top:34px; left:31px;}
+	.box9 .left .left2 .xianfeng2{font-size:14px; color:#020203; position:absolute; top:55px; left:31px;}
+	.box9 .rightz{width:309px; height:620px; float:left;}
+	.box9 .rightz .righta{width:309px; height:104px; position:relative;border-bottom:1px solid #DFDFDF;}
+	.box9 .rightz .righta .rightb{  font-size:25px; color:#000;position:absolute; top:42px; left:81px;}
+	.box9 .rightz .righta .rightc{color:red;font-size:25px; position:absolute; top:42px; left:31px;}
+	.box9 .rightz .a{width:309px; height:104px; position:relative; top:0; left:0; border-bottom:1px solid #DFDFDF;}
+	.box9 .rightz .a img{position:absolute; top:20px; right:47px;}
+	.box9 .rightz .a .a1{position:absolute; top:34px; left:67px; font-size:14px; color:#2A2A2A;}
+	.box9 .rightz .a .a2{position:absolute; top:57px; left:67px; font-size:14px; color:#2A2A2A;}
+	.box9 .rightz .a .a3{position:absolute; top:34px; left:35px; font-size:28px; color:#E94D1A;}
+	.box10{width:930px; height:65px; position:relative; margin:0 auto;}
+	.box10 .box-zi{font-size:17px; color:#333; position:absolute; top:33px; left:0px;}
+	.box11{width:930px; height:410px; margin:0 auto; overflow:hidden; border:1px solid #DFDFDF; border-right:none;}
+	.box11 .hongmi1{width:309px; height:410px; float:left; position:relative; top:0; left:0; border-right:1px solid #DFDFDF;}
+	.box11 .hongmi1 img.gai{position:absolute; top:142px; left:113px;}
+	.box11 .hongmi1 .gai1{font-size:14px; color:#000; font-weight:bold; position:absolute; top:33px; left:31px;}
+	.box11 .hongmi1 .gai2{font-size:12px; color:#000; position:absolute; top:56px; left:116px;}
+	.box11 .hongmi1 .gai3{font-size:14px; color:#000; font-weight:bold; position:absolute; top:73px; left:31px;}
+	.box11 .hongmi1 .gai4{font-size:12px; color:#888; position:absolute; top:356px; left:28px;}
+	.box11 .hongmi1 .xing3{position:absolute; top:58px; left:40px;}
+	.box11 .hongmi1 .di{position:absolute; top:338px; left:10px;}
+	.box12{width:930px; height:65px; position:relative; top:0; left:0; margin:0 auto;}
+	.box12 p{position:absolute; top:30px;left:0; font-size:18px; color:#414141;}
+	.box13{width:930px; height:310px; margin:0 auto; overflow:hidden; border:1px solid #DFDFDF; border-right:none;}
+	.box13 .ka1{width:308px; height:308px; float:left; position:relative; top:0; left:0; border-right:1px solid #DFDFDF;}
+	.box13 .ka1 .ka{position:absolute; top:140px; left:86px;}
+	.box13 .ka1 .ka2{font-size:14px; color:#000; position:absolute; top:35px; left:31px;}
+	.box13 .ka1 .ka3{font-size:14px; color:#000; position:absolute; top:52px; left:31px;}
+	.box13 .ka1 .ka4{font-size:14px; color:#000; text-decoration:line-through; position:absolute; top:52px; left:66px;}
+	.box13 .ka1 .block{width:70px; height:20px; background:#F32F39; position:absolute; right:22px; top:0px; font-size:12px; color:#FFF; text-align:center; line-height:20px;}
+	.box14{width:930px; height:65px; margin:0 auto; position:relative; top:0; left:0;}
+	.box14 .book{font-size:17px; color:#585858; position:absolute; top:26px; left:0;}
+	.box14 .book1{font-size:17px; color:#585858; position:absolute; top:26px; right:0px;}
+	.box15{width:930px; height:65px; background:#FFF; margin:0 auto;}
+	.box16{width:928px; height:335px;margin:0 auto; border:1px solid #DFDFDF; border-right:none;}
+	.box16 .gaobai{width:308px; height:335px; border-right:1px solid #DFDFDF; position:relative; top:0; left:0; float:left;}
+	.box16 .gaobai .guanggun{position:absolute; top:102px; left:30px;}
+	.box16 .gaobai .guang{font-size:14px; color:#434343; font-weight:bold; position:absolute; top:32px; left:30px;}
+	.box16 .gaobai .gun{font-size:14px; color:#434343; font-weight:bold; position:absolute; top:52px; left:30px;}
+	.box17{width:1007px; height:534px; background:#FAFAFA; margin:0 auto;}
+	.box17 .last{width:930px; height:154px; margin:0 auto; overflow:hidden; border-bottom:1px solid #DFDFDF;}
+	.box17 .last .last1{width:185px; height:154px; position:relative; top:0; left:0;float:left;}
+	.box17 .last .last1 .xiu{position:absolute; top:47px; left:75px;}
+	.box17 .last .last1 .xiu1{font-size:14px; font-weight:bold; color:#2E2E2E; position:absolute; top:95px; left:41px;}
+	.box17 .box18{width:900px; height:158px; margin:0 auto; overflow:hidden; position:relative; overflow:hidden; padding-top:40px; padding-left:30px;overflow:hidden; border-bottom:1px solid #dfdfdf;}
+	.box17 .box18 ul{ text-indent:1em; width:140px; border-right:1px solid #dfdfdf; height:120px; float:left; line-height:25px; color:#666;}
+	.box17 .box18 ul .li1{font-size:18px; font-weight:bold; display:block; margin-bottom:10px;}
+	.box17 .box18 ul .li{font-size:14px;}
+	.box17 .box18 .p1{font-size:20px; font-weight:bold; color:#000; position:absolute; top:40px; right:42px;}
+	.box17 .box18 .p2{font-size:13px; color:#6d6d6d; position:absolute; top:74px; right:33px;}
+	.box17 .box18 .p3{font-size:13px; color:#6d6d6d; position:absolute; top:101px; right:92px;}
+	.box17 .box18 .p4{width:120px; height:30px; background:#ff4a00; text-align:center; line-height:30px; font-size:13px; color:#fff; position:absolute; top:129px; right:45px;}
+	.box17 .box19{width:930px; height:160px; position:relative; overflow:hidden; margin:0 auto;}
+	.box19 .zi{font-size:12px; color:#999; display:block; float:left; margin-top:18px; margin-left:10px;}
+	.box19 .zi1{font-size:12px; color:#999; display:block; float:left; margin-top:13px; margin-left:10px;}
+	.box19 select{width:198px; height:38px;position:absolute; top:36px; right:0px; border:none; border:1px solid #dfdfdf;}
+	.box19 .tu{width:200px; height:80px; overflow:hidden; position:absolute; bottom:0px; left:20px;}
+	.box19 .tu img{float:left; margin-right:5px;}
+</style>
+</head>
+
+<body>
+	<div class="box">
+    <!--标题栏-->
+    	<div class="box1">
+        	<div class="left">
+            	<ul>
+                	<li>
+                    	<a href="#">小米网 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">MIUI 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">米聊 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">游戏 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">多看阅读 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">云服务 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">小米网移动版 丨</a>
+                    </li>
+                    <li>
+                    	<a href="#">Select Region </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+            	<ul>
+                	<li>
+                    	<a href="#">注册</a>
+                    </li>
+                    <li>
+                    	<a href="#">登录 丨</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+        	<img src="img/logo1.png" />
+            <i></i>
+            <div>
+            	<a href="#">购物车</a>
+                
+            </div>
+            <b></b>
+            <span>11月18日预约开放购买</span>
+        </div>
+        <div class="box3">
+        	<div class="left">
+            	<h2>全部商品分类</h2>
+                <ul>
+                	<li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                    <li>
+                    	<a href="#">购买手机</a><br />
+                        <a href="#" class="zi">小米4 小米3 红米 红米Note</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+            	<ul class="list1">
+                	<li>
+                    	<a href="#">首页</a>
+                    </li>
+                    <li>
+                    	<a href="#">小米手机</a>
+                    </li>
+                    <li>
+                    	<a href="#">红米</a>
+                    </li>
+                    <li>
+                    	<a href="#">小米平板</a>
+                    </li>
+                    <li>
+                    	<a href="#">小米电视</a>
+                    </li>
+                    <li>
+                    	<a href="#">盒子</a>
+                    </li>
+                    <li>
+                    	<a href="#">路由器</a>
+                    </li>
+                    <li>
+                    	<a href="#">合约机</a>
+                    </li>
+                    <li>
+                    	<a href="#">服务</a>
+                    </li>
+                    <li>
+                    	<a href="#">社区</a>
+                    </li>
+                </ul>
+                <div class="right2">
+                	<img src="img/xiaomi.png" />
+                    <ul class="list">
+                    	<li>
+                           <a href="#">1</a>
+                           <b></b>
+                        </li>
+                        <li>
+                        	<a href="#">2</a>
+                            <b></b>
+                        </li>
+                        <li>
+                        	<a href="#">3</a>
+                            <b></b>
+                        </li>
+                        <li>
+                        	<a href="#">4</a>
+                            <b></b>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="right3">
+                	<ul>
+                    	<li>
+                        	<a href="#">
+                            	<img src="img/xiaomi3.png" />
+                                <span class="zi1">小米3 特价1499</span>
+                                <span class="zi2">直降200，免预约购买</span>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="img/xiaomi3.png" />
+                                <span class="zi1">小米3 特价1499</span>
+                                <span class="zi2">直降200，免预约购买</span>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="img/xiaomi3.png" />
+                                <span class="zi1">小米3 特价1499</span>
+                                <span class="zi2">直降200，免预约购买</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+        	<span class="zi1">小米明星单品</span>
+            <span class="zi2">根据机型选配件</span>
+            <div class="div1"><a href="#">&lt;</a></div>
+            <div class="div2"><a href="#">&gt;</a></div>
+        </div>
+        <div class="box5">
+        	<ul>
+            	<li>
+                	<a href="#">
+                    	<img src="img/pingban.png" />
+                        <p class="p1">免预约买小米平板</p>
+                        <p class="p2">四核2.2GHz处理器，7.9英寸视网膜屏</p>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="img/pingban.png" />
+                        <p class="p1">免预约买小米平板</p>
+                        <p class="p2">四核2.2GHz处理器，7.9英寸视网膜屏</p>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="img/pingban.png" />
+                        <p class="p1">免预约买小米平板</p>
+                        <p class="p2">四核2.2GHz处理器，7.9英寸视网膜屏</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="box6">
+        	<span>新品上架</span>
+            <a href="#">更多 &gt;</a>
+        </div>
+        <div class="box7">
+        	<div class="left">
+            	<div class="left1">
+                	<img src="img/xueya.png" />
+                    <span class="h1">IHealth智能血压计</span>
+                    <span class="h2">父母在家一点就测 测量结果云端同步</span>
+                    <span class="h3">199元</span>
+                </div>
+                <div class="left2">
+                	<div class="left2-1">
+                    	<img src="img/yi.png" />
+                        <span class="yi1">大人物米兔圆领套头卫衣</span>
+                        <span class="yi2">99元</span>
+                        <span class="yi3">129元</span>
+                        <div>包邮</div>
+                    </div>
+                    <div class="left2-2">
+                    	<img src="img/erji.png" />
+                        <span class="zi1">QCY运动蓝牙耳机</span>
+                        <span class="zi2">129元</span>
+                    </div>
+                    <div class="left2-2">
+                    	<img src="img/erji.png" />
+                        <span class="zi1">QCY运动蓝牙耳机</span>
+                        <span class="zi2">129元</span>
+                    </div>
+                    <div class="left2-1">
+                    	<img src="img/yi.png" />
+                        <span class="yi1">大人物米兔圆领套头卫衣</span>
+                        <span class="yi2">99元</span>
+                        <span class="yi3">129元</span>
+                        <div>包邮</div>
+                    </div>
+                    <div class="left2-1">
+                    	<img src="img/yi.png" />
+                        <span class="yi1">大人物米兔圆领套头卫衣</span>
+                        <span class="yi2">99元</span>
+                        <span class="yi3">129元</span>
+                        <div>包邮</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+            	<ul class="u1">
+                	<li>
+                    	<img src="img/gou.png" />
+                        <span class="font1">特惠配件套装</span>
+                        <span class="font2">手机必备配件组合购买</span>
+                        <span class="font3">实惠更优惠</span>
+                    </li>
+                    <li>
+                    	<img src="img/gou.png" />
+                        <span class="font1">特惠配件套装</span>
+                        <span class="font2">手机必备配件组合购买</span>
+                        <span class="font3">实惠更优惠</span>
+                    </li>
+                    <li>
+                    	<img src="img/gou.png" />
+                        <span class="font1">特惠配件套装</span>
+                        <span class="font2">手机必备配件组合购买</span>
+                        <span class="font3">实惠更优惠</span>
+                    </li>
+                </ul>
+                <div class="center">
+                	<span class="font1-1">话费充值</span>
+                    <div class="div1">请输入手机号</div>
+                    <div class="div2">
+                    	<span>100元</span>
+                    	<img src="img/jiao.png" />
+                    </div>
+                    <span class="font1-2">实付价格: 98.4元起</span>
+                    <div class="div3">立即充值</div>
+                </div>
+                <div class="bottom">
+                	<h2 class="h2">新闻公告</h2>
+                    <ul class="u2">
+                    	<li>
+                        	<div></div>
+                        	<span>企业用户采购通道</span>
+                            <img src="img/dayu.png" />
+                        </li>
+                        <li>
+                        	<div></div>
+                        	<span>企业用户采购通道</span>
+                            <img src="img/dayu.png" />
+                        </li>
+                        <li>
+                        	<div></div>
+                        	<span>企业用户采购通道</span>
+                            <img src="img/dayu.png" />
+                        </li>
+                        <li>
+                        	<div></div>
+                        	<span>企业用户采购通道</span>
+                            <img src="img/dayu.png" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box8">
+        	<span>大家都喜欢</span>
+        </div>
+        <div class="box9">
+        	<div class="left">
+            	<div class="left1">
+                	<img src="img/qinglv.png" />
+                    <span class="mi1">小米T恤换季特卖</span>
+                    <span class="mi2">舒适纯棉面料 多色经典图案</span>
+                    <span class="mi3">全场29元</span>
+                </div>
+                <div class="left2">
+                	<img src="img/xianfeng.png" />
+                    <span class="xianfeng1">先锋SE-MJ512折叠式头戴式耳机</span>
+                    <span class="xianfeng2">168元</span>
+                </div>
+                <div class="left2">
+                	<img src="img/xianfeng.png" />
+                    <span class="xianfeng1">先锋SE-MJ512折叠式头戴式耳机</span>
+                    <span class="xianfeng2">168元</span>
+                </div>
+            </div>
+            <div class="rightz">
+            	<div class="righta">
+                    <span class="rightc">HOT</span>
+                    <span class="rightb">热销商品排行</span>
+                </div>
+                <div class="a">
+                	<img src="img/dianyuan.png" />
+                    <span class="a1">5200mah移动电源</span>
+                    <span class="a2">49元</span>
+                    <span class="a3">1</span>
+                </div>
+                 <div class="a">
+                	<img src="img/dianyuan.png" />
+                    <span class="a1">5200mah移动电源</span>
+                    <span class="a2">49元</span>
+                    <span class="a3">1</span>
+                </div>
+                 <div class="a">
+                	<img src="img/dianyuan.png" />
+                    <span class="a1">5200mah移动电源</span>
+                    <span class="a2">49元</span>
+                    <span class="a3">1</span>
+                </div>
+                 <div class="a">
+                	<img src="img/dianyuan.png" />
+                    <span class="a1">5200mah移动电源</span>
+                    <span class="a2">49元</span>
+                    <span class="a3">1</span>
+                </div>
+                 <div class="a">
+                	<img src="img/dianyuan.png" />
+                    <span class="a1">5200mah移动电源</span>
+                    <span class="a2">49元</span>
+                    <span class="a3">1</span>
+                </div>
+            </div>
+        </div>
+        <div class="box10">
+        	<span class="box-zi">热评产品</span>
+        </div>
+        <div class="box11">
+        	<div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+            <div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+            <div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+        </div>
+        <div class="box12">
+        	<p>特价产品</p>
+        </div>
+        <div class="box13">
+        	<div class="ka1">
+            	<img src="img/ka.png" class="ka" />
+                <span class="ka2">SanDisk 32GB储存卡</span>
+                <span class="ka3">89元</span>
+                <span class="ka4">100元</span>
+                <div class="block">省20元</div>
+            </div>
+            <div class="ka1">
+            	<img src="img/ka.png" class="ka" />
+                <span class="ka2">SanDisk 32GB储存卡</span>
+                <span class="ka3">89元</span>
+                <span class="ka4">100元</span>
+                <div class="block">省20元</div>
+            </div>
+            <div class="ka1">
+            	<img src="img/ka.png" class="ka" />
+                <span class="ka2">SanDisk 32GB储存卡</span>
+                <span class="ka3">89元</span>
+                <span class="ka4">100元</span>
+                <div class="block">省20元</div>
+            </div>
+        </div>
+        <div class="box14">
+        	<span class="book">多看图书</span>
+            <span class="book1">更多 ></span>
+        </div>
+         <div class="box11">
+        	<div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+            <div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+            <div class="hongmi1">
+            	<img src="img/hougai.png" class="gai" />
+                <span class="gai1">红米色彩主题后盖</span>
+                <span class="gai2">丨 1231人好评</span>
+                <span class="gai3">39元</span>
+                <img src="img/xing3.png" class="xing3" />
+                <img src="img/di.png" class="di" />
+                <span class="gai4">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</span>
+            </div>
+        </div>
+        <div class="box15"></div>
+        <div class="box16">
+        	<div class="gaobai">
+            	<img src="img/guanggun.png"  class="guanggun"/>
+                <span class="guang">光棍节想脱单吗？告白字体0元起</span>
+                <span class="gun">6米币</span>
+            </div>
+            <div class="gaobai">
+            	<img src="img/guanggun.png"  class="guanggun"/>
+                <span class="guang">光棍节想脱单吗？告白字体0元起</span>
+                <span class="gun">6米币</span>
+            </div>
+            <div class="gaobai">
+            	<img src="img/guanggun.png"  class="guanggun"/>
+                <span class="guang">光棍节想脱单吗？告白字体0元起</span>
+                <span class="gun">6米币</span>
+            </div>
+        </div>
+        <div class="box17">
+        	<div class="last">
+            	<div class="last1">
+                	<img src="img/xiu.png" class="xiu" />
+                    <span class="xiu1">1小时快修服务</span>
+                </div>
+                <div class="last1">
+                	<img src="img/xiu.png" class="xiu" />
+                    <span class="xiu1">1小时快修服务</span>
+                </div>
+                <div class="last1">
+                	<img src="img/xiu.png" class="xiu" />
+                    <span class="xiu1">1小时快修服务</span>
+                </div>
+                <div class="last1">
+                	<img src="img/xiu.png" class="xiu" />
+                    <span class="xiu1">1小时快修服务</span>
+                </div>
+                <div class="last1">
+                	<img src="img/xiu.png" class="xiu" />
+                    <span class="xiu1">1小时快修服务</span>
+                </div>
+            </div>
+	        <div class="box18">
+	        	<ul>
+	        		<li class="li1">帮助中心</li>
+	        		<li class="li">购物指南</li>
+	        		<li class="li">支付方式</li>
+	        		<li class="li">配送方式</li>
+	        	</ul>
+	        	<ul>
+	        		<li class="li1">帮助中心</li>
+	        		<li class="li">购物指南</li>
+	        		<li class="li">支付方式</li>
+	        		<li class="li">配送方式</li>
+	        	</ul>
+	        	<ul>
+	        		<li class="li1">帮助中心</li>
+	        		<li class="li">购物指南</li>
+	        		<li class="li">支付方式</li>
+	        		<li class="li">配送方式</li>
+	        	</ul>
+	        	<ul>
+	        		<li class="li1">帮助中心</li>
+	        		<li class="li">购物指南</li>
+	        		<li class="li">支付方式</li>
+	        		<li class="li">配送方式</li>
+	        	</ul>
+	        	<ul>
+	        		<li class="li1">帮助中心</li>
+	        		<li class="li">购物指南</li>
+	        		<li class="li">支付方式</li>
+	        		<li class="li">配送方式</li>
+	        	</ul>
+	        	<span class="p1">400-100-5678</span>
+	        	<div class="p2">周一至周日8：00-18：00</div>
+	        	<span class="p3">仅收市话</span>
+	        	<div class="p4">24小时在线客服</div>
+	        </div>
+	        <div class="box19">
+	        	<div class="zi">小米旗下网站：小米网丨MIUI丨米聊丨多看书城丨小米路由器丨小米后院丨小米天猫店丨小米淘宝直营店丨小米网盟丨问题反馈丨Select Rgion</div>
+	        	<div class="zi1">©mi.com京ICP证110507号 京ICP备10046444号 京公网安备1101080212535号 京网文[2014]0059-0009号</div>
+	        	<select>
+	        		<option selected="selected">简体中文</option>
+	        		<option>英文版</option>
+	        		<option>泰语版</option>
+	        	</select>
+	        	<div class="tu">
+	        		<img src="img/zhan1.png" />
+	        		<img src="img/zhan2.png" />
+	        		<img src="img/zhan3.png" />
+	        	</div>
+	        </div>
+        </div>
+    </div>
+</body>
+</html>

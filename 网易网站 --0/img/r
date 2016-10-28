@@ -1,0 +1,4 @@
+document.write('<!--浮层(网易首页)自动投放代码开始 -->');
+adInfoTempFc = {	index:1,	src1:"http://img2.126.net/ntesrich/2015/0130/1422589250374_2qws.swf",	src2:"http://img2.126.net/ntesrich/2015/0202/1422866617037_7rb0.swf",	url:"http://g.163.com/a?CID=33439&Values=3282859524&Redirect=http://c.admaster.com.cn/c/a26000,b200653504,c2791,i0,m101,h",	key:"7993382581422876061540401"}
+document.write('<script language="javascript" src="http://img1.126.net/channel4/html/fcbox-index-v1.0.1-140625.js"></script>');
+document.write('<!--浮层自动投放代码结束-->');
