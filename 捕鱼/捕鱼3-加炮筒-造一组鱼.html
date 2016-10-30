@@ -40,7 +40,7 @@
 		var oC=document.querySelector('canvas');
 		var oBtn=document.querySelector('input');
 		var gd=oC.getContext('2d');
-		var s=7;
+		var s=1;
 		
 		loadImage(sArr,function(){
 			
@@ -61,11 +61,17 @@
 			
 			
 			
-			// var oCannon=new Cannon(s);
-			
+			 var oCannon=new Cannon(s);
+			oBtn.onclick=function(){
+				gd.clearRect(0,0,oC.width,oC.height)
+				s++;
+				if(s>7){
+					s=1;
+				}
 			//造炮
-				var oCannon=new Cannon(s);
+				oCannon=new Cannon(s);
 			
+			}
 			
 			var minX=-50;
 			var maxX=oC.width+50;
@@ -73,7 +79,7 @@
 			setInterval(function(){
 				//造鱼
 				
-				if(Math.random()<0.05){
+				if(Math.random()<0.04){
 					var oFish=new Fish(rnd(1,6));
 					if(Math.random()>0.5){
 						oFish.x=minX;
@@ -134,42 +140,49 @@
 							var f_w=fishArr[i].w;
 							var f_h=fishArr[i].h;
 							var f_r=fishArr[i].rotate;
+							if(Math.random()>(0.3/s)){
+								if(Math.random()<(0.999/oFish.type)){
+									//创建死鱼
+									var dieFish=new Diefish(fishArr[i].type);
+									dieFish.x=f_x;
+									dieFish.y=f_y;
+									dieFish.w=f_w;
+									dieFish.h=f_h;
+									dieFish.rotate=f_r;
+									diefishArr.push(dieFish);
+									
+									//死鱼消失
+									setTimeout(function(){
+										diefishArr.shift();	
+									},300);
+									
+									
+									
+									//鱼死
+									fishArr.splice(i,1);
+									
+									//生成金币
+									var oCoin=new Coin(f_t);
+									oCoin.x=f_x;
+									oCoin.y=f_y;
+									coinArr.push(oCoin);
+									
+									var oA=new Audio();
+									oA.src='snd/coin.wav';
+									oA.play();
+									
+									
+									//死鱼消失
+									setTimeout(function(){
+										coinArr.shift();	
+									},1000);
+								}
+								
+							}
 							
-							//创建死鱼
-							var dieFish=new Diefish(fishArr[i].type);
-							dieFish.x=f_x;
-							dieFish.y=f_y;
-							dieFish.w=f_w;
-							dieFish.h=f_h;
-							dieFish.rotate=f_r;
-							diefishArr.push(dieFish);
-							
-							//死鱼消失
-							setTimeout(function(){
-								diefishArr.shift();	
-							},300);
-							
+
 							//炮弹消失
 							bulletArr.splice(j,1);
-							
-							//鱼死
-							fishArr.splice(i,1);
-							
-							//生成金币
-							var oCoin=new Coin(f_t);
-							oCoin.x=f_x;
-							oCoin.y=f_y;
-							coinArr.push(oCoin);
-							
-							var oA=new Audio();
-							oA.src='snd/coin.wav';
-							oA.play();
-							
-							
-							//死鱼消失
-							setTimeout(function(){
-								coinArr.shift();	
-							},1000);
 							
 							//生成渔网
 							var oWeb=new Web(b_t);
