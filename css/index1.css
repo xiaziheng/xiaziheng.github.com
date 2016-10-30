@@ -1,0 +1,51 @@
+*{padding:0; margin:0; list-style:none;}.
+body{position:relative;}
+#start{ width:1350px; height:100%;_display:none;}
+#start .start-b{width:1350px; height:100%; position:absolute; top:0; left:0;}
+#start .start-n{position:absolute; top:50px; right:80px; width:80px; height:40px; background:#dac691; cursor:pointer;}
+#start .bg1{ width:570px; height:150px; position:absolute; top:300px; left:575px;}
+#start .bg2{width:400px; height:100px; position:absolute; top:0px; right:0;}
+#start #nav{width:700px; height:40px; position:absolute; top:260px; left:575px;}
+#start #nav span{color:#333; font-size:30px; font-weight:bold; font-family:"微软雅黑"; opacity:0;}
+#box{width:1350px; height:100%; background:#E0DCD1; display:none; position:absolute;}
+#box .home{width:100%; height:600px; position:relative;}
+#box .home .header{width:1350px; height:600px;}
+#box .home .nav1{}
+#box .home .nav1 .home1{text-decoration:none; color:#666; position:absolute; top:2px; left:440px; background:#FBFBFB; width:60px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
+#box .home .nav1 .works{text-decoration:none; color:#666; position:absolute; top:2px; left:554px; background:#FBFBFB; width:80px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
+#box .home .nav1 .about-n1{position:absolute; top:2px; left:640px;}
+#box .home .nav1 .about-me{text-decoration:none; color:#666; position:absolute; top:2px; left:693px; background:#FBFBFB; width:80px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
+#box .home .nav1 .about-n2{position:absolute; top:2px; left:780px;}
+#box .home .nav1 .contact{text-decoration:none; color:#666; position:absolute; top:2px; left:832px; background:#FBFBFB; width:80px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
+#box .home .photo-biao{position:absolute; top:3px; left:990px; background:#FBFBFB;width:160px; height:70px; line-height:105px;}
+#box .home .photo-biao img{border-radius:50%; cursor:pointer;}
+#box .home .photo-biao img:hover{background:pink;}
+#box .home .nav1 a:hover{color:pink;}
+/*作品展*/
+#box .works-display{width:100%; height:600px; background:url(../img/bg-works.jpg); position:relative;}
+#box .works-display .photo-moban{width:400px;}
+#box .works-display .works-font{position:absolute; top:35px; left:114px; font-size:18px; color:#504E4C; font-weight:bold; cursor:pointer;}
+#box .works-display #say{position:absolute; top:0; left:440px; width:750px; height:80px; _background:red; line-height:20px;}
+#box .works-display #say span{color:pink; font-size:16px; font-weight:bold; font-family:微软雅黑; text-indent:18px; line-height:25px; -webkit-text-stroke:1px #666;}
+#box .works-display #show-w{width:100%; background:red;}
+#box .works-display #show-w #zpz{ width:100%;}
+#box .works-display #show-w #zpz li{ overflow:hidden; border-radius:50%; width:200px; height:200px; background:cyan; position:relative; text-align:center; line-height:200px; font-size:50px; color:#fff; float:left;margin:10px; margin-top:26px;}
+#box .works-display #show-w #zpz li a{color:#666; text-decoration:none; width:200px; height:200px; font-size:20px; text-align:center; line-height:200px; background:#84d939; display:block; border-radius:40%; opacity:0.8; filter:alpha(opacity:80); position:absolute; left:-200px; top:0; font-weight:bold;}
+#box .about-me{width:100%; height:600px; background:url(../img/bg-works.jpg); position:relative;}
+#box .about-me .about-mb{width:340px; display:block;}
+#box .about-me .about-font{position:absolute; top:20px; left:114px; font-size:23px; color:#504E4C; font-weight:bold; cursor:pointer;}
+#box .about-me .about-block{border-radius:15% 15% 20%; overflow:hidden; cursor:pointer; box-shadow: 6px 5px 8px ; float:left; transition: 1s all ease;}
+#box .about-me .about-block:hover{transform: translate(10px) rotate(20deg);  -webkit-mask-position:0px -30px;}
+#box .about-me .decoration-me{width:200px; font-size:17px; color:#666; font-weight:bold; font-family:"微软雅黑"; float:left; margin-top:30px; margin-left:55px; _border:2px solid purple; _border-radius:20%; border-right:2px solid #666; box-shadow: 6px 6px 6px 2px; border-radius:20%; transition: 1s all ease;}
+#box .about-me .decoration-me:hover{transform: translate(10px) rotate(20deg);  -webkit-mask-position:0px -30px;}
+#box .about-me .decoration-me div{line-height:35px; text-align:center;}
+#box .about-me .decoration-zj{width:100%; width:700px; float:left; font-size:24px; color:green; font-weight:bold; font-family:"微软雅黑"; transition: 1s all ease; margin-left:50px; line-height:26px;}
+#box .about-me .decoration-zj div{font-size:17px; color:#666; }
+#box .contact-me{width:100%; height:600px; position:relative; _overflow:hidden;}
+#box .contact-me .hua{}
+#box .contact-me .link{font-size:35px; color:#666; font-weight:bold; font-family:"微软雅黑"; position:absolute; top:220px; left:40px; -webkit-text-stroke:2px green;}
+#box .contact-me .link-block{position:absolute; top:280px; left:70px;}
+#box .contact-me .link-block p{font-size:22px; color:#666; font-weight:bold; line-height:40px;}
+#box .contact-me .ender{font-size:60px; color:orange; -webkit-text-stroke:2px #666; box-shadow: 5px 2px 6px; position:absolute; bottom:2px; left:40px; transition: 1s all ease; border-radius:20%;}
+#box .contact-me .ender:hover{transform: translate(20px) rotate(360deg);}
+

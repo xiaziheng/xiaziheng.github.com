@@ -1,0 +1,5 @@
+	mvas_33074416=1019350;mv_acquire=1;mv_bid=33074416;
+mvcu_33074416='http://show.g.mediav.com/c?type=2&oimpid=4r9beTJ3NTQj&pub=111695_513416_1019350&cus=120_507146_5705510_33074416_0&fee=cUUUUUZUUUbg&pinfo=&solutiontype=1&solutionowner=1&creativetype=2&ref=http%3A%2F%2Fimg1.126.net%2Fchannel1%2Fhtml%2Fmv_0531.html&url=http://n.vip.com/EvANRb07';
+mvctype_33074416=2;
+
+eval('mediav_fini'+mvas_33074416+'=1');mediav.makeFlash(300, 100, "http://material.mediav.com/galileo/20150205/1f43448a2ae153dbc29f0feb9afd68e7.swf", 0, mvcu_33074416, "33074416", "Opaque", "");

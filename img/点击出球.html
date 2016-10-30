@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+	    body{overflow: hidden;}
+	    input{position: absolute;left: 0;top:0;}
+		div{width: 50px;height:50px;border-radius: 50%;position: absolute;left:0;top:0;}
+	</style>
+	<script>
+		function rns(n,m){
+			return parseInt(Math.random()*(m-n)+n)
+		}
+		window.onload=function(){
+			var oBtn=document.getElementById('btn');
+			oBtn.onclick=function(){
+				var oDiv=document.createElement('div');
+				oDiv.style.backgroundColor='rgb('+rns(1,256)+','+rns(1,256)+','+rns(1,256)+')';
+
+				document.body.appendChild(oDiv);
+				move(oDiv,rns(1,100),rns(1,100));
+				var lastX=0;
+				var lastY=0;
+				var speedX=0;
+				var speedY=0;
+				oDiv.onmousedown=function(ev){
+					var oEvent=ev || event;
+					var disX=oEvent.clientX-oDiv.offsetLeft;
+					var disY=oEvent.clientY-oDiv.offsetTop;
+					document.onmousemove=function(ev){
+						var oEvent=ev ||event;
+						var l=oEvent.clientX-disX;
+						var t=oEvent.clientY-disY;
+						oDiv.style.left=l+'px';
+						oDiv.style.top=t+'px';
+
+						speedX=oEvent.clientX-lastX;
+						speedY=oEvent.clientY-lastY;
+						lastX=oEvent.clientX;
+						lastY=oEvent.clientY;
+					}
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+						move(oDiv,speedX,speedY)
+					}
+					return false;
+				}
+				
+			}
+			function move(obj,speedX,speedY){
+				var l=obj.offsetLeft;
+				var t=obj.offsetTop;
+				var speedX=speedX || 10;
+				var speedY=speedY || 10;
+				var maxH=document.documentElement.clientHeight-obj.offsetHeight;
+				var maxW=document.documentElement.clientWidth-obj.offsetWidth;
+				clearInterval(obj.timer);
+				obj.timer=setInterval(function(){
+					speedY+=3;
+					l+=speedX;
+					t+=speedY;
+					if(t>maxH){
+						speedY*=-0.8;
+						speedX*=0.8;
+						t=maxH;
+					}
+					if(t<0){
+						speedY*=-0.8;
+						t=0;
+					}
+					if(l>maxW){
+						speedX*=-0.8;
+						l=maxW;
+					}
+					if(l<0){
+						speedX*=-0.8;
+						l=0;
+					}
+					obj.style.left=l+'px';
+					obj.style.top=t+'px';
+					if(Math.abs(speedX)<1){speedX=0;}
+					if(Math.abs(speedY)<1){speedY=0;}
+			
+					if(speedX==0 && speedY==0 && t==maxH){
+						clearInterval(obj.timer);	
+					}
+				},30)
+			}
+		} 
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="点一点" id="btn"> 
+	<!-- <div>
+		
+	</div> -->
+</body>
+</html>

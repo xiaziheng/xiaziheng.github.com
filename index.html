@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/index1.css">
+</head>
+<script src="js/index1.js"></script>
+<script src="img/move.js"></script>
+<script>
+window.onload=function(){
+	var timer=null;
+	var str='    大家好！欢迎光临我的个人空间，有什么不足之处请联系我，谢谢(@^_^@)~ ';
+	var oNav=document.getElementById('nav');
+	for(var i=0; i<str.length; i++){
+		var oSpan=document.createElement('span');
+		oSpan.innerHTML=str.charAt(i);
+		oNav.appendChild(oSpan);
+	}
+	var aSpan=oNav.children;
+	var i=0;
+	var timer=setInterval(function(){
+		move(aSpan[i],{opacity:1},{time:300,type:'ease-out'});
+		i++;
+		if(i==aSpan.length){
+			clearInterval(timer)
+		}
+	},100);
+
+	//按钮点击进入主界面
+	var oBtn=document.getElementById('btn');
+	var oBox=document.getElementById('box');
+	var oStart=document.getElementById('start');
+	oBtn.onclick=function(){
+		oBox.style.display='block';
+		oStart.style.display='none';
+	}
+
+	//作品展鼠标移入方向
+	function hoverDir(obj,oEvent){
+		var scrollT=document.body.scrollTop || document.documentElement.scrollTop;
+		var scrollL=document.body.scrollLeft || document.documentElement.scrollLeft;
+		var w=obj.offsetWidth;
+		var h=obj.offsetHeight;
+		var x=obj.offsetLeft+w/2-oEvent.clientX+scrollL;
+		var y=obj.offsetTop+h/2-oEvent.clientY+scrollT;
+		return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+	}
+	var oZpz=document.getElementById('zpz');
+    var aLi2=oZpz.getElementsByTagName('li');
+
+    for(var i=0;i<aLi2.length;i++){
+        aLi2[i].onmouseover=function(ev){
+            var oEvent=ev||event;
+            var oSon=this.children[0];
+            var oFrom=oEvent.fromElement || oEvent.relatedTarget;
+            if(this.contains(oFrom))return false;
+
+            switch(findDir(this,ev)){
+                case 0:
+//                        oDiv.innerHTML='右';
+                    oSon.style.left=200+'px';
+                    oSon.style.top=0;
+                    break;
+                case 1:
+//                        oDiv.innerHTML='下';
+                    oSon.style.left=0;
+                    oSon.style.top=200+'px';
+                    break;
+                case 2:
+//                        oDiv.innerHTML='左';
+                    oSon.style.left=-200+'px';
+                    oSon.style.top=0;
+                    break;
+                case 3:
+//                        oDiv.innerHTML='上';
+                    oSon.style.top=-200+'px';
+                    oSon.style.left=0;
+                    break;
+            }
+            move(oSon,{left:0,top:0});
+
+        };
+        aLi2[i].onmouseout=function(ev){
+            var oEvent=ev||event;
+            var oSon=this.children[0];
+            var to=oEvent.toElement || oEvent.relatedTarget;
+            if(this.contains(to))return false;
+
+            switch(findDir(this,ev)){
+                case 0:
+                    move(oSon,{left:200,top:0});
+//                        oDiv.innerHTML='右';
+                    break;
+                case 1:
+//                        oDiv.innerHTML='下';
+                    move(oSon,{left:0,top:200});
+                    break;
+                case 2:
+//                        oDiv.innerHTML='左';
+                    move(oSon,{left:-200,top:0});
+                    break;
+                case 3:
+//                        oDiv.innerHTML='上';
+                    move(oSon,{top:-200,left:0});
+                    break;
+            }
+        };
+    };
+
+    //点击时候向上滑
+    var oNav1=document.getElementById('nav1');
+    var aA1=oNav1.getElementsByTagName('a');
+    for(var i=0; i<aA1.length; i++){
+    	aA1[i].index=i;
+    	aA1[i].onclick=function(){
+    		oBox.style.top=-600*i+'px';
+    	}
+    }
+}
+</script>
+<body>
+<!-- 开始界面 -->
+	<div id="start">
+		<img src="img/ppt3598.jpg" class="start-b" />
+		<img src="img/bg.jpg" class="bg1" />
+		<img src="img/bg2.jpg" class="bg2" />
+		<div id="nav">
+			<span></span>
+		</div>
+		<input type="button" value="点击进入" class="start-n" id="btn" />
+	</div>
+	<div id="box">
+		<!-- 首页 -->
+		<div class="home">
+			<img src="img/header.png" class="header" />
+			<div class="nav1" id="nav1">
+				<a href="javascript:;" class="home1">首页</a>
+				<a href="javascript:;" class="works">作品展</a>
+				<img src="img/n1.jpg" class="about-n1" />
+				<a href="javascript:;" class="about-me">关于我</a>
+				<img src="img/n2.jpg" class="about-n2" />
+				<a href="javascript:;" class="contact">联系我</a>
+			</div>
+			<div class="photo-biao">
+				<img id="weixin" style="width:33px; height:33px;" src="img/微信.png" class="photo-wei" />
+				<img id="qq" style="width:33px; height:33px;" src="img/qq.png" class="photo-qq" />
+				<img style="width:33px; height:33px;" src="img/微博.png" class="photo-bo" />
+				<img style="width:33px; height:33px;" src="img/QQ空间.png" class="photo-kj" />
+			</div>
+		</div>
+		<!-- 作品展 -->
+		<div class="works-display" id="works-s">
+			<img src="img/p11.jpg" class="photo-moban" />
+			<div id="say">
+				<span>逆 境 是 成 长 的 必 经 过 程，能 勇 于  接 受 逆 境 的 人，生 命 就 会 日 渐 的 茁 壮。我 的 财 富 并 不 是 因 为 我 拥 有 很 多，而 是 我 要 求 的 很 少。即 使 道 路 坎 坷 不 平，车 轮 也 要 前 进；即 使 江 河 波 涛 汹 涌，船 只 也 要 航 行。</span>
+			</div>
+			<div class="works-font">WORKS-SHOW:</div>
+			<div id="show-w">
+				<ul id="zpz">
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/翻页效果6.html" target="_blank">翻页效果</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/官网分页4.html" target="_blank">分頁變色運動</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/官网作品展示9.html" target="_blank">拖拽切圖</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/苹果菜单4.html" target="_blank">苹果菜單變幻</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/圆6.html" target="_blank">循環圓</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/zns_demo.html" target="_blank">3D背景墻拖拽</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/照片墙6.html" target="_blank">照片墻隨即換</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="img/点击出球.html" target="_blank">点击出球</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="聚划算/index.html" target="_blank">聚划算</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;" >
+				    	<a href="灵魂回响/网页/灵魂回响.html" target="_blank">灵魂回响</a>
+				    </li>
+				    
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="网易网站 --0/网易1.html" target="_blank">網易PC端</a>
+				    </li>
+				    <li style="background:url(img/tree.jpg)no-repeat;">
+				    	<a href="捕鱼/捕鱼3-加炮筒-造一组鱼.html" target="_blank">捕鱼达人</a>
+				    </li>
+				</ul>
+			</div>
+		</div>
+		<!-- 关于我 -->
+		<div class="about-me" id="about-s">
+			<img src="img/p22.jpg" class="about-mb" />
+			<div class="about-font">关于我：about-me</div>
+			<div class="about-block">
+				<img style="width:300px; height:450px; margin-top:30px; display:block; float:left" src="img/weixin1.jpg" class="photo-wx" />
+			</div>
+			<div class="decoration-me">
+				<div>姓 名：夏子恒</div>
+				<div>性别：男</div>
+				<div>婚姻状况：未婚</div>
+				<div>民族：汉族</div>
+				<div>户籍：河北秦皇岛</div>
+				<div>年龄：22</div>
+				<div>现所在地：北京昌平</div>
+				<div>身高：183</div>
+				<div>联系电话：18332615663</div>
+				<div>电子邮箱：1325941253@qq.com</div>
+			</div>
+			<div class="decoration-zj">
+				为什么我要从事前端
+				<div>&nbsp;&nbsp;</div>
+				<div>1. 精通HTML，能够书写语义合理，结构清晰，易维护的HTML结构。</div>
+				<div>2. 精通CSS，能够还原视觉设计，并兼容业界承认的主流浏览器。</div>
+				<div>3. 熟悉JavaScript，了解Script基础内容，掌握1~2种js框架，如JQuery。</div>
+				<div>4. 对常见的浏览器兼容问题有清晰的理解，并有可靠的解决方案。</div>
+				<div>&nbsp;&nbsp;</div>
+				<div>曾经我一直都有一个想法就是做一个自己的网站，大学时因为专业问题，没去深入学习web前端课程。然而毕业工作之后，从接触前端开始，慢慢增加了对web前端的了解，后续自己下载关于html和css教学视频，同时自学JavaScript知识，并深入了解这个行业。如今才发现，Web前端就是我真正感兴趣的行业，在学习练习的过程，为了达到自己想要的效果，坚持不懈的在网上搜寻资料，甚至有时会熬夜。这也是我发现，自从上班以来从来没为哪一份工作比这付出的多的原因————web才是我的兴趣。</div>
+				<div>&nbsp;&nbsp;</div>
+				<div>为什么会有成就感？其实很简单，知识永无止境。特别对web前端来说，当我自己想实现一个页面效果，而恰恰这个页面效果我不会，于是我会请教身边的web前端大神或者自己上网查询，并通过不同方法去实现，直到页面输出自己想要的效果时候，我会觉得自己心里满满的成就感。同时也会让我觉得自己又Get到一个新技能。</div>
+			</div>
+		</div>
+		<!-- 联系我 -->
+		<div class="contact-me">
+			<img src="img/hua.jpg" />
+			<div class="link">与我联系：</div>
+			<div class="link-block">
+				<p>+联系人/contacts：夏子恒</p>
+				<p>+手机/Moblie：18332615663</p>
+				<p>+电邮/Email：1325941253@qq.com</p>
+				<p>+QQ/：1325941253</p>
+				<p>+微信：18332615663</p>
+			</div>
+			<div class="ender">感谢光临我的小屋！！！</div>
+		</div>
+	</div>
+</body>
+</html>
