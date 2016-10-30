@@ -1,5 +1,0 @@
-	mvas_32740386=1019351;mv_acquire=1;mv_bid=32740386;
-mvcu_32740386='http://show.g.mediav.com/c?type=2&oimpid=4TLpeGZVminW&pub=111695_513416_1019351&cus=120192_712861_7232537_32740386_0&fee=rGUUUUZUUUba&pinfo=&solutiontype=1&solutionowner=1&creativetype=1&ref=http%3A%2F%2Fimg1.126.net%2Fchannel1%2Fhtml%2Fmv_0531.html&url=http://www.21cake.com/article-21brand-83.html?utm_source=JX-DSP&utm_medium=Flash&utm_term=&utm_content=WangYi-XGJ&utm_campaign=JX';
-mvctype_32740386=1;
-
-eval('mediav_fini'+mvas_32740386+'=1');mediav.makeImage("http://material.mediav.com/galileo/20150126/6220c10a099cef1fe0c906dd035c08dc.gif", mvcu_32740386, 300, 100, "32740386");
