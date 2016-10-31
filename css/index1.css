@@ -1,7 +1,7 @@
 *{padding:0; margin:0; list-style:none;}.
 body{position:relative;}
-#start{ width:1350px; height:100%;_display:none;}
-#start .start-b{width:1350px; height:100%; position:absolute; top:0; left:0;}
+#start{ width:100%; height:100%;_display:none;}
+#start .start-b{width:100%; height:100%; position:absolute; top:0; left:0;}
 #start .start-n{position:absolute; top:50px; right:80px; width:80px; height:40px; background:#dac691; cursor:pointer;}
 #start .bg1{ width:570px; height:150px; position:absolute; top:300px; left:575px;}
 #start .bg2{width:400px; height:100px; position:absolute; top:0px; right:0;}
@@ -47,5 +47,5 @@ body{position:relative;}
 #box .contact-me .link-block{position:absolute; top:280px; left:70px;}
 #box .contact-me .link-block p{font-size:22px; color:#666; font-weight:bold; line-height:40px;}
 #box .contact-me .ender{font-size:60px; color:orange; -webkit-text-stroke:2px #666; box-shadow: 5px 2px 6px; position:absolute; bottom:2px; left:40px; transition: 1s all ease; border-radius:20%;}
-#box .contact-me .ender:hover{transform: translate(20px) rotateY(360deg);}
+#box .contact-me .ender:hover{transform:perspective(800px) translate(20px) rotateY(360deg);}
 
