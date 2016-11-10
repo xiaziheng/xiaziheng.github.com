@@ -9,7 +9,21 @@
 <script src="js/index1.js"></script>
 <script src="img/move.js"></script>
 <script>
-window.onload=function(){
+function domReady(fn){
+   if(document.addEventListener){
+   // alert(1);
+       document.addEventListener('DOMContentLoaded',function(){
+        fn && fn()
+       },false);
+   }else{
+        addEvent(document,'readystatechange',function(){
+            if(document.readyState=='complete'){
+                fn && fn();
+            }
+        });
+   }
+}
+domReady(function(){
 	var timer=null;
 	var str='       大家好！欢迎光临我的个人空间，有什么不足之处请联系我，谢谢(@^_^@)~ ';
 	var oNav=document.getElementById('nav');
@@ -118,7 +132,9 @@ window.onload=function(){
     		oBox.style.top=-600*i+'px';
     	}
     }
-}
+})
+	
+
 </script>
 <body>
 <!-- 开始界面 -->
