@@ -1,5 +1,5 @@
-*{padding:0; margin:0; list-style:none;}.
-body{position:relative;}
+*{padding:0; margin:0; }
+ul,ol,dl{list-style: none;}
 #start{ width:100%; height:100%;_display:none;}
 #start .start-b{width:100%; height:100%; position:absolute; top:0; left:0;}
 #start .start-n{position:absolute; top:50px; right:80px; width:80px; height:40px; background:#dac691; cursor:pointer;}
@@ -7,10 +7,9 @@ body{position:relative;}
 #start .bg2{width:400px; height:100px; position:absolute; top:0px; right:0;}
 #start #nav{width:700px; height:40px; position:absolute; top:260px; left:575px;}
 #start #nav span{color:#333; font-size:30px; font-weight:bold; font-family:"微软雅黑"; opacity:0;}
-#box{width:1350px; height:100%; background:#E0DCD1;  position:absolute;}
+#box{width:1350px; height:100%; background:#E0DCD1;display: none;  position:absolute;}
 #box .home{width:100%; height:600px; position:relative;}
 #box .home .header{width:1350px; height:600px;}
-#box .home .nav1{}
 #box .home .nav1 .home1{text-decoration:none; color:#666; position:absolute; top:2px; left:440px; background:#FBFBFB; width:60px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
 #box .home .nav1 .works{text-decoration:none; color:#666; position:absolute; top:2px; left:554px; background:#FBFBFB; width:80px; height:70px; line-height:86px; font-family:"楷体"; font-size:25px; font-weight:bold;}
 #box .home .nav1 .about-n1{position:absolute; top:2px; left:640px;}
@@ -42,7 +41,6 @@ body{position:relative;}
 #box .about-me .decoration-zj{width:100%; width:700px; float:left; font-size:24px; color:green; font-weight:bold; font-family:"微软雅黑"; transition: 1s all ease; margin-left:50px; line-height:26px;}
 #box .about-me .decoration-zj div{font-size:17px; color:#666; }
 #box .contact-me{width:100%; height:600px; position:relative; _overflow:hidden;}
-#box .contact-me .hua{}
 #box .contact-me .link{font-size:35px; color:#666; font-weight:bold; font-family:"微软雅黑"; position:absolute; top:220px; left:40px; -webkit-text-stroke:2px green;}
 #box .contact-me .link-block{position:absolute; top:280px; left:70px;}
 #box .contact-me .link-block p{font-size:22px; color:#666; font-weight:bold; line-height:40px;}
