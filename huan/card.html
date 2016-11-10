@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{ background:#000;}
+	*{ margin:0; padding:0;}
+	#box{ width:133px; height:200px; margin:100px auto; transform-style:preserve-3d; transform:perspective(800px) rotateX(-10deg); position:relative;}
+	p { width:100%; height:100%; position:absolute; top:0; left:0; box-shadow:0 0 4px #FFF,0 0 6px #FFF,0 0 10px #FFF; -webkit-box-reflect:below 10px linear-gradient(rgba(0,0,0,0) 70%,rgba(0,0,0,1));}
+</style>
+<script>
+	window.onload=function(){
+		var oBox=document.querySelector('#box');
+		var N=11;
+		var d=360/N;
+		for(var i=0; i<N;i++){
+			var oP=document.createElement('p');
+			oP.style.backgroundImage='url(img/'+(i+1)+'.jpg)';
+			oBox.appendChild(oP);
+			oP.style.transition='1s all ease '+((N-i)*200)+'ms';
+			(function(obj,index){
+				setTimeout(function(){
+					obj.style.transform='rotateY('+(index*d)+'deg) translateZ(350px)';	
+				},0);
+			})(oP,i);
+		};	
+		
+		var aP=oBox.children;
+		var n=0;
+		var y=50;
+		var x=0;
+		var speedX=0;
+		var speedY=0;
+		var lastX=0;
+		var lastY=0;
+		var timer=null;
+		
+		document.onmousedown=function(ev){
+			var disX=ev.clientX-x;
+			var disY=ev.clientY-y;
+			document.onmousemove=function(ev){
+				x=ev.clientX-disX;
+				y=ev.clientY-disY;
+				
+				change(x/8,-y/5);
+				
+				speedX=ev.clientX-lastX;
+				speedY=ev.clientY-lastY;
+				
+				lastX=ev.clientX;
+				lastY=ev.clientY;
+			};
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				
+				clearInterval(timer);
+				timer=setInterval(function(){
+					speedX*=0.9;
+					speedY*=0.9;
+					
+					x+=speedX;
+					y+=speedY;
+					
+					change(x/8,-y/5);
+					if(Math.abs(speedX)<=1&&Math.abs(speedY)<=1){
+						clearInterval(timer);
+					}
+					
+				},30);
+				
+			};	
+			return false;
+		}
+
+		var j=1;
+		function change(x,y){
+			
+			oBox.style.transform='perspective(800px) rotateX('+y+'deg)';
+			
+			for(var i=0; i<aP.length;i++){
+				aP[i].style.transition='none';
+				aP[i].style.transform='rotateY('+(i*d+x)+'deg) translateZ(350px)';
+				var s_opa=Math.abs(Math.abs(i*d+x)%360-180)/180;
+				if(s_opa<0.5){s_opa=0.5}
+				aP[i].style.opacity=s_opa;
+			}		
+		}
+	};
+</script>
+</head>
+
+<body>
+	<div id="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
