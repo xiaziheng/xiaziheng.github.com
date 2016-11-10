@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{ overflow:hidden;}
+	.box{ width:700px; height:400px; margin:50px auto; position:relative; background:#EEE; background:url(img2/2.jpg);}
+	.box span{ transform-style:preserve-3d; }
+</style>
+<script>
+	function rnd(n,m){
+		return parseInt(Math.random()*(m-n)+n);	
+	}
+	
+	window.onload=function(){
+		var oBox=document.querySelector('.box');
+		
+		var R=6;
+		var C=4;
+		for(var r=0; r<R;r++){
+			for(var c=0;c<C;c++){
+				var oSpan=document.createElement('span');	
+				oSpan.style.position='absolute';
+				oSpan.style.width=oBox.offsetWidth/C+'px';
+				oSpan.style.height=oBox.offsetHeight/R+'px';
+				oSpan.style.left=c*oBox.offsetWidth/C+'px';
+				oSpan.style.top=r*oBox.offsetHeight/R+'px';
+				var x=-c*oBox.offsetWidth/C;
+				var y=-r*oBox.offsetHeight/R;
+				
+				oSpan.style.background='url(img2/1.jpg) '+x+'px '+y+'px';
+				oBox.appendChild(oSpan);
+				
+				oSpan.c=c;
+				oSpan.r=r;
+					
+			}
+		}
+		
+		var oCh=oBox.offsetHeight/2;
+		var oCw=oBox.offsetWidth/2;
+		var aSpan=oBox.children;
+		var iNow=0;
+		var bReady=true;
+		oBox.onclick=function(){
+			if(!bReady)return;
+			bReady=false;
+			iNow++;
+			for(var i=0; i<aSpan.length;i++){
+				var oSch=aSpan[i].offsetTop+aSpan[i].offsetHeight/2;
+				var oScw=aSpan[i].offsetLeft+aSpan[i].offsetWidth/2;
+				var a=-(oCh-oSch);
+				var b=-(oCw-oScw);
+				
+				//var c=Math.sqrt(a*a+b*b);
+				aSpan[i].style.transition='0.5s all  ease-in';
+				aSpan[i].style.transform='scale(1.5) translate('+b+'px,'+a+'px) rotateX('+rnd(-360,360)+'deg) rotateY('+rnd(-360,360)+'deg) rotateZ('+rnd(-360,360)+'deg)';
+				aSpan[i].style.opacity=0;
+				
+			}
+		};
+		
+		aSpan[0].addEventListener('transitionend',function(){
+			for(var i=0; i<aSpan.length;i++){
+				aSpan[i].style.transition='none';
+				aSpan[i].style.transform='scale(1) translate(0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
+				aSpan[i].style.opacity=1;
+				aSpan[i].style.backgroundImage='url(img2/'+(iNow%3+1)+'.jpg)';
+			}
+			oBox.style.backgroundImage='url(img2/'+((iNow+1)%3+1)+'.jpg)';
+			bReady=true;
+		},false);
+			
+	};
+</script>
+</head>
+
+<body>
+	<div class="box">
+    	
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
