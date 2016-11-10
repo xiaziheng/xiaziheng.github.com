@@ -7,7 +7,7 @@ body{position:relative;}
 #start .bg2{width:400px; height:100px; position:absolute; top:0px; right:0;}
 #start #nav{width:700px; height:40px; position:absolute; top:260px; left:575px;}
 #start #nav span{color:#333; font-size:30px; font-weight:bold; font-family:"微软雅黑"; opacity:0;}
-#box{width:1350px; height:100%; background:#E0DCD1; display:none; position:absolute;}
+#box{width:1350px; height:100%; background:#E0DCD1;  position:absolute;}
 #box .home{width:100%; height:600px; position:relative;}
 #box .home .header{width:1350px; height:600px;}
 #box .home .nav1{}

@@ -24,32 +24,32 @@ function domReady(fn){
    }
 }
 domReady(function(){
-	var timer=null;
-	var str='       大家好！欢迎光临我的个人空间，有什么不足之处请联系我，谢谢(@^_^@)~ ';
-	var oNav=document.getElementById('nav');
-	for(var i=0; i<str.length; i++){
-		var oSpan=document.createElement('span');
-		oSpan.innerHTML=str.charAt(i);
-		oNav.appendChild(oSpan);
-	}
-	var aSpan=oNav.children;
-	var i=0;
-	var timer=setInterval(function(){
-		move(aSpan[i],{opacity:1},{time:300,type:'ease-out'});
-		i++;
-		if(i==aSpan.length){
-			clearInterval(timer)
-		}
-	},100);
+	// var timer=null;
+	// var str='       大家好！欢迎光临我的个人空间，有什么不足之处请联系我，谢谢(@^_^@)~ ';
+	// var oNav=document.getElementById('nav');
+	// for(var i=0; i<str.length; i++){
+	// 	var oSpan=document.createElement('span');
+	// 	oSpan.innerHTML=str.charAt(i);
+	// 	oNav.appendChild(oSpan);
+	// }
+	// var aSpan=oNav.children;
+	// var i=0;
+	// var timer=setInterval(function(){
+	// 	move(aSpan[i],{opacity:1},{time:300,type:'ease-out'});
+	// 	i++;
+	// 	if(i==aSpan.length){
+	// 		clearInterval(timer)
+	// 	}
+	// },100);
 
-	//按钮点击进入主界面
-	var oBtn=document.getElementById('btn');
-	var oBox=document.getElementById('box');
-	var oStart=document.getElementById('start');
-	oBtn.onclick=function(){
-		oBox.style.display='block';
-		oStart.style.display='none';
-	}
+	// //按钮点击进入主界面
+	// var oBtn=document.getElementById('btn');
+	// var oBox=document.getElementById('box');
+	// var oStart=document.getElementById('start');
+	// oBtn.onclick=function(){
+	// 	oBox.style.display='block';
+	// 	oStart.style.display='none';
+	// }
 
 	//作品展鼠标移入方向
 	function hoverDir(obj,oEvent){
@@ -138,14 +138,14 @@ domReady(function(){
 </script>
 <body>
 <!-- 开始界面 -->
-	<div id="start">
+	<!-- <div id="start">
 		<img src="img/ppt3598.jpg" class="start-b" />
 		
 		<div id="nav">
 			<span></span>
 		</div>
 		<input type="button" value="点击进入" class="start-n" id="btn" />
-	</div>
+	</div> -->
 	<div id="box">
 		<!-- 首页 -->
 		<div class="home">
