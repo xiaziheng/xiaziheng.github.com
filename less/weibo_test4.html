@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能课堂 —— 微博ajax接口测试 - www.zhinengshe.com</title>
+<link href="style/weibo.css" rel="stylesheet" type="text/css" />
+<script src="newAjax.js"></script>
+<script src="cookie.js"></script>
+<script>
+    window.onload = function(){
+        var oT = document.getElementById('t1');
+        var oBtn = document.getElementById('btn1');
+        var oBox = document.getElementById('msg_box');
+        var oPage_box = document.getElementById('page_box');
+        var iNow = 1;
+
+        var URL = 'weibo.php?';
+        // 添加内容
+        oBtn.onclick = function(){
+            ajax(URL,{
+                'act':'add',
+                'content':oT.value
+            },function(str){
+                var json = eval('('+str+')');
+                if(json.error){
+                    alert('添加失败');
+                }else{
+                    var oDiv = createDiv(oT.value,json.time,0,0,json.id);
+                    if(oBox.children){
+                        oBox.insertBefore(oDiv,oBox.children[0]);
+                    }else{
+                        oBox.appendChild(oDiv);
+                    }
+
+                    if(oBox.children.length > 6){
+                        oBox.removeChild(oBox.children[6]);
+                    }
+                    oT.value = '';
+                }
+            });
+
+            getPageNum();
+        }
+
+        // 创建div
+        function createDiv(text,time,acc,ref,id){
+            var oDate = new Date();
+            oDate.setTime(time*1000);
+            var sDate = oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate()+' '+oDate.getHours()+':'+oDate.getMinutes()+':'+oDate.getSeconds();
+            
+            var oDiv = document.createElement('div');
+            oDiv.className = 'reply';
+            oDiv.innerHTML = '<p class="replyContent">'+text+'</p>'+
+                '<p class="operation">'+
+                    '<span class="replyTime">'+sDate+'</span>'+
+                    '<span class="handle">'+
+                        '<a href="javascript:;" class="top">'+acc+'</a>'+
+                        '<a href="javascript:;" class="down_icon">'+ref+'</a>'+
+                        '<a href="javascript:;" class="cut">删除</a>'+
+                    '</span>'+
+                '</p>';
+
+            // 删除
+            var aA = oDiv.getElementsByTagName('a');
+            aA[2].onclick = function(){
+                if(!confirm('确定删除么')) return;
+                ajax(URL,{
+                    'act':'del',
+                    'id':id
+                },function(str){
+                    var json = eval('('+str+')');
+                    if(json.error){
+                        alert('删除失败');
+                    }else{
+                        oBox.removeChild(oDiv);
+                        getPageMsg(iNow);
+                        getPageNum();
+                    }
+                });
+            }
+
+            // 顶
+            aA[0].onclick = function(){
+                if(getCookie('acc'+id)){
+                    alert('亲！一天只能顶一次哦');
+                }else{
+                    ajax(URL,{
+                        'act':'acc',
+                        'id':id
+                    },function(str){
+                        var json = eval('('+str+')');
+                        if(json.error){
+                            alert('顶失败了');
+                        }else{
+                            aA[0].innerHTML = parseInt(aA[0].innerHTML)+1;
+                            setCookie('acc'+id,1,1);
+                        }
+                    })
+                }
+            }
+
+            return oDiv;
+        }
+
+        // 搞出来一页
+        getPageMsg(n);
+        var n = 1;
+        function getPageMsg(num){
+            oBox.innerHTML = '';
+            ajax(URL,{
+                'act':'get',
+                'page':num
+            },function(str){
+                var arr = eval('('+str+')');
+                for(var i=0; i<arr.length; i++){
+                    var oDiv = createDiv(arr[i].content,arr[i].time,arr[i].acc,arr[i].ref,arr[i].id);
+                    oBox.appendChild(oDiv);
+                }
+            });
+        }
+
+        // 多少页
+        getPageNum();
+        function getPageNum(){
+            oPage_box.innerHTML = '';
+            ajax(URL,{
+                'act':'get_page_count'
+            },function(str){
+                var json = eval('('+str+')');
+                for(var i=0; i<json.count; i++){
+                    var oA = document.createElement('a');
+                    oA.href = 'javascript:;';
+                    oA.innerHTML = i+1;
+                    oPage_box.appendChild(oA);
+
+                    if(i == iNow-1){
+                        oA.className = 'active';
+                    }
+
+                    // 分页
+                    oA.onclick = function(){
+                        var n = this.innerHTML;
+                        getPageMsg(n);
+                        for(var j=0; j<oPage_box.children.length; j++){
+                            oPage_box.children[j].className = '';
+                        }
+                        iNow = n;
+                        oPage_box.children[iNow-1].className = 'active';
+                    }
+                }
+            })
+        }
+    }
+</script>
+</head>
+
+<body>
+<div class="znsArea">
+<!--留言-->
+     <div class="takeComment">
+        <textarea name="textarea" class="takeTextField" id="t1"></textarea>
+        <div class="takeSbmComment">
+            <input type="button" class="inputs" value="" id="btn1"/>
+            <!-- <span>(可按 Enter 回复)</span> -->
+        </div>
+    </div>
+<!--已留-->
+    <div class="commentOn">
+        <div class="messList" id="msg_box">
+        	<!-- <div class="reply">
+                <p class="replyContent">adsfasd</p>
+                <p class="operation">
+                    <span class="replyTime">2011-09-08 16:37:60</span>
+                    <span class="handle">
+                    	<a href="javascript:;" class="top">0</a>
+                        <a href="javascript:;" class="down_icon">0</a>
+                        <a href="javascript:;" class="cut">删除</a>
+                    </span>
+                </p>
+            </div> -->
+        </div>
+        <div class="page" id="page_box">
+        	<!-- <a href="javascript:;" class="active">1</a>
+        	<a href="javascript:;">2</a>
+        	<a href="javascript:;">3</a> -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
