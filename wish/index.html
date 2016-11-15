@@ -107,8 +107,8 @@
                     data : {
                         act : 'get'
                     },
-                    success : function(str){
-                        var json = eval('('+str+')');
+                    success : function(str1){
+                        var json = eval('('+str1+')');
                         if(json.error){
                             alert(json.msg);
                         }else{
