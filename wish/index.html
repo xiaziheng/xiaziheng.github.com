@@ -42,8 +42,8 @@
                         username : oUser.value,
                         content : oContent.value
                     },
-                    success : function(str){
-                        var json = eval('('+str+')');
+                    success : function(str1){
+                        var json = eval('('+str1+')');
                         if(json.error){
                             alert(json.msg);
                         }else{
@@ -84,8 +84,8 @@
                                 act : 'delete',
                                 id : id
                             },
-                            success : function(str){
-                                var json = eval('('+str+')');
+                            success : function(str1){
+                                var json = eval('('+str1+')');
                                 if(json.error){
                                     alert(json.msg);
                                 }else{
@@ -107,8 +107,8 @@
                     data : {
                         act : 'get'
                     },
-                    success : function(str1){
-                        var json = eval('('+str1+')');
+                    success : function(str2){
+                        var json = eval('('+str2+')');
                         if(json.error){
                             alert(json.msg);
                         }else{
