@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 页面公共的样式 -->
+    <link rel="stylesheet" href="./lib/wangEditor/wangEditor.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 清除浮动 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            line-height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+    </style>
+    <!-- 数字输入框的样式 -->
+    <style type="text/css">
+        .text_area_editor.hidden {
+            display: none;
+        }
+        .text_area_editor .hidden {
+            display: none;
+        }
+        .text_area_editor .toolbar{
+            border:1px solid #000;
+            position: fixed;
+            bottom:0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+    <!-- 布局的样式 -->
+    <style type="text/css">
+        .conponent_wrap {
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* 宽度布局 */
+        .width_100 {
+            width: 100% !important;
+            float: left !important;
+        }
+        .width_50 {
+            width: 100% !important;
+            float: left !important;
+        }
+        /* 单行显示 */
+        .clear_left {
+            clear: both;
+        }
+    </style>
+    <title>富文本编辑器</title>
+</head>
+
+<body>
+<div class="pc_form">
+    <div class="conponent_wrap clearfix">
+        <!-- 编辑 -->
+        <div class="text_area_editor width_50">
+            <div class="label">编辑器</div>
+            <div id="test1">
+                <div class="toolbar"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        <!--<button onclick="clickValue()">获取内容</button> <button onclick="TextAreaEditor.clear('test1')">清空内容</button><button onclick="setValue('你好')">写入“你好”</button>-->
+        <!-- 编辑-必填 -->
+        <!--<div class="text_area_editor width_50">-->
+            <!--<div class="label">编辑器必填</div>-->
+            <!--<div id="test2" required="required">-->
+                <!--<div class="toolbar"></div>-->
+                <!--<div class="text"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; 只读 &ndash;&gt;-->
+        <!--<div class="text_area_editor width_50">-->
+            <!--<div class="label">编辑器只读</div>-->
+            <!--<div id="test3">-->
+                <!--<div class="toolbar"></div>-->
+                <!--<div class="text"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; 隐藏 &ndash;&gt;-->
+        <!--<div class="text_area_editor hidden">-->
+            <!--<div class="label">编辑器</div>-->
+            <!--<div id="test4">-->
+                <!--<div class="toolbar"></div>-->
+                <!--<div class="text"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+</div>
+
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/wangEditor/wangEditor.js"></script>
+<script type="text/javascript">
+    var TextAreaEditor = {};
+    /**
+     * 限制只能输入数字
+     * @param {string} domId 数字输入框的domid
+     */
+    TextAreaEditor.init = function (domId) {
+        var E = window.wangEditor;
+        this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
+        this[domId].customConfig.menus = [
+            'bold',  // 粗体
+            'italic',  // 斜体
+            'underline',  // 下划线
+            'image',  // 插入图片
+        ]
+        this[domId].create()
+    }
+    /**
+     * 给数字输入框赋值
+     * @param {string} domId 数字输入框的domId
+     * @param {string} value 需要赋的值
+     */
+    TextAreaEditor.setValue = function (domId, value) {
+        this[domId].txt.html('<p>'+value+'</p>');
+    }
+    /**
+     * @param {string} domId 数字输入框的domid
+     */
+    TextAreaEditor.getValue = function (domId) {
+        return this[domId].txt.text();
+    }
+    /**
+     * 检测必填
+     * @param {string} domId 数字输入框的domid
+     */
+    TextAreaEditor.checkRequired = function (domId) {
+        var text = this[domId].txt.text();
+        var _this = $('#'+domId);
+        if (_this.attr("required")) {
+            if (text.length == 0) {
+                // layer.open({
+                //     content: _this.parent(".text_area_editor").find(".label").html() + "是必填项";
+                // })
+            }
+        }
+    }
+    /**
+     * 禁用
+     * @param {string} domId 数字输入框的domid
+     */
+    TextAreaEditor.disable = function (domId) {
+        this[domId].$textElem.attr('contenteditable', false);
+    }
+    /**
+     * 显示隐藏的方法
+     * @param {string} 数字输入框的domid
+     * @param {string} 只能是show和hidden
+     */
+    TextAreaEditor.show = function (domId, status) {
+        if (status == "hidden") {
+            jQuery("#" + domId).parent(".text_area_editor").addClass('hidden');
+        } else if (status == "show") {
+            jQuery("#" + domId).parent(".text_area_editor").removeClass('hidden');
+        }
+    }
+    /**
+     * 数字输入框的清空方法
+     * @param {string} domId 数字输入框的domid
+     */
+    TextAreaEditor.clear = function (domId) {
+        this[domId].txt.clear()
+    }
+
+   function clickValue(){
+        alert(TextAreaEditor.getValue('test1'));
+    }
+    function setValue(value){
+        TextAreaEditor.setValue('test1',value);
+    }
+    $(function(){
+        TextAreaEditor.init("test1");
+        // TextAreaEditor.init("test2");
+        // TextAreaEditor.init("test3");
+        // TextAreaEditor.disable('test3');
+        // TextAreaEditor.init("test4");
+        // TextAreaEditor.checkRequired('test2');
+    })
+
+</script>
+</body>
+
+</html>
