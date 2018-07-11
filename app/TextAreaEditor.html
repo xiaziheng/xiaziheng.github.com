@@ -118,7 +118,6 @@
      * @param {string} domId 数字输入框的domid
      */
     var height =  window.innerHeight;
-    document.querySelector('.toolbar').scrollIntoView();
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
@@ -131,7 +130,8 @@
         this[domId].customConfig.onfocus = function () {
             setTimeout(()=>{
                 document.getElementById('test2').value=height-window.innerHeight;
-                $('.toolbar').css('bottom',height-window.innerHeight)
+                // $('.toolbar').css('bottom',height-window.innerHeight)
+                document.querySelector('.toolbar').scrollIntoView();
             },200)
 
         }
