@@ -133,7 +133,7 @@
         this[domId].customConfig.onfocus = function (e) {
             // inputFocus(e)
             setTimeout(()=>{
-                TextAreaEditor.setValue('test1',window.screen.availHeight +'   '+window.screen.height);
+                TextAreaEditor.setValue('test1',window.screen.availHeight +'   '+window.screen.height+'   '+document.body.clientHeight);
             },1500)
 
             // $(".toolbar").css("position","static");
@@ -232,17 +232,6 @@
             }
         }, 200);
     }
-    var windheight = $(window).height();  /*未唤起键盘时当前窗口高度*/
-
-    $(window).resize(function(){
-        var docheight = $(window).height();/*唤起键盘时当前窗口高度*/
-        alert(docheight)
-        if(docheight < windheight){            /*当唤起键盘高度小于未唤起键盘高度时执行*/
-            $(".toolbar").css("position","static");
-        }else{
-            $(".toolbar").css("position","fixed");
-        }
-    });
 </script>
 </body>
 
