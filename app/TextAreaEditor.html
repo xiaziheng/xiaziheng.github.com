@@ -133,8 +133,9 @@
         this[domId].customConfig.onfocus = function (e) {
             // inputFocus(e)
             setTimeout(()=>{
-                TextAreaEditor.setValue('test1',window.screen.availHeight +'   '+window.screen.height+'   '+document.body.clientHeight);
-            },1500)
+                TextAreaEditor.setValue('test1',document.body.clientHeight);
+                $(document.body).height(document.body.clientHeight)
+            },200)
 
             // $(".toolbar").css("position","static");
         }
