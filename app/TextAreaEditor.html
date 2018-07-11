@@ -128,7 +128,7 @@
             'image',  // 插入图片
         ];
         this[domId].customConfig.onfocus = function () {
-            document.getElementById('test2').value=window.innerHeight;
+            document.getElementById('test2').value=height-window.innerHeight;
             $('.toolbar').css('bottom',height-window.innerHeight)
         }
         this[domId].customConfig.onblur = function () {
