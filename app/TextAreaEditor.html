@@ -125,7 +125,7 @@
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new ___E(domId);
-        ___E.config.menus = [
+        this[domId].config.menus = [
             'bold',
             'italic',  // 斜体
             'underline',  // 下划线
@@ -186,7 +186,7 @@
      * @param {string} domId 数字输入框的domid
      */
     TextAreaEditor.clear = function (domId) {
-        this[domId].$tx.clear()
+        this[domId].$txt.clear()
     }
 
    function clickValue(){
