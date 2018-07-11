@@ -130,14 +130,16 @@
             'underline',  // 下划线
             'image',  // 插入图片
         ];
-        // this[domId].customConfig.onfocus = function (e) {
-        //     // inputFocus(e)
-        //     $(".toolbar").css("position","static");
-        // }
-        // this[domId].customConfig.onblur = function (e) {
-        //     // inputFocus(e)
-        //     $(".toolbar").css("position","fixed");
-        // }
+        this[domId].customConfig.onfocus = function (e) {
+            // inputFocus(e)
+            alert(window.screen.availHeight)
+            alert( window.screen.height)
+            // $(".toolbar").css("position","static");
+        }
+        this[domId].customConfig.onblur = function (e) {
+            // inputFocus(e)
+            // $(".toolbar").css("position","fixed");
+        }
         this[domId].create()
     }
     /**
