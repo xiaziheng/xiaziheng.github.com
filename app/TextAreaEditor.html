@@ -206,6 +206,7 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
     })
+    alert(document.documentElement.clientHeight);
     function inputFocus(e) {
         var winobj = $(window),
             scope = this,
@@ -216,8 +217,9 @@
                 && agent.indexOf('linux') == -1 && agent.indexOf('firefox') == -1) {//safra浏览器
                 window.scrollTo(0, 1000000);//先滚动到最底部，再用scrollY得到当前的值，必须延迟 否则拿到的就是1000000
                 setTimeout(function(){
+                    alert(document.documentElement.clientHeight);
                     window.scrollTo(0, window.scrollY - 45);//45像素 所有浏览器都是这么高
-                }, 50)
+                }, 100)
             } else {//其他浏览器
                 window.scrollTo(0, 1000000);
                 // window.scrollTo(0, ++this.scrollNum);
