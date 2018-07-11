@@ -32,8 +32,8 @@
             display: none;
         }
         .text_area_editor .toolbar{
-            position: absolute;
-            bottom:0;
+            position: fixed;
+            top:0;
             left: 0;
             background: #ccc;
             width: 100%;
@@ -53,9 +53,9 @@
             margin: 40px auto;
             height: 100%;
         }
-        /*html,body,.pc_form,.text_area_editor{*/
-            /*height: 100%;*/
-        /*}*/
+        html,body,.pc_form,.text_area_editor{
+            height: 10000px;
+        }
         /* 宽度布局 */
         .width_100 {
             width: 100% !important;
@@ -77,40 +77,33 @@
 <div class="pc_form">
     <div class="conponent_wrap clearfix">
         <!-- 编辑 -->
-        <div class="text_area_editor width_50">
+        <div class="input_text_number width_50">
+            <div class="label">数字</div>
+            <input type="text" placeholder="请输入" id="test1">
+        </div>
+        <div class="input_text_number width_50">
+            <div class="label">数字</div>
+            <input type="text" placeholder="请输入" id="test1">
+        </div>
+        <div class="input_text_number width_50">
+            <div class="label">数字</div>
+            <input type="text" placeholder="请输入" id="test1">
+        </div>
+        <div class="input_text_number width_50">
+            <div class="label">数字</div>
+            <input type="text" placeholder="请输入" id="test1">
+        </div>
+        <div class="input_text_number width_50">
+            <div class="label">数字</div>
+            <input type="text" placeholder="请输入" id="test1">
+        </div>
+        <div class="text_area_editor width_100">
             <div class="label">编辑器</div>
             <div id="test1">
                 <div class="toolbar"></div>
                 <div class="text"></div>
             </div>
         </div>
-        <!--<button onclick="clickValue()">获取内容</button> <button onclick="TextAreaEditor.clear('test1')">清空内容</button><button onclick="setValue('你好')">写入“你好”</button>-->
-        <!-- 编辑-必填 -->
-        <!--<div class="text_area_editor width_50">-->
-            <!--<div class="label">编辑器必填</div>-->
-            <!--<div id="test2" required="required">-->
-                <!--<div class="toolbar"></div>-->
-                <!--<div class="text"></div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash; 只读 &ndash;&gt;-->
-        <!--<div class="text_area_editor width_50">-->
-            <!--<div class="label">编辑器只读</div>-->
-            <!--<div id="test3">-->
-                <!--<div class="toolbar"></div>-->
-                <!--<div class="text"></div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash; 隐藏 &ndash;&gt;-->
-        <!--<div class="text_area_editor hidden">-->
-            <!--<div class="label">编辑器</div>-->
-            <!--<div id="test4">-->
-                <!--<div class="toolbar"></div>-->
-                <!--<div class="text"></div>-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 
 </div>
@@ -134,22 +127,11 @@
             'underline',  // 下划线
             'image',  // 插入图片
         ];
-        this[domId].customConfig.onfocus = function (e) {
-            // inputFocus(e)
-            setTimeout(()=>{
-                TextAreaEditor.setValue('test1',document.body.clientHeight);
-                // $(document.body).height(document.body.clientHeight);
-                var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
-                var documentheight = parseFloat($(document).height());
-                var bottomHeight = documentheight - totalheight;
-                $('.toolbar').css({'bottom':bottomHeight})
-            },200)
-
-            // $(".toolbar").css("position","static");
+        this[domId].customConfig.onfocus = function () {
+            $('#'+domId+' .toolbar').removeClass('hidden');
         }
-        this[domId].customConfig.onblur = function (e) {
-            // inputFocus(e)
-            // $(".toolbar").css("position","fixed");
+        this[domId].customConfig.onblur = function () {
+            $('#'+domId+' .toolbar').addClass('hidden');
         }
         this[domId].create()
     }
@@ -159,13 +141,13 @@
      * @param {string} value 需要赋的值
      */
     TextAreaEditor.setValue = function (domId, value) {
-        this[domId].txt.html('<p>'+value+'</p>');
+        this[domId].txt.html(value);
     }
     /**
      * @param {string} domId 数字输入框的domid
      */
     TextAreaEditor.getValue = function (domId) {
-        return this[domId].txt.text();
+        return this[domId].txt.html();
     }
     /**
      * 检测必填
@@ -222,32 +204,7 @@
         // TextAreaEditor.disable('test3');
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
-        TextAreaEditor.setValue('test1',document.body.clientHeight);
-        $(window).scroll(function () {
-            var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
-            var documentheight = parseFloat($(document).height());
-            var bottomHeight = documentheight - totalheight;
-            $('.toolbar').css({'bottom':bottomHeight});
-        })
     })
-    function inputFocus(e) {
-        var winobj = $(window),
-            scope = this,
-            agent = navigator.userAgent.toLowerCase();
-        setTimeout(function () {
-            if (agent.indexOf('safari') != -1 && agent.indexOf('mqqbrowser') == -1
-                && agent.indexOf('coast') == -1 && agent.indexOf('android') == -1
-                && agent.indexOf('linux') == -1 && agent.indexOf('firefox') == -1) {//safra浏览器
-                window.scrollTo(0, 1000000);//先滚动到最底部，再用scrollY得到当前的值，必须延迟 否则拿到的就是1000000
-                setTimeout(function(){
-                    window.scrollTo(0, window.scrollY - 45);//45像素 所有浏览器都是这么高
-                }, 50)
-            } else {//其他浏览器
-                window.scrollTo(0, 1000000);
-                // window.scrollTo(0, ++this.scrollNum);
-            }
-        }, 200);
-    }
 </script>
 </body>
 
