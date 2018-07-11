@@ -132,8 +132,10 @@
         ];
         this[domId].customConfig.onfocus = function (e) {
             // inputFocus(e)
-            alert(window.screen.availHeight)
-            alert( window.screen.height)
+            setTimeout(()=>{
+                this[domId].txt.html(window.screen.availHeight +'   '+window.screen.height)
+            },200)
+
             // $(".toolbar").css("position","static");
         }
         this[domId].customConfig.onblur = function (e) {
