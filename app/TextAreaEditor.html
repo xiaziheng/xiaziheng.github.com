@@ -32,11 +32,14 @@
             display: none;
         }
         .text_area_editor .toolbar{
-            position: fixed;
+            position: absolute;
             bottom:0;
             left: 0;
             background: #ccc;
             width: 100%;
+        }
+        .text_area_editor .toolbar i{
+            font-size: 25px;
         }
         .text_area_editor .text{
             height:100%;
@@ -136,7 +139,10 @@
             setTimeout(()=>{
                 TextAreaEditor.setValue('test1',document.body.clientHeight);
                 // $(document.body).height(document.body.clientHeight);
-                $('.toolbar').css({'bottom':height-document.body.clientHeight})
+                var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+                var documentheight = parseFloat($(document).height());
+                var bottomHeight = documentheight - totalheight;
+                $('.toolbar').css({'bottom':bottomHeight})
             },200)
 
             // $(".toolbar").css("position","static");
@@ -217,7 +223,12 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
         TextAreaEditor.setValue('test1',document.body.clientHeight);
-
+        $(window).scroll(function () {
+            var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+            var documentheight = parseFloat($(document).height());
+            var bottomHeight = documentheight - totalheight;
+            $('.toolbar').css({'bottom':bottomHeight});
+        })
     })
     function inputFocus(e) {
         var winobj = $(window),
