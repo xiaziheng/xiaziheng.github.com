@@ -133,7 +133,7 @@
         this[domId].customConfig.onfocus = function (e) {
             // inputFocus(e)
             setTimeout(()=>{
-                this[domId].txt.html(window.screen.availHeight +'   '+window.screen.height)
+                TextAreaEditor.setValue('test1',window.screen.availHeight +'   '+window.screen.height);
             },200)
 
             // $(".toolbar").css("position","static");
