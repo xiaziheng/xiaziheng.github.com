@@ -32,7 +32,6 @@
             display: none;
         }
         .text_area_editor .toolbar{
-            border:1px solid #000;
             position: fixed;
             top:0;
             left: 0;
@@ -51,9 +50,9 @@
             margin: 40px auto;
             height: 100%;
         }
-        html,body,.pc_form,.text_area_editor{
-            height: 100%;
-        }
+        /*html,body,.pc_form,.text_area_editor{*/
+            /*height: 100%;*/
+        /*}*/
         /* 宽度布局 */
         .width_100 {
             width: 100% !important;
@@ -131,9 +130,14 @@
             'underline',  // 下划线
             'image',  // 插入图片
         ];
-        this[domId].customConfig.onfocus = function (e) {
-            inputFocus(e)
-        }
+        // this[domId].customConfig.onfocus = function (e) {
+        //     // inputFocus(e)
+        //     $(".toolbar").css("position","static");
+        // }
+        // this[domId].customConfig.onblur = function (e) {
+        //     // inputFocus(e)
+        //     $(".toolbar").css("position","fixed");
+        // }
         this[domId].create()
     }
     /**
@@ -224,7 +228,17 @@
             }
         }, 200);
     }
+    var windheight = $(window).height();  /*未唤起键盘时当前窗口高度*/
 
+    $(window).resize(function(){
+        var docheight = $(window).height();/*唤起键盘时当前窗口高度*/
+        alert(docheight)
+        if(docheight < windheight){            /*当唤起键盘高度小于未唤起键盘高度时执行*/
+            $(".toolbar").css("position","static");
+        }else{
+            $(".toolbar").css("position","fixed");
+        }
+    });
 </script>
 </body>
 
