@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 页面公共的样式 -->
-    <link rel="stylesheet" href="./lib/wangEditor/wangEditor.css">
+    <link rel="stylesheet" href="./lib/wangEditor-mobile/wangEditor-mobile.css">
     <style type="text/css">
         * {
             margin: 0;
@@ -77,10 +77,9 @@
         <!-- 编辑 -->
         <div class="text_area_editor width_50">
             <div class="label">编辑器</div>
-            <div id="test1" class="editor">
-                <div class="toolbar"></div>
-                <div class="text"></div>
-            </div>
+            <textarea id="test1" style="width:100%;height:100%;">
+                <p>请输入内容...</p>
+            </textarea>
         </div>
         <!--<button onclick="clickValue()">获取内容</button> <button onclick="TextAreaEditor.clear('test1')">清空内容</button><button onclick="setValue('你好')">写入“你好”</button>-->
         <!-- 编辑-必填 -->
@@ -114,8 +113,9 @@
 </div>
 
 
-<script src="./lib/jquery.min.js"></script>
-<script src="./lib/wangEditor/wangEditor.js"></script>
+<script src="./lib/wangEditor-mobile/zepto.js"></script>
+<script src="./lib/wangEditor-mobile/zepto.touch.js"></script>
+<script src="./lib/wangEditor-mobile/wangEditor-mobile.js"></script>
 <script type="text/javascript">
     var TextAreaEditor = {};
     /**
@@ -124,17 +124,8 @@
      */
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
-        this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
-        this[domId].customConfig.menus = [
-            'bold',  // 粗体
-            'italic',  // 斜体
-            'underline',  // 下划线
-            'image',  // 插入图片
-        ];
-        this[domId].customConfig.onfocus = function (e) {
-            inputFocus(e)
-        }
-        this[domId].create()
+        this[domId] = new ___E(domId);
+        this[domId].init();
     }
     /**
      * 给数字输入框赋值
@@ -206,26 +197,24 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
     })
-    alert(document.documentElement.clientHeight);
-    function inputFocus(e) {
-        var winobj = $(window),
-            scope = this,
-            agent = navigator.userAgent.toLowerCase();
-        setTimeout(function () {
-            if (agent.indexOf('safari') != -1 && agent.indexOf('mqqbrowser') == -1
-                && agent.indexOf('coast') == -1 && agent.indexOf('android') == -1
-                && agent.indexOf('linux') == -1 && agent.indexOf('firefox') == -1) {//safra浏览器
-                window.scrollTo(0, 1000000);//先滚动到最底部，再用scrollY得到当前的值，必须延迟 否则拿到的就是1000000
-                setTimeout(function(){
-                    TextAreaEditor.setValue('test1',document.documentElement.clientHeight);
-                    window.scrollTo(0, window.scrollY - 45);//45像素 所有浏览器都是这么高
-                }, 100)
-            } else {//其他浏览器
-                window.scrollTo(0, 1000000);
-                // window.scrollTo(0, ++this.scrollNum);
-            }
-        }, 200);
-    }
+    // function inputFocus(e) {
+    //     var winobj = $(window),
+    //         scope = this,
+    //         agent = navigator.userAgent.toLowerCase();
+    //     setTimeout(function () {
+    //         if (agent.indexOf('safari') != -1 && agent.indexOf('mqqbrowser') == -1
+    //             && agent.indexOf('coast') == -1 && agent.indexOf('android') == -1
+    //             && agent.indexOf('linux') == -1 && agent.indexOf('firefox') == -1) {//safra浏览器
+    //             window.scrollTo(0, 1000000);//先滚动到最底部，再用scrollY得到当前的值，必须延迟 否则拿到的就是1000000
+    //             setTimeout(function(){
+    //                 window.scrollTo(0, window.scrollY - 45);//45像素 所有浏览器都是这么高
+    //             }, 100)
+    //         } else {//其他浏览器
+    //             window.scrollTo(0, 1000000);
+    //             // window.scrollTo(0, ++this.scrollNum);
+    //         }
+    //     }, 200);
+    // }
 
 </script>
 </body>
