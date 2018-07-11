@@ -33,7 +33,7 @@
         }
         .text_area_editor .toolbar{
             position: fixed;
-            top:0;
+            bottom:0;
             left: 0;
             background: #ccc;
             width: 100%;
@@ -121,6 +121,7 @@
      * 限制只能输入数字
      * @param {string} domId 数字输入框的domid
      */
+    var height =  document.body.clientHeight;
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
@@ -134,7 +135,8 @@
             // inputFocus(e)
             setTimeout(()=>{
                 TextAreaEditor.setValue('test1',document.body.clientHeight);
-                $(document.body).height(document.body.clientHeight)
+                // $(document.body).height(document.body.clientHeight);
+                $('.toolbar').css({'bottom':height-document.body.clientHeight})
             },200)
 
             // $(".toolbar").css("position","static");
@@ -214,6 +216,8 @@
         // TextAreaEditor.disable('test3');
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
+        TextAreaEditor.setValue('test1',document.body.clientHeight);
+
     })
     function inputFocus(e) {
         var winobj = $(window),
