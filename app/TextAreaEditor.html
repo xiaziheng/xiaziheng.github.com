@@ -125,6 +125,12 @@
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new ___E(domId);
+        ___E.config.menus = [
+            'bold',
+            'italic',  // 斜体
+            'underline',  // 下划线
+            'img'
+        ];
         this[domId].init();
     }
     /**
@@ -133,20 +139,20 @@
      * @param {string} value 需要赋的值
      */
     TextAreaEditor.setValue = function (domId, value) {
-        this[domId].txt.html('<p>'+value+'</p>');
+        this[domId].$txt.html('<p>'+value+'</p>');
     }
     /**
      * @param {string} domId 数字输入框的domid
      */
     TextAreaEditor.getValue = function (domId) {
-        return this[domId].txt.text();
+        return this[domId].$txt.text();
     }
     /**
      * 检测必填
      * @param {string} domId 数字输入框的domid
      */
     TextAreaEditor.checkRequired = function (domId) {
-        var text = this[domId].txt.text();
+        var text = this[domId].$txt.text();
         var _this = $('#'+domId);
         if (_this.attr("required")) {
             if (text.length == 0) {
@@ -180,7 +186,7 @@
      * @param {string} domId 数字输入框的domid
      */
     TextAreaEditor.clear = function (domId) {
-        this[domId].txt.clear()
+        this[domId].$tx.clear()
     }
 
    function clickValue(){
