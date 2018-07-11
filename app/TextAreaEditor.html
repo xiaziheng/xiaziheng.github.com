@@ -128,8 +128,11 @@
             'image',  // 插入图片
         ];
         this[domId].customConfig.onfocus = function () {
-            document.getElementById('test2').value=height-window.innerHeight;
-            $('.toolbar').css('bottom',height-window.innerHeight)
+            setTimeout(()=>{
+                document.getElementById('test2').value=height-window.innerHeight;
+                $('.toolbar').css('bottom',height-window.innerHeight)
+            },200)
+
         }
         this[domId].customConfig.onblur = function () {
             document.getElementById('test2').value=window.innerHeight
