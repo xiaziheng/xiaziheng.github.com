@@ -79,23 +79,23 @@
         <!-- 编辑 -->
         <div class="input_text_number width_50">
             <div class="label">数字</div>
-            <input type="text" placeholder="请输入" id="test1">
+            <input type="text" placeholder="请输入" >
         </div>
         <div class="input_text_number width_50">
             <div class="label">数字</div>
-            <input type="text" placeholder="请输入" id="test1">
+            <input type="text" placeholder="请输入">
         </div>
         <div class="input_text_number width_50">
             <div class="label">数字</div>
-            <input type="text" placeholder="请输入" id="test1">
+            <input type="text" placeholder="请输入">
         </div>
         <div class="input_text_number width_50">
             <div class="label">数字</div>
-            <input type="text" placeholder="请输入" id="test1">
+            <input type="text" placeholder="请输入" >
         </div>
         <div class="input_text_number width_50">
             <div class="label">数字</div>
-            <input type="text" placeholder="请输入" id="test1">
+            <input type="text" placeholder="请输入" id="test2">
         </div>
         <div class="text_area_editor width_100">
             <div class="label">编辑器</div>
@@ -117,7 +117,7 @@
      * 限制只能输入数字
      * @param {string} domId 数字输入框的domid
      */
-    var height =  document.body.clientHeight;
+    var height =  window.innerHeight;
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
@@ -128,10 +128,11 @@
             'image',  // 插入图片
         ];
         this[domId].customConfig.onfocus = function () {
-            $('#'+domId+' .toolbar').removeClass('hidden');
+            document.getElementById('test2').value=window.innerHeight;
+            $('.toolbar').css('bottom',height-window.innerHeight)
         }
         this[domId].customConfig.onblur = function () {
-            $('#'+domId+' .toolbar').addClass('hidden');
+            document.getElementById('test2').value=window.innerHeight
         }
         this[domId].create()
     }
