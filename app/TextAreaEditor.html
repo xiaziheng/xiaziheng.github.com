@@ -118,6 +118,7 @@
      * @param {string} domId 数字输入框的domid
      */
     var height =  window.innerHeight;
+    document.querySelector('.toolbar').scrollIntoView();
     TextAreaEditor.init = function (domId) {
         var E = window.wangEditor;
         this[domId] = new E('#'+domId+' .toolbar','#'+domId+' .text');
