@@ -211,12 +211,12 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
         // 通过键盘弹起事件获取
-        window.on('keyboardup', function (e) {
+        $(window).on('keyboardup', function (e) {
          document.getElementById('test3').value=e.height;
 
         })
 // 键盘收起事件
-        window.on('keyboarddown', function (e) {
+        $(window).on('keyboarddown', function (e) {
             console.log(e.height) // 0
             document.getElementById('test4').value=e.height;
         })
