@@ -212,7 +212,7 @@
         // TextAreaEditor.checkRequired('test2');
         // 通过键盘弹起事件获取
         console.log($.os)
-        $('#test1').on($.os.ios?'tap' : 'click', function() {
+        $('#test1').on('tap', function() {
             setTimeout(()=>{
                 initHeight = window.innerHeight;
                 document.getElementById('test2').value=height-initHeight;
