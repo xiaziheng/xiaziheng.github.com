@@ -1,0 +1,128 @@
+#profile_block{
+        display: none;
+}
+#navList a:link {
+        text-shadow: none;
+}
+.side-node {
+        text-align: center;
+}
+.side-node ul li {
+        font-weight: bolder;
+}
+#sidebar_search{
+       display: none;
+}
+#sidebar_toptags{
+       display: none;
+}
+#sidebar_shortcut{
+       display: none;
+}
+#div_digg .buryit {
+       display: none;
+}
+#sidebar_postcategory ul li a {
+       font-weight: bolder;
+}
+#sidebar_postcategory ul li a:hover {
+       font-size: 18px;
+}
+#ad_t2 {
+        display: none;
+}
+#ad_c1 {
+        display: none;
+}
+#under_post_news {
+        display: none;
+}
+#ad_c2 {
+        display: none;
+}
+#under_post_kb {
+        display: none;
+}
+#cnblogs_c1, #cnblogs_c2 {
+        display: none;
+}
+.blogStats {
+       display: none;
+}
+#span_refresh_tips:after {
+       content: '分享知识，充实你我。';
+       color: white;
+       font-size: 25px;
+}
+#comment_nav {
+        width:100%;
+       height:50px;
+       background: #2175bc;
+}
+#comment_nav a {
+      font-size: 16px;
+      color: #fff;
+      text-decoration:none;
+      margin-right: 16px;
+}
+#comment_nav a:hover {
+      cursor: pointer;
+      color: black;
+}
+#blogCalendar .CalTitle td {
+      font-weight: bold;
+}
+#blogCalendar tr .CalTodayDay{
+     font-weight: bolder;
+     color: blue;
+}
+
+canvas {
+    z-index: 1!important;
+}
+#main {
+    z-index: 100;
+}
+@keyframes mymove
+{
+    0%   {bottom:-40px}
+    50%  {bottom: 0px}
+    100% {bottom: 40px}
+}
+#returnTop {
+    position: fixed;
+    z-index: 100;
+    width: 80px;
+    right: 4%;
+    bottom: 40px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: white;
+    border-radius: 3px;
+    animation: mymove 4s none ease;
+}
+#navigator {
+    position: relative;
+    z-index: 100;
+    clear: both;
+    height: 25px;
+    border-right: none;
+    border-left: none;
+    background-color: #2175bc;
+    background-position: right center;
+}
+#returnTop:hover{
+    background: #2175bc;
+}
+#returnTop a {
+    color: #2175bc;
+    font-size: 30px;
+    text-decoration: none;
+}
+#returnTop a:hover{
+    color: white;
+}
+.topicListFooter {
+    text-align: center!important;
+}
