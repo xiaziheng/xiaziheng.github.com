@@ -128,16 +128,16 @@
             'image',  // 插入图片
         ];
         this[domId].customConfig.onfocus = function () {
-            setTimeout(()=>{
-                document.getElementById('test2').value=height-window.innerHeight;
-
-                // $('.toolbar').css('bottom',height-window.innerHeight)
-                document.querySelector('.toolbar').scrollIntoView();
-            },1000)
+            // setTimeout(()=>{
+            //     document.getElementById('test2').value=height-window.innerHeight;
+            //
+            //     // $('.toolbar').css('bottom',height-window.innerHeight)
+            //     document.querySelector('.toolbar').scrollIntoView();
+            // },1000)
 
         }
         this[domId].customConfig.onblur = function () {
-            document.getElementById('test2').value=window.innerHeight
+            // document.getElementById('test2').value=window.innerHeight
         }
         this[domId].create()
     }
@@ -211,15 +211,13 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
         // 通过键盘弹起事件获取
-        $(window).on('keyboardup', function (e) {
-         document.getElementById('test3').value=e.height;
+        $('#fake-input').on($.os.ios?'tap' : 'click', function() {
+            setTimeout(()=>{
+                initHeight = window.innerHeight;
+                document.getElementById('test2').value=height-initHeight;
+            },500)
 
-        })
-// 键盘收起事件
-        $(window).on('keyboarddown', function (e) {
-            console.log(e.height) // 0
-            document.getElementById('test4').value=e.height;
-        })
+        });
     })
 </script>
 </body>
