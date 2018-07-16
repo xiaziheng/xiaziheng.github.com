@@ -211,7 +211,8 @@
         // TextAreaEditor.init("test4");
         // TextAreaEditor.checkRequired('test2');
         // 通过键盘弹起事件获取
-        $('#fake-input').on($.os.ios?'tap' : 'click', function() {
+        console.log($.os)
+        $('#test1').on($.os.ios?'tap' : 'click', function() {
             setTimeout(()=>{
                 initHeight = window.innerHeight;
                 document.getElementById('test2').value=height-initHeight;
