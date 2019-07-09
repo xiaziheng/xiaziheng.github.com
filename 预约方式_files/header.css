@@ -1,0 +1,65 @@
+.service {
+	width:140px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	height:30px;
+	font-size:12px;
+	color:#666666;
+}
+.service li {
+	float: left;
+	display: block;
+	background: none;
+	position: relative;
+	z-index: 999;
+	margin: 0;
+}
+.service li a {
+	display: block;
+	padding: 0;
+	line-height: 30px;
+	text-decoration: none;
+	zoom: 1;
+	width:70px;
+	text-align:center;
+	
+}
+.service li a:hover, .service li a.hov {
+	background-color: #e8e8e8;
+	color: #f00;
+}
+/* --------------subnav------------- */
+.service ul {
+	position: absolute;
+	left: 0px;
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color:#e8e8e8;
+	
+	font-size:12px;
+	
+}
+.service ul li {
+	width: 70px;
+	float: left;
+
+	text-align: center;
+}
+
+
+.service ul li:hover {
+	background:#bababa;
+}
+
+.service ul a:hover {
+	text-decoration: none;
+
+	background: transparent;
+	color: #000;
+}
+.service ul {
+	margin: 0 0 0 0px;
+}			

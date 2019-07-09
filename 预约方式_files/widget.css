@@ -1,0 +1,256 @@
+@charset "utf-8";
+/* CSS Document */
+
+	
+/*-----------------统一栏目样式--------------*/
+.green_widget-tit{
+	background:url(../images/nvl_bg2.png);
+	<!--background-position:100% -250px;-->
+	height:36px;
+	padding-right:0px;
+	}
+.green_widget-tit_index{
+	background:url(../images/tit_bg.png);
+	background-position:100% -100px;
+	height:37px;
+	line-height: 36px;
+	padding-left: 10px;
+	margin-top: 0px;
+	padding-top: 0px;
+	
+	}
+.green_widget-tit .child{
+	<!--background:url(../images/nvl_bg2.png);-->
+	background-position:0 -200px;
+	height:36px;
+	padding-left:10px;
+	display: block;
+	}
+.green_widget-tit_index .tit-text{
+	font-family:'microsoft yahei';
+	color:#666666;
+	font-weight:bold;
+	font-size:12px;
+	line-height:36px;
+	}		
+.green_widget-tit .tit-text{
+	font-family:'microsoft yahei';
+	color:#666666;
+	font-weight:bold;
+	font-size:12px;
+	line-height:36px;
+	}	
+.green_widget-tit .tit-more{
+	color:#fff;/*栏目标题文字*/
+	font-size:12px;
+	float:right;
+	height:18px;
+	width:57px;
+	margin-top:10px;
+	display:block;
+	float:right;
+	background:url(../images/more.gif) no-repeat;
+	white-space:nowrap;
+	}
+.green_widget-tit .tit-more a{
+	color:#fff;/*栏目更多*/
+	}		
+/*------------以上为单色绿皮肤--------------	*/
+.greengray_widget-tit{
+	background:url(../images/tit_bg.png);
+	background-position:100% -150px;
+	height:37px;
+	padding-right:10px;
+	}
+.greengray_widget-tit2{
+	background:url(../images/tit_bg.png);
+	background-position:100% -100px;
+	height:27px;
+	padding-top: 10px;
+	padding-left:10px;
+	font-weight:700
+	}
+.greengray_widget-tit .child{
+	background:url(../images/tit_bg.png);
+	background-position:0 -100px;
+	height:37px;
+	padding-left:32px;
+	}
+	
+.greengray_widget-tit .tit-text{
+	color:#000;
+	font-weight:bold;
+	font-size:12px;
+	line-height:36px;
+	}	
+.greengray_widget-tit .tit-more{
+	color:#777777;/*栏目标题文字*/
+	font-size:12px;
+	float:right;
+	height:18px;
+	width:47px;
+	margin-top:10px;
+	display:block;
+	float:right;
+
+	}
+.greengray_widget-tit .tit-more a{
+	color:#f9f9f9;/*栏目更多*/
+	}		
+/*------------以上为绿色和浅灰搭配皮肤--------------	*/
+
+.gray_widget-tit{
+	background:url(../images/tit_bg.png);
+	background-position:100% -350px;
+	height:36px;
+	padding-right:10px;
+	}
+.gray_widget-tit .child{
+	background:url(../images/tit_bg.png);
+	background-position:0 -300px;
+	height:36px;
+	padding-left:10px;
+	}	
+.gray_widget-tit .tit-text{
+	color:#000;
+	font-weight:bold;
+	font-size:12px;
+	line-height:36px;
+	}	
+.gray_widget-tit .tit-more{
+	color:#000;/*栏目标题文字*/
+	font-size:12px;
+	float:right;
+	height:18px;
+	width:37px;
+	margin-top:10px;
+	display:block;
+	float:right;
+	background:url(../images/more.gif) no-repeat;
+	white-space:nowrap;
+	}
+.gray_widget-tit .tit-more a{
+	color:#000;/*栏目更多*/
+	}
+/*------------以上为单色灰皮肤--------------	*/	
+.gray2_widget-tit{
+	background:url(../images/tit_bg.png);
+	background-position:100% -550px;
+	height:50px;
+	padding-right:10px;
+	}
+.gray2_widget-tit .child{
+	background:url(../images/tit_bg.png);
+	background-position:0 -500px;
+	height:50px;
+	padding-left:10px;
+	}	
+.gray2_widget-tit .tit-text{
+	color:#000;
+	font-weight:bold;
+	font-size:12px;
+	line-height:50px;
+	}	
+.gray2_widget-tit .tit-more{
+	color:#000;/*栏目标题文字*/
+	font-size:12px;
+	float:right;
+	height:18px;
+	width:37px;
+	margin-top:10px;
+	display:block;
+	float:right;
+	background:url(../images/more.gif) no-repeat;
+	white-space:nowrap;
+	}
+.gray2_widget-tit .tit-more a{
+	color:#000;/*栏目更多*/
+	}
+	
+	
+.gree_widget-tit{
+	background:url(../images/tit_bg.png);
+	background-position:100% -650px;
+	padding-right:10px;
+	height:43px;
+	}
+.gree_widget-tit .child{
+	background:url(../images/tit_bg.png);
+	background-position:0 -600px;
+	padding-left:10px;
+	height:43px;
+	}
+	
+	
+.gree_widget-tit .tit-text{
+	color:#000;
+	font-weight:bold;
+	font-size:12px;
+	line-height:42px;
+	padding-left:53px;
+
+	}	
+/*------------以上为单色灰预约用皮肤--------------	*/		
+.icon_widget-tit{
+	background:url(../images/tit_bg.png);
+	background-position:100% -450px;
+	height:36px;
+	padding-right:10px;
+	}
+.icon_widget-tit .child{
+	background:url(../images/tit_bg.png);
+	background-position:0 -400px;
+	height:36px;
+	padding-left:40px;
+	}	
+.icon_widget-tit .tit-text{
+	color:#000;
+	font-weight:bold;
+	font-size:12px;
+	line-height:44px;
+	}	
+.icon_widget-tit .tit-more{
+	color:#000;/*栏目标题文字*/
+	font-size:12px;
+	float:right;
+	height:18px;
+	width:37px;
+	margin-top:10px;
+	display:block;
+	float:right;
+	background:url(../images/more.gif) no-repeat;
+	white-space:nowrap;
+	}
+.icon_widget-tit .tit-more a{
+	color:#000;/*栏目更多*/
+	}	
+	/*小标题栏四号（14）：*/
+.icon_widget-tit_14{
+	font-family:'microsoft yahei';
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	color:#666666;
+	line-height:36px;
+	}		
+/*------------以上为带绿色圆圈的灰色皮肤--------------	*/	
+	
+		
+
+.widget-body{
+	border:1px solid #d8d8d8; border-top:none;
+	background:#fff;
+	}														
+.widget-content{
+	padding:0px 1px;
+	background:#fff;
+	}
+	
+.widget-padding{padding-left:0px;display:block}
+.widget-padding-none{padding:0;display:block}	
+.widget-list-icon {background:url(../images/newstit.gif) left 9px no-repeat;}/*新闻标题前缀图标*/	
+.widget-list-icon2 {background:url(../images/greenponit.gif) left 9px no-repeat;}
+.widget-lineheight {line-height:27px;height:27px;_height:27px;}/*新闻标题行高*/	
+.widget-title-nowrap{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;display:block;zoom:1;font-size:12px;padding-left: 5px;}	/*新闻标题不换行*/
+
+

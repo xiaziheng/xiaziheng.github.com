@@ -1,0 +1,430 @@
+$.fn.extend({
+	allenMenu: function() {
+		$(this).children('ul').children('li').hover(
+			function() {
+				if(!$(this).children('ul').hasClass('focus')) {
+					$(this).addClass('focus');
+					$(this).children('ul:first').stop(true, true).animate({ height:'show' }, 'fast');
+				}
+			},
+			function() {
+				$(this).removeClass('focus');
+				$(this).children('ul:first').stop(true, true).animate({ height:'hide', opacity:'hide' }, 'slow');
+			}
+		);
+		$(this).children('ul').children('li').children('ul').hover(
+			function() {
+				$(this).addClass('focus');
+			},
+			function() {
+				$(this).removeClass('focus');
+			}
+		);
+	}
+});
+
+//验证email  
+$.fn.extend({
+	   checkEmail:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "Email 格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+//	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+//	      obj.html("");
+	      return  true ; 
+	   }
+	});
+//验证手机号码
+$.fn.extend({
+	   checkMobilePhone:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "手机号码 格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^[0-9]{11}$/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	      obj.html("");
+	      return  true ; 
+	   }
+	});
+//验证电话号码
+$.fn.extend({
+	   checkHouseTel:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "电话号码格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^((\d{0,4}-\d{7,8})|(\d{7,8})|(1[3584]\d{9}))$/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	    	  obj.html("");
+	      return  true ; 
+	   }
+	});
+
+
+
+//身份证号码
+$.fn.extend({
+	   checkCardNo:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "身份证号码格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this); 
+	      var _email = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	    	  obj.html("");
+	      return  true ; 
+	   }
+	});
+
+//姓名
+$.fn.extend({
+	   checkName:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "姓名格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^([(\u4e00-\u9fa5)]|[A-Za-z_])([(\u4e00-\u9fa5)]|[A-Za-z0-9_]){0,19}$/;  //匹配格式(1-20个字符,不能以数字开头,内容可以使数字字母下划线)
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	     // $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	      obj.html("");
+	      return  true ; 
+	   }
+	});
+
+//登陆用户名
+$.fn.extend({
+	   checkLoginName:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "用户名格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^[A-Za-z_]([A-Za-z0-9_])+$/;  //匹配格式(1-20个字符,不能以数字开头,内容可以使数字字母下划线)
+	      var email_val = $this.val();
+	      if(!_email.test(email_val)){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	    //  $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	      obj.html("");
+	      return  true ; 
+	   }
+	});
+
+
+
+//昵称
+$.fn.extend({
+	   checkNickName:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "昵称格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^([(\u4e00-\u9fa5)]|[A-Za-z_])([(\u4e00-\u9fa5)]|[A-Za-z0-9_]){0,19}$/;  //匹配格式(不含特殊字符)
+	      var email_val = $this.val();
+	     
+	      if(!_email.test(email_val) ){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	    
+	      if(obj)
+	    	  obj.html("");
+	      return  true ; 
+	   }
+	});
+//邮编
+$.fn.extend({
+	   checkZipCode:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "邮政编码格式错误 !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^[1-9][0-9]{5}$/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val) ){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	      obj.html("");
+	      return  true ; 
+	   }
+	});
+//图片格式 
+$.fn.extend({
+	   checkImg:function(flag,obj) {
+		   
+		   if(typeof(flag) ==  undefined){ //如果 没则默认true 当前 验证的对象获取焦点
+			   flag =   true  ; 
+		   }
+		   if(typeof(flag) ==  "object"){  //如果只传入一个参数 并且是对象 
+			   obj  = flag ; 
+		   }
+		   if(typeof(flag) ==  "string"){  //如果只传入一个参数 并且是string
+			   obj  = $(flag) ; 
+		   }
+		   if(typeof(obj) ==  "string"){  //如果只传入两个参数 并且是string
+			   obj  = $(obj) ; 
+		   }
+	      var msg = {
+	    		  correct: "",
+	    		  error: "图片格式错误(支持gif,jpeg,jpg,png) !"
+	         //显示内容
+	      };
+	      
+	      var $this = $(this);         
+	      var _email = /^.*\.((gif)|(jpeg)|(jpg)|(png))$/;  //匹配格式
+	      var email_val = $this.val();
+	      if(!_email.test(email_val) ){
+	    	  if(obj){
+	    		  obj.html(msg.error);
+	    	  }else {
+	    		   alert(msg.error);
+	    	  }
+	      if(flag)
+	     // $this.focus();
+
+	      $(this).css("border","1px solid red");  //如果 不合法则改变边框样式 为红色
+	     // $(':text').not(this).css('border','1px solid red');
+	      return  false ; 
+	   } 
+	      $(this).css("border",""); //合法则去除样式
+	      if(obj)
+	      obj.html("");
+	      return  true ; 
+	   }
+	});

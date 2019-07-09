@@ -1,0 +1,177 @@
+var PublicLib = {
+	createTag : function(oParentNode, sTagType, id, sClassName, sStyle, sTitle) {
+		var $tag = $('<' + sTagType + ' style=' + sStyle + '/>').addClass(sClassName).attr('id', id);
+		$(oParentNode).before($tag);
+		return $tag[0];
+	},
+	// get 时间戳
+	getTimestamp : function() {
+		return escape(new Date());
+	},
+
+	autoSelectRadio : function(nl, n) {
+		if (typeof(nl) != "object") {
+			nl = $n(nl);
+		}
+		if (typeof(n) == "number") {
+			nl[n].checked = true;
+		} else {
+			for (var i = 0; i < nl.length; i++) {
+				if (nl[i].value == n) {
+					nl[i].checked = true;
+					return;
+				}
+			}
+		}
+	},
+	autoSelectCheckBox : function(nl, a) {
+		if (a == "") {
+			return;
+		}
+		a = a.split(",");
+		if (typeof(nl) != "object") {
+			nl = $n(nl);
+		}
+		if (typeof(n) == "number") {
+			nl[n].checked = true;
+		} else {
+			var j = 0;
+			for (var i = 0; i < nl.length; i++) {
+				for (j = 0; j < a.length; j++) {
+					if (nl[i].value == a[j]) {
+						nl[i].checked = true;
+					}
+				}
+			}
+		}
+	},
+	autoSelectItem : function(o, v, blnMulti) {
+		if (!blnMulti) {
+			for (var i = 0; i < o.length; i++) {
+				if (o[i].value == v) {
+					o[i].selected = true;
+					if (!blnMulti) {
+						break;
+					}
+				}
+			}
+		} else {
+			v = v.split(",");
+			for (var i = 0; i < o.length; i++) {
+				for (var j = 0; j < v.length; j++) {
+					if (o[i].value == v[j]) {
+						o[i].selected = true;
+					}
+				}
+			}
+
+		}
+	},
+	fillSelect : function(a, iVIndex, iTIndex, o, isInit, isMulti, iHeight) {
+		var Option = null;
+		if (isInit) {
+			o.length = 0;
+		}
+		for (var i = 0; i < a.length; i++) {
+			if (typeof(a[i][2]) != "ok") {
+				Option = document.createElement("OPTION");
+				Option.value = a[i][iVIndex];
+				Option.text = a[i][iTIndex];
+				o.options.add(Option);
+			} else {
+				Option = document.createElement("optgroup");
+				Option.label = a[i][iTIndex];
+				o.appendChild(Option);
+			}
+		}
+		if ((typeof(isMulti) != "undefined") && (isMulti)) {
+			o.size = (o.length > iHeight) ? iHeight : o.length;
+			o.multiple = "multiple";
+		}
+	},
+	getExpDate : function(days, hours, minutes) {
+		var expDate = new Date();
+		if (typeof(days) == "number" && typeof(hours) == "number" && typeof(hours) == "number") {
+			expDate.setDate(expDate.getDate() + parseInt(days));
+			expDate.setHours(expDate.getHours() + parseInt(hours));
+			expDate.setMinutes(expDate.getMinutes() + parseInt(minutes));
+			return expDate.toGMTString();
+		}
+	},
+	getCookieVal : function(offset) {
+		var endstr = document.cookie.indexOf(";", offset);
+		if (endstr == -1) {
+			endstr = document.cookie.length;
+		}
+		return unescape(document.cookie.substring(offset, endstr));
+	},
+	getCookie : function(name) {
+		var arg = name + "=";
+		var alen = arg.length;
+		var clen = document.cookie.length;
+		var i = 0;
+		while (i < clen) {
+			var j = i + alen;
+			if (document.cookie.substring(i, j) == arg) {
+				return this.getCookieVal(j);
+			}
+			i = document.cookie.indexOf(" ", i) + 1;
+			if (i == 0)
+				break;
+		}
+		return;
+	},
+	setCookie : function(name, value, expires, path, domain, secure) {
+		document.cookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires : "")
+				+ ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "")
+				+ ((secure) ? "; secure" : "");
+	},
+	deleteCookie : function(name, path, domain) {
+		if (this.getCookie(name)) {
+			document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "")
+					+ "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+		}
+	},
+	formatNumber : function(num, decplaces) {
+		num = parseFloat(num);
+		if (!isNaN(num)) {
+			var str = "" + Math.round(eval(num) * Math.pow(10, decplaces));
+			if (str.indexOf("e") != -1) {
+				return "Out of Range";
+			}
+			while (str.length <= decplaces) {
+				str = "0" + str;
+			}
+			var decpoint = str.length - decplaces;
+			str = (str.substring(0, decpoint) + "." + str.substring(decpoint, str.length)).split(".");
+			return str[0] + "." + (str[1].substr(0, 2));
+		} else {
+			return "NaN";
+		}
+	},
+	mul : function(n1, n2) {
+		var m = 0, s1 = n1.toString(), s2 = n2.toString();
+		try {
+			m += s1.split(".")[1].length
+		} catch (e) {
+		}
+		try {
+			m += s2.split(".")[1].length
+		} catch (e) {
+		}
+		return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m)
+	},
+	getNodeValue : function(n) {
+		return n.hasChildNodes() ? n.firstChild.nodeValue : "";
+	},
+	skipToURL : function(url, classname) {
+		window.document.body.innerHTML = "<div class='" + (classname == undefined ? "Skiping" : classname)
+				+ "'>正在跳转...</div>";
+		location.href = url;
+	},
+	unSelect : function(nl) {
+		for (var i = 0; i < nl.length; i++) {
+			nl[i].checked = !nl[i].checked;
+		}
+	}
+}

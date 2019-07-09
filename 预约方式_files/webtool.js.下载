@@ -1,0 +1,67 @@
+
+function orderSearch()
+{
+	var s='';
+	  $('input[name="srcDB"]:checked').each(function(){
+	    s+=$(this).val()+',';
+	  }); 
+	  
+	  alert(s);
+	  
+	  var s1='';
+	  $('input[name="tables"]:checked').each(function(){
+		    s1+=$(this).val()+',';
+		  }); 
+		  
+	  alert(s1);
+	  var p = $("#ptable");
+	  p.attr("value",s+"$#"+s1);
+	  
+	  
+	var o = $("#orderform");
+	o.submit();
+}
+
+function doReset()
+{
+	var o = $("#useraccount");
+	o.attr("value","");
+	
+	var o = $("#password");
+	o.attr("value","");		
+}
+
+
+function doLogin()
+{
+	alert("doLogin");
+	
+	var userid = $("#useraccount").val();
+
+	var pwd = $("#password").val();
+	
+    if (isNullOrEmpty(userid)) {
+        alert("用户不能为空值");
+        return;
+    }
+    if (isNullOrEmpty(pwd)) {
+        alert("密码不能为空值");
+        return;
+    }
+    
+	var o = $("#loginFrm");
+	o.submit();
+}
+
+
+isNullOrEmpty = function (value) {
+    if (value == undefined)
+        return true;
+    if (value == null)
+        return true;
+    if (typeof value == "string") {
+        if (value == "")
+            return true;
+    }
+    return false;
+};

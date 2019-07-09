@@ -1,0 +1,58 @@
+/** html5 发送消息，解决ie10下js不能修改window.name而导致的无法传送数据问题 */
+var init = function() {
+	if (window.postMessage) {
+		addEvent(window, "message", messageHanlder)
+	}
+};
+function addEvent(sNode, sEventType, oFunc) {
+	var oElement = sNode;
+	if ((typeof oFunc).toLowerCase() != "function") {
+		return;
+	}
+	if (oElement.attachEvent) {
+		oElement.attachEvent('on' + sEventType, oFunc);
+	} else if (oElement.addEventListener) {
+		oElement.addEventListener(sEventType, oFunc, false);
+	} else {
+		oElement['on' + sEventType] = oFunc;
+	}
+	return true;
+}
+var messageHanlder = function(oEvt) {
+	oEvt = oEvt || window.event;
+	var data = oEvt.data;
+	callback && callback(data);
+};
+function callback(d) {
+	var data = eval("(" + d + ")");
+	var iframe = document.getElementsByTagName("iframe")[0];
+	var newIframe = document.createElement('iframe');
+	iframe.parentNode.replaceChild(newIframe, iframe);
+	newIframe.setAttribute("width", iframe.getAttribute('width'));
+	newIframe.setAttribute("height", iframe.getAttribute('height'));
+	newIframe.setAttribute("frameborder", iframe.getAttribute('frameborder'));
+	newIframe.setAttribute("scrolling", iframe.getAttribute('scrolling'));
+	newIframe.setAttribute("marginheight", iframe.getAttribute('marginheight'));
+	newIframe.setAttribute("marginwidth", iframe.getAttribute('marginwidth'));
+	newIframe.setAttribute("id", iframe.getAttribute('id'));
+	newIframe.setAttribute("name", iframe.getAttribute('name'));
+	newIframe.setAttribute("src", data['to']);
+	var comp = false;
+	if (newIframe.attachEvent) {
+		newIframe.attachEvent("onload", function() {
+					comp = true;
+				});
+	} else {
+		newIframe.onload = function() {
+			comp = true;
+		};
+	}
+	var timeid = window.setInterval(function() {
+				if (comp) {
+					window.clearInterval(timeid);
+					window.frames[0].postMessage(data['json'], "*")
+				}
+			}, 1);
+}
+init();
+/** 发送消息结束 */

@@ -1,0 +1,99 @@
+/** 
+* 浮动DIV定时显示提示信息,如操作成功, 失败等 
+* @param string tips (提示的内容) 
+* @param int height 显示的信息距离浏览器顶部的高度 
+* @param int time 显示的时间(按秒算), time > 0 
+* @sample <a href="javascript:void(0);" onclick="showTips( '操作成功', 100, 3 );">点击</a> 
+* @sample 上面代码表示点击后显示操作成功3秒钟, 距离顶部100px 
+* @copyright ZhouHr 2010-08-27 
+*/ 
+function showTips( tips, time,xx,yy ){ 
+	fadeout();
+	var mousePos = mouseCoords(); 
+	var tipsDiv = '<div id="tipsId" class="tipsClass" onclick="fadeout()" >' + tips + '</div>'; 
+	var x=mousePos.x-150;
+	var y=mousePos.y-127;
+	if(xx)x=xx;
+	if(yy)y=yy;
+	if(y<160){
+		y=160;
+	}
+	$( 'body' ).append( tipsDiv ); 
+	$( '#tipsId' ).css({ 
+	'top' : y + 'px', 
+	'left' :x +'px' 
+	}).show(); 
+	if(time && time>0){
+	setTimeout( function(){$( 'div.tipsClass' ).remove();}, ( time * 1000 ) );
+	}
+}
+/** 
+* 浮动DIV定时显示提示信息,如操作成功, 失败等 
+* @param string tips (提示的内容) 
+* @param int height 显示的信息距离浏览器顶部的高度 
+* @param int time 显示的时间(按秒算), time > 0 
+* @param array arrayxy xy的偏移量数组 
+* 
+* @sample <a href="javascript:void(0);" onclick="showTips( '操作成功', 100,'txt' );">点击</a> 
+* @sample 上面代码表示点击后显示操作成功3秒钟, 距离id="txt" 
+* @copyright peng 2014-1-24 
+*/ 
+function showTipsBySelector( tips, time,selector,arrayxy ){ 
+	fadeout();
+	
+	if( $(selector).offset() == null)
+		{
+		return ;
+		}
+	var left = $(selector).offset().left;//元素相当于窗口的左边的偏移量
+	var top =  $(selector).offset().top;//元素相对于窗口的上边的偏移量
+	var tipsDiv = '<div id="tipsId" class="tipsClass" onclick="fadeout()" >' + tips + '</div>'; 
+	var x=left;
+	var y=top-127;
+	if(arrayxy[0]){
+		x=x+arrayxy[0];
+	}
+	if(arrayxy[1]){
+		y=y+arrayxy[1];
+	}
+	if(y<160){
+		y=160;
+	}
+	$( 'body' ).append( tipsDiv ); 
+	$( '#tipsId' ).css({ 
+	'top' : y + 'px', 
+	'left' :x +'px' 
+	}).show(); 
+	if(time && time>0){
+	setTimeout( function(){$( 'div.tipsClass' ).remove();}, ( time * 1000 ) );
+	}
+}
+/**
+ * 获取x,y坐标
+ */
+function mouseCoords(ev) 
+{ 
+	ev= ev || window.event; 
+	if(ev){
+		if(ev.pageX || ev.pageY){ 
+			return {x:ev.pageX, y:ev.pageY}; 
+		}else if (ev.srcElement){
+			var obj = ev.srcElement;
+			return {x:$(obj).offset().left+20, y:$(obj).offset().top-120}; 
+		}else{ 
+			return {x:ev.screenX ,y:ev.clientY + document.body.scrollTop - document.body.clientTop}; 
+		}
+	}else {
+		return { 
+			x:document.body.scrollWidth/2 , 
+			y:(document.body.scrollHeight-document.body.scrollTop)/2 
+		}; 
+	}
+} 
+/***
+ * 隐藏
+ */
+ function fadeout(){
+	$( 'div.tipsClass' ).remove();
+}
+ 

@@ -1,0 +1,363 @@
+@charset "utf-8";
+/* CSS Document */
+body { 
+	font-family:"微软雅黑","宋体"; 
+	font-size:12px; 
+	margin:0;
+	padding:0;
+	background-color:#fff;
+	background:url(../images/body_bg.png) repeat-x;
+}
+td {
+	vertical-align:top
+	}
+ul,li{
+	list-style:none;
+	padding:0;margin:0}
+img {
+	border:0;
+}
+
+a:link {
+	color:#666666;
+	text-decoration:none;
+	cursor:pointer;
+}
+a:active {
+	color:#000000;
+	text-decoration:none;
+}
+a:visited {
+	color:#000000;
+	text-decoration:none;
+}
+a:hover {
+	color:#ff0000;
+	text-decoration:none;
+}
+
+
+.clear {
+	clear:both;
+}
+/*------------------------------------头部---------------------------------*/
+
+.top {
+	background:url(../images/banner/top_bg.png) repeat-x;
+	height:30px;
+	}
+.top_con {
+	width:980px;
+	text-align:right;
+	margin:0 auto;
+	}
+.light_color{
+	color:#666666;
+	}	
+.light_color a{
+	color:#666666;
+	}
+.light_color a:hover{
+	color:#ff0000;
+	}
+
+.banner {
+	height:90px;
+	width:980px;
+	margin:0 auto;
+	background:url(../images/banner.jpg) no-repeat;
+	}
+	
+.banner_ser{
+	float:right;
+	padding-top:30px;
+	}	
+.banner input {
+	background:url(../images/serinput_bg.jpg) no-repeat;
+	border:0;
+	height:30px;
+	width:270px;
+	vertical-align:top
+	}						
+		
+.nav {
+	background:url(../images/nvl_bg2.png) repeat-x;
+	height:43px;
+	
+	}
+.nav ul {
+	width:980px;
+	text-align:left;
+	margin:0 auto;
+	}	
+	
+.nav ul li {
+	float:left;
+	line-height:43px;
+	padding-right:40px;
+	}
+.nav ul li a{
+	display:block;
+	height:43px;
+	color:#fff;
+	font-weight:bold;
+	font-size:15px;
+	padding-left:40px;
+	}
+.nav ul li a:hover {
+	text-decoration:underline;
+}	
+.nav ul li.cur{	
+	background:url(../images/tit_bg.png);
+	background-position:100% -50px;
+	padding-right:40px;
+	}
+.nav ul li.cur  a{
+	background:url(../images/tit_bg.png);
+	background-position:0 0;
+	padding-left:40px;
+	}	
+	
+/*-----------------------------底部-----------------------	*/
+.bottom{
+	background:url(../images/bottom_bg.jpg) repeat-x;
+	height:140px;
+	margin-top:20px;
+	}
+.bottom_con{
+	width:980px;
+	margin:0 auto;
+	}		
+.bottom dl{float:left;width:150px;height:auto; min-height:134px;_height:134px;padding:10px 20px;background:url(../images/foot_line.gif) no-repeat right center;}
+.bottom dl.bgnone{background:none;}
+.bottom dl dt{font:bold 14px/30px "宋体";color:#297929;display:block;margin-bottom:6px;background:url(../images/foothelp_group.png) no-repeat;text-indent:35px;}
+.bottom dl dt.ico1{ background-position:5px 0;}
+.bottom dl dt.ico2{ background-position:0 -39px;}
+.bottom dl dt.ico3{ background-position:0 -79px;}
+.bottom dl dt.ico4{ background-position:0 -162px;}
+.bottom dl dt.ico5{ background-position:0 -120px;}
+.bottom dl dd{text-indent:45px;line-height:20px; font-size:12px;padding:0; margin:0}
+.bottom dl dd a{width:100%;display:block;background:url(../images/ico_group.gif) no-repeat 35px 6px;}
+	
+/*------------------------------------主内容---------------------------------*/	
+.book_con{
+	width:980px;
+	margin:0 auto;
+	}
+.mall_con table {
+	table-layout:fixed;}		
+
+.con_checkin{
+	background:#f2f2f2;
+	padding:0px 0px 0 15px;}	
+.con_form{
+	width:980px;
+
+	padding: 0px 0px 0 15px;
+	position:relative;	
+	}	
+	
+.per_tip{
+	width:380px;
+	/*position:absolute;*/
+	top:20px;
+	right:20px;
+	line-height:30px;
+	border:1px solid #ffd7ba;
+	padding:10px;
+	font-size:15px;
+	background:#fffcf8;
+	text-aligh:left;
+	}
+
+.li_bg{
+	display:block;
+	width:222px;
+	height:43px;
+	background:url(../images/li_bg.jpg) no-repeat;
+	margin:1px 0;
+	line-height:43px;
+	padding-left:15px;
+	}	
+
+.tab0{
+	border:0px solid #ccc; border-collapse:collapse;
+	border-top:none;
+	}
+.tab0 td{
+	padding:10px 10px 5px 10px;
+	}
+.chgcor{
+	background:#f7f4f4;}
+.tab1 td{
+	padding:0;
+	border:none}	
+.tab2{
+	border:0;
+	}	
+.tab2 td{
+	border:0;
+	}	
+.spe_tit{
+	width:113px;
+	height:29px;
+	background:url(../images/spe_tit.png) no-repeat;
+	display:block;
+	color:#fff;
+	line-height:28px;
+	}	
+.album_info h2{
+	border-bottom:1px dotted #ccc;
+	margin:0;
+	padding:10px 0}
+	
+.album_info p{
+	line-height:30px;}
+.price	{
+	font-size: 20px;
+	font-weight: bold;
+	color: #CC0000;	}
+.total{
+	width:384px;
+	height:120px;
+	background:#fafafa;
+	border:1px solid #ccc;
+	line-height:40px;
+	text-align:center}
+	
+.pro_inf{
+	margin-top:10px;}	
+/*--------------------选项卡样式-----------------------	*/
+#tags {
+	
+	HEIGHT: 36px;
+	padding:0;margin:0;
+	list-style:none;
+	font-family:"微软雅黑";
+	font-size:14px;
+
+	margin-bottom:-1px;
+}
+#tags LI {
+	list-style:none;
+	FLOAT: left; 
+	margin-right:5px; 
+	LIST-STYLE-TYPE: none; 
+	HEIGHT: 36px
+}
+#tags LI A {
+height:36px;width:155px;
+background:url(../images/li_bgnormal.jpg) no-repeat;
+	text-align:center;
+	FLOAT: left; 
+	PADDING-BOTTOM: 0px; 
+	LINE-HEIGHT: 36px; 
+	PADDING-TOP: 0px; 
+	font-weight:bold;
+	font-size:12px;
+	TEXT-DECORATION: none;
+	color:#000
+}
+#tags LI.emptyTag {
+	BACKGROUND: none transparent scroll repeat 0% 0%; 
+	WIDTH: 4px
+}
+#tags LI.selectTag {
+	MARGIN-BOTTOM: -2px; 
+	POSITION: relative; HEIGHT: 36px
+}
+#tags LI.selectTag A {
+	BACKGROUND: url(../images/lihov_bg.jpg) no-repeat; 
+	COLOR: #fff; 
+	height:36px;width:155px;
+	
+}
+#tagContent {
+ 	border:1px solid #ccc;
+	border-top:2px solid #b91418;
+	background:#fff;
+
+}
+.tagContent {
+	PADDING-RIGHT: 10px; 
+	DISPLAY: none; 
+	PADDING-LEFT: 10px; 
+	PADDING-BOTTOM: 10px; 
+	COLOR: #474747; 
+	PADDING-TOP: 10px; 
+}
+#tagContent DIV.selectTag {
+	DISPLAY: block
+}
+.tagContent {
+	font-size:12px;
+	line-height:24px;}
+	.nor_btn{
+	background:url(../images/nor_button.jpg) repeat-x;
+	border:1px solid #559a30;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	font-size:12px;
+	padding:5px 15px;
+}
+.nor_btn{
+	background:url(../images/nor_button.jpg) repeat-x;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+	font-size:12px;
+	padding:5px 15px;
+}
+#divLayer
+{
+            width:100%;
+            height:100%;
+            background-color:#eee;
+            filter:alpha(opacity=30);/*设置半透明效果*/
+            opacity:0.3;/*透明度*/
+            z-index:6666;/*设置div层所处的位置*/
+            position:absolute;
+            display:none;
+            cursor:not-allowed;
+}
+
+
+.tipsClass{
+	position : absolute; 
+	padding : 15px 15px 0px 6px; 
+	background-image: url(../images/pop.png); 
+	background-repeat: no-repeat;
+	
+	font-size : 18 px; 
+	font-weight:400;
+	margin : 0 auto; 
+	text-align: left; 
+	width:200px;
+	height:127px
+}
+.tipsMidClass{
+	position : absolute; 
+	padding : 15px 15px 0px 6px; 
+	background-image: url(../images/pop3_04.jpg); 
+	background-repeat: repeat-y;
+	font-size : 14 px; 
+	font-weight:400;
+	margin : 0 auto; 
+	text-align: left; 
+	width:200px;
+	height:87px
+}
+.tipsBtomClass{
+	position : absolute; 
+	padding : 15px 15px 0px 6px; 
+	background-image: url(../images//pop_03.jpg; 
+	background-repeat: no-repeat;
+	font-size : 14 px; 
+	font-weight:400;
+	margin : 0 auto; 
+	text-align: left; 
+	width:200px;
+	height:28px
+}				

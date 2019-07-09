@@ -1,0 +1,233 @@
+var P = {};// paper对象
+P.Msg = [];
+P.Msg["Empty"] = "不能为空";
+P.addEvent = function() {
+	$(':input ,textarea').click(function() {
+				var $msgDiv = $(this).parents('.IBox').find('.Form_Msg');
+				var v = $(this).val();// 改变后的值
+				if (v) {
+					if ($msgDiv && $msgDiv.html()) {
+						$msgDiv.remove();
+					}
+				}
+			})
+}
+// 清除内容
+P.clearAnswer = function(pageno) {
+	$('input:checked').each(function() {
+				if ($(this).attr('checked')) {
+					$(this).removeAttr('checked')
+				}
+			})
+	$('input[type="text"],textarea').val('');
+
+}
+// 提示信息
+P.initMessageBox = function(i, iErrMsgMode, o, msgType, msg) {
+	var div;
+	switch (iErrMsgMode) {
+		case 0 :
+			break;
+		case 1 :
+			div = PublicLib.createTag(o, "div", "Message" + i, "Form_Msg", "", "");
+			if (msgType) {
+				msgType = 'Empty';
+			}
+			$(div).html(msg || P.Msg[msgType]).show();
+			break;
+		case 2 :
+			div = PublicLib.createTag(document.body, "div", "PopMsg", "Form_PopMsg", "", "");
+			$(div).html("<div class='Form_PopMsg_Content'></div>");
+			break;
+	}
+}
+// 提交时验证
+P.submitForm = function(pageno) {
+	var $IBox = $('.IBox');
+	$('.Form_Msg').remove();
+	var v = '';// 用户填写值
+	var type = 'Empty';
+	var b = true;
+	// 验证题目
+	$IBox.each(function(i, o) {
+				var $input = $(this).find('.MemoInput');// textarea
+				var $radio = $(this).find(':radio');// radio
+				var $checkbox = $(this).find(':checkbox');// checkbox
+
+				if ($input.length)
+					v = $input.val();
+				else if ($radio.length || $checkbox.length) {
+					var $_all = $(this).find(':checked');
+					var _a = [];
+					$_all.each(function(a, b) {
+								_a.push($(b).val());
+							})
+					v = _a.join();
+				}
+				if (!v) {
+					if (!$('#Message' + i).html()) {
+						P.initMessageBox(i, 1, $(this).find('.ItemName'), type)
+					}
+					if (b) {
+						b = false;
+					}
+				}
+			});
+	if (!b) {
+		$(document).scrollTop(($('.Form_Msg').offset().top));
+	}
+	return b;
+}
+function CurentTime() {
+	var now = new Date();
+	var year = now.getFullYear(); // 年
+	var month = now.getMonth() + 1; // 月
+	var day = now.getDate(); // 日
+	var hh = now.getHours(); // 时
+	var mm = now.getMinutes(); // 分
+	var ss = now.getSeconds();// 秒
+	var clock = year + "-";
+	if (month < 10)
+		clock += "0";
+	clock += month + "-";
+	if (day < 10)
+		clock += "0";
+	clock += day + " ";
+	if (hh < 10)
+		clock += "0";
+	clock += hh + ":";
+	if (mm < 10)
+		clock += '0';
+	clock += mm + ":";
+	if (ss < 10)
+		clock += '0';
+	clock += ss;
+	return (clock);
+}
+P.submit = function() {
+	if (P.submitForm()) {
+		var paper = {
+			'paperCode' : $('#paperCode').val(),
+			'paperName' : $('#paperName').val(),
+			'paperLevel' : $('#paperLevel').val(),
+			'instruction' : $('#instruction').val(),
+			'typeCode' : $('#typeCode').val(),
+			'paperSort' : $('#paperSort').val(),
+			// 'typeName' : $('#typeName').val(),
+			'picInfo' : $('#picInfo').val(),
+			'linkFlash' : $('#linkFlash').val(),
+			'sex' : $('#sex').val(),
+			'suitAge' : $('#suitAge').val(),
+			'unsuitCareer' : $('#unsuitCareer').val(),
+			'beginTime' : $('#beginTime').val(),
+			'answerMan' : $('#answerMan').val() || '匿名',
+			'createMan' : $('#createMan').val() || '',
+			'comId' : $('#comId').val() || '',
+			'comName' : $('#comName').val() || '',
+			'crtId' : $('#crtId').val() || '',
+			'crtName' : $('#crtName').val() || '',
+			'organId' : $('#organId').val() || '',
+			'organName' : $('#organName').val() || '',
+			'remark' : $('#remark').val() || '',
+			'cardNo':$('#cardNo').val() || '',
+			'cardType':$('#cardType').val() || '',
+			'guideBarcode':$('#guideBarcode').val() || ''
+		}
+		var titles = [];
+		$('.IBox').each(function() {
+					var score = 0;
+					var option = {};
+					var options = [];
+					var $table = $(this).find('table');
+
+					var $text = $table.find('textarea');
+					var $checkbox = $table.find(':checkbox');
+					var $radio = $table.find(':radio');
+					if ($text.length > 0) {// 输入框
+						score = 0;// 分值为0，手动评分
+						$text.each(function(i, t) {
+									option = {
+										'OPTION_SORT' : $(t).attr('optionSort'),
+										'DISPLAY_SEQ' : $(t).attr('displaySeq'),
+										'OPTION_VIEW_WAY' : $(t).attr('optionViewWay'),
+										'PIC_ADDR' : $(t).attr('picAddr'),
+										'OPTION_CONTENT' : $(t).val() || '',
+										'OPTION_CODE' : $(t).attr('optionCode')
+									}
+									options.push(option);
+								});
+					}
+					if ($checkbox.length > 0) {// 复选框
+						$checkbox.each(function(i, t) {
+									if (t.checked) {
+										if ($(t).attr('optionSort') == '01') {
+											score += $(t).attr('positiveScore') * 1;
+										} else {
+											score -= $(t).attr('negativeScore') * 1;
+										}
+										if (score < 0)
+											score = 0;
+										option = {
+											'OPTION_SORT' : $(t).attr('optionSort'),
+											'DISPLAY_SEQ' : $(t).attr('displaySeq'),
+											'OPTION_VIEW_WAY' : $(t).attr('optionViewWay'),
+											'PIC_ADDR' : $(t).attr('picAddr'),
+											'OPTION_CONTENT' : $.trim($(t).parent().text().replace(/[\r\n]/g, ''))
+													|| '',
+											'OPTION_CODE' : $(t).attr('optionCode')
+										}
+										options.push(option);
+									} else {
+										score += 0;
+									}
+								})
+					}
+					if ($radio.length > 0) {// 单选框
+						$radio.each(function(i, t) {
+									if (t.checked) {
+										if ($(t).attr('optionSort') == '01') {
+											score = $(t).attr('positiveScore') * 1;
+										} else {
+											score = 0;
+										}
+										option = {
+											'OPTION_SORT' : $(t).attr('optionSort'),
+											'DISPLAY_SEQ' : $(t).attr('displaySeq'),
+											'OPTION_VIEW_WAY' : $(t).attr('optionViewWay'),
+											'PIC_ADDR' : $(t).attr('picAddr'),
+											'OPTION_CONTENT' : $.trim($(t).parent().text().replace(/[\r\n]/g, ''))
+													|| '',
+											'OPTION_CODE' : $(t).attr('optionCode')
+										}
+										options.push(option);
+									}
+								})
+					}
+					var title = {
+						'titleId' : $(this).attr('id'),
+						'typeCode' : $(this).attr('typeCode'),
+						'titleName' : $(this).attr('titleName'),
+						'picInfo' : $(this).attr('picInfo'),
+						'mark' : $(this).attr('mark'),
+						'titleNum' : $(this).attr('index'),
+						'seq' : $(this).attr('seq'),
+						'options' : options,
+						'score' : score
+					}
+					titles.push(title);
+				});
+		paper['titles'] = titles;
+		return paper;
+	}
+}
+// 隐藏遮罩层
+function hideLoading(o) {
+	$(o||'body').hideLoading();
+}
+function loading(o) {
+	$(o||'body').showLoading({
+				'afterShow' : function() {
+					P.clearAnswer();
+				}
+			});// 加载遮罩层
+}

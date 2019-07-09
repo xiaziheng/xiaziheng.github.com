@@ -1,0 +1,150 @@
+#product-track .right {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#product-track .right {
+	width: 780px;
+}
+
+.root61 #product-track .right {
+	width: 1000px;
+}
+
+.fl {
+	float: left;
+}
+
+#shortcut .fl b,#shortcut .menu b {
+	background-image: url(../images/20111221C.png);
+	background-repeat: no-repeat;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.fx-select {
+	color: #666;
+	border: 1px solid #D6D6D6;
+	position: relative;
+	background:
+		url('data:image/gif;base64,R0lGODlhBwAEAJEAAAAAAP///2BgYP///yH5BAEAAAMALAAAAAAHAAQAAAIIlC+DOWoN2SgAOw==')
+		95% center no-repeat;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	display: * inline;
+	float: left;
+	margin-right: 10px;
+}
+
+.fx-select-list {
+	margin: 0;
+	padding: 0;
+	text-indent: 10px;
+	position: absolute;
+	border: 1px solid #D6D6D6;
+	left: -1px;
+	background: #fff;
+}
+
+.fx-select-list dd {
+	overflow: hidden;
+	margin: 0;
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+	color: #666;
+	cursor: default;
+}
+
+.fx-select-list-hover {
+	background: #efefef;
+}
+
+.fx-select-val {
+	overflow: hidden;
+	font-size: 12px;
+	text-indent: 10px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+}
+
+.fx-select-hover {
+	border: 1px solid #bbb;
+}
+
+.fx-select-hover .fx-select-list {
+	border: 1px solid #bbb;
+}
+
+
+body {background-color:#fff;}
+html, body {height:100%;}
+html body{font-size:12px;color:#333333}
+html>body{font-size:12px;color:#333333}
+#TB_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:1000;
+	width: 100%;
+	height: 100%;
+	background-color:#CCC;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+#TB_window {
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	_position: absolute;
+	background: #ccc;
+	z-index: 1002;
+	color:#000;
+	display:none;
+}
+#TB_caption{
+	height:25px;
+	padding:10px 30px 10px 25px;
+}
+#TB_closeWindow{
+	height:25px;
+	padding:10px 25px 10px 0;
+	float:right;
+}
+#TB_closeAjaxWindow{
+	padding:5px 10px 7px 0;
+	margin-bottom:1px;
+	text-align:right;
+	background-color:#e8e8e8;
+}
+#TB_ajaxContent{
+	padding:0px;
+	margin-top:-1px;
+	overflow:auto;
+}
+
+#TB_load{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	overflow: visible;
+	visibility: visible;
+	display: block;
+	z-index:1001;
+}
+#TB_loadContent{
+	margin-left: -125px;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	width: 250px;
+	height: 100px;
+	visibility: visible;
+}

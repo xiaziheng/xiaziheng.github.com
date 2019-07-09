@@ -1,0 +1,173 @@
+
+function getPage_(ajaxUrl,pageCurrent,aimPosition,pageSize){
+	if(!ajaxUrl){
+		return;
+	}
+	var maxPage = 0;
+    	  $.ajax({
+    		  url:ajaxUrl+"?ajax=yes&pageCurrent="+pageCurrent+"&pageSize="+pageSize,
+    		  type:"post",
+    		  dataType:'json',
+    		  success:function(result){
+    		     maxPage = result.totalpage;
+    		   
+    		     if(result.flag == 1){
+    		    	 obj = result.list;
+    		    	 handleData(obj);//处理返回的数据,如动态的赋值给一个表格
+    		    	 
+    		    	 var notCantUse = "style='display:none'";
+    		    	 var html_page = "<button id='prePage_'  ";
+    		    	 if(pageCurrent<=1){
+    		    		 html_page+=notCantUse;
+    		    	 }
+    		    	 html_page +=   ">上一页</button>" +
+    		    	                "第<input id='pageCurrent_' style='width:30px;'/>页"+
+    		    	                "<button id='jumppage_' >GO</button>"+
+    		    	                "<button id='nextPage_'  ";
+    		    	 
+    		    	 if(pageCurrent>=maxPage){
+    		    		 html_page+=notCantUse;
+    		    	 }
+    		    	 html_page +=  ">下一页</button>" +
+    		    	               "&nbsp;共<font id='allCount_'></font>页";
+    		    	 
+    		    	 aimPosition.html(html_page);
+    		    	 var currentP = result.pagenum;//当前页
+    		    	 $("#prePage_").unbind("click");//上一页取消绑定click事件
+    		    	 $("#nextPage_").unbind("click");//下一页取消绑定click事件
+    		    	 $("#jumppage_").unbind("click");
+    		    	 $("#allCount_").html(result.totalpage);//给最大页数span赋值
+    		    	 $("#pageCurrent_").val(result.pagenum);//给当前页数赋值
+    		    	 $("#prePage_").click(//上一页绑定click事件
+			    		    		     function(){
+			    		    		    	    pageCurrent=pageCurrent-1<1?1:pageCurrent-1;
+			    		    			        getPage_(ajaxUrl,pageCurrent,aimPosition,pageSize);
+			    		    			 }
+    		    		             );
+    		    	 $("#nextPage_").click(//下一页绑定click事件
+    		    		                  function(){
+    		    		                	    pageCurrent=pageCurrent+1>maxPage?maxPage:pageCurrent+1;
+    		    		                	     getPage_(ajaxUrl,pageCurrent,aimPosition,pageSize);
+    		    		                  }
+    		    		              );
+    		    	 $("#jumppage_").click(//跳转绑定click事件
+    		    		                  function(){
+    		    		                	     jumpToPage(ajaxUrl,pageCurrent,aimPosition,pageSize,maxPage);
+    		    		                  }
+    		    		              );
+    		     }else{
+    		    	 alert(result.msg);
+    		     }
+    		     afterMethod();
+    		  },
+    		  error:function(XMLHttpRequest, textStatus,errorThrown){
+    			 alert("网络繁忙请稍后重试！");
+    		     afterMethod();
+    		  }
+    	  });
+      }
+function jumpToPage(ajaxUrl,pageCurrent,aimPosition,pageSize,maxPage){
+		var currentPage = $("#pageCurrent_").val();
+		var reg = /\d/g;
+		
+		if(!reg.test(currentPage) ){
+			alert("页码格式不对!");
+			return false;
+		}
+		
+		if(currentPage<=0 || currentPage>maxPage){
+			alert("页码不合理，小于最小页码或大于最大页码！");
+			return false;
+		}
+		getPage_(ajaxUrl,currentPage,aimPosition,pageSize);
+	}
+
+/*通过freemarker的方式做分页*/
+function pageToolForFreeMarker(contentId,pageSize,currentPage,url,startPage,endPage){
+	var urlPar = "\""+url+"\",\""+currentPage+"\"";
+	var htmStr = [];
+	
+	if(parseInt(currentPage)>1){
+		htmStr.push("<button onclick='prePageFreeMar(");
+		htmStr.push(urlPar);
+		htmStr.push(")'>上一页</button>&nbsp;");
+	}
+	var startPageNum = parseInt(startPage);
+	var endPageNum = parseInt(endPage);
+	for(var i=startPageNum;i<=endPageNum;i++){
+		var isCurrentStyle = "";
+		if(currentPage == i){
+			isCurrentStyle = "background-color:#A3F69A";
+		}else{
+			isCurrentStyle = "background-color:white";
+		}
+		var urlA = "\""+url+i+".htm\"";//通过链接跳转页面的参数
+		htmStr.push("<span name='pageIndexSpan' style='padding: 0px 5px;border:1px solid #ccc;"+isCurrentStyle+"' onclick='goPageByA(");
+		htmStr.push(urlA);
+		htmStr.push(")'><a href='javascript:void(0)'>");
+		htmStr.push(i);
+		htmStr.push(".</a></span>&nbsp;");
+	}
+	
+	if(parseInt(currentPage)<parseInt(pageSize)){
+		htmStr.push("<button onclick='nextPageFreeMar(");
+		htmStr.push(urlPar);
+		htmStr.push(")'>下一页</button>");
+	}
+	htmStr.push("<input id='freeJump' style='width:30px;' value='");
+	htmStr.push(currentPage);
+	htmStr.push("'/>");
+	htmStr.push("<button style='width:30px;' onclick='goPageFreeMar(");
+	htmStr.push(urlPar);
+	htmStr.push(")'>GO</button>&nbsp;");
+	
+	htmStr.push("&nbsp;总共&nbsp;<span id='allCountFr'>");
+	htmStr.push(pageSize);
+	htmStr.push("</span>&nbsp;页</span>");
+	
+	$(contentId).html(htmStr.join(""));
+	//鼠标移入移出颜色变化
+	$("span[name=pageIndexSpan]").hover(
+		function(){
+			if($(this).css("background-color")=="white"){
+			  $(this).css("background-color","#A3F68A");}
+			},
+		function(){
+			if($(this).css("background-color").toUpperCase() == "#A3F68A"){
+			   $(this).css("background-color","white");}
+			}
+		);
+	//$("span[name=pageIndexSpan]").mouseout(function(){$(this).css("background-color","white");});
+}
+/*上一页*/
+function prePageFreeMar(url,currentPage){
+	window.location.href=url+(parseInt(currentPage)-1)+".htm";
+}
+/*下一页*/
+function nextPageFreeMar(url,currentPage){
+	window.location.href=url+(parseInt(currentPage)+1)+".htm";
+}
+/*跳转到某页码*/
+function goPageFreeMar(url,currentPage){
+	var pageNum = $("#freeJump").val();
+	var allPage = $("#allCountFr").html();
+	
+	var reg = /\d/g;
+		
+		if(!reg.test(pageNum) ){
+			alert("页码格式不对!");
+			return false;
+		}
+		
+		if(parseInt(pageNum)<=0 || parseInt(pageNum)>parseInt(allPage)){
+			alert("页码不合理，小于最小页码或大于最大页码！");
+			return false;
+		}
+	
+	window.location.href=url+pageNum+".htm";
+}
+/*通过直接点击页码跳转,A标签跳转*/
+function goPageByA(url){
+	window.location.href=url;
+}
+

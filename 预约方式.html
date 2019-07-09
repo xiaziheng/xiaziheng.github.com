@@ -1,0 +1,1247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://book.ciming.com/onlineReport.html?checkCode=000101019032179429 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="慈铭体检,在线预约,报告查询,健康管理">  
+<meta name="keywords" content="慈铭体检,在线预约,报告查询,健康管理">
+<meta name="robots" content="all">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<title>预约方式 </title> 
+
+
+<link href="./预约方式_files/mall.css" rel="stylesheet" type="text/css">
+
+<link href="./预约方式_files/style.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/common_new.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/widget.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/zzsc.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/base.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/user.base.2012.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/user.safe.2011.css" rel="stylesheet" type="text/css">
+<link href="./预约方式_files/order.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="./预约方式_files/jquery-1.8.0.js.下载"></script>	
+<script type="text/javascript" src="./预约方式_files/webtool.js.下载"></script>	
+<script type="text/javascript" src="./预约方式_files/popdiv.js.下载"></script>	
+
+<script type="text/javascript" src="./预约方式_files/page_index.js.下载"></script>	
+
+ <script type="text/javascript" src="./预约方式_files/jsMD5.js.下载"></script> 
+ <script type="text/javascript" src="./预约方式_files/main.js.下载"></script>
+ <!-- 解决IE9兼容和个别360浏览器不兼容的js（正式环境）     由于引入该文件，导致ie9兼容模式无法在我的报告中正常添加报告（测试环境）-->
+<script type="text/javascript" src="./预约方式_files/json2.js.下载"></script>
+<!-- 解决firefox和IE无法添加报告的问题  TypeError: $(...).ajaxSubmit is not a function-->
+<script type="text/javascript" src="./预约方式_files/jquery-form.js.下载"></script>
+ 
+</head>
+
+<body>
+<!---------顶部登录信息-------start --->
+
+<div class="cus_top">
+	
+<!--遮罩层的css和js文件-->
+<link rel="stylesheet" href="./预约方式_files/showLoading.css" type="text/css">
+<script type="text/javascript" src="./预约方式_files/jquery.showLoading.js.下载"></script>
+<link rel="stylesheet" href="./预约方式_files/header.css" type="text/css">
+
+<script type="text/javascript">
+function logout(){
+	  window.location.href="http://book.ciming.com/logout.html";
+	}
+	
+	$(function() {
+		
+$('.service li').hover(function() {
+	$('ul', this).slideDown(1);
+	$(this).children('a:first').addClass("hov");
+
+}, function() {
+	$('ul', this).slideUp(1);
+	$(this).children('a:first').removeClass("hov");		
+});
+
+	});
+</script>
+<div id="divLayer">
+</div>
+
+<div class="top">
+	<div class="top_con">
+    	<table width="560" border="0" cellspacing="0" cellpadding="0" align="right" style="line-height:30px;white-space: nowrap;overflow: visible;">
+		  <tbody><tr>
+			<td id="usershow">
+					</td><td class="light_color" id="showlogout"> <a href="http://book.ciming.com/login.html" title="登录">登录</a>&nbsp;&nbsp; 
+		     <span style="color:#b7b6b6;">|</span>&nbsp;&nbsp;<a href="http://book.ciming.com/way.html">首页</a>&nbsp;&nbsp;<span style="color:#b7b6b6">|</span> &nbsp;&nbsp;
+		       <a href="http://book.ciming.com/registers.html">免费注册<span style="padding-left:20px;color:#b7b6b6">|</span></a>
+		      
+		     </td>
+		     
+		    <td style=""><a href="http://book.ciming.com/help.html">帮助中心</a><span style="padding-left:20px;color:#b7b6b6">|</span></td>
+		    <td>
+			<div id="nav" style="z-index: -1">
+				<ul class="service">
+				  <li><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#">客户服务</a>
+				     <ul>
+				        <li><a href="http://book.ciming.com/serviceMailbox.html" target="_blank">客服邮箱</a></li>
+				     </ul>
+				  </li>
+	
+				  <li><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#">网站导航</a>
+				     <ul>   
+				        <li><a target="_blank" href="http://www.ciming.com/" class="">慈铭集团</a></li>
+				     </ul>
+				  </li>
+				</ul>
+			</div>	
+			
+		    </td>
+		  </tr>
+    	</tbody></table>
+    </div>
+</div>
+
+<!---------头部banner 搜索  -------->
+<div class="banner">
+	<div class="banner_ser">
+		<table width="600" border="0" cellspacing="0" cellpadding="0">
+		  <tbody><tr>
+		    <td style="display: none;">
+		        <input name="searchContent" id="searchContent" style="font-size:12px;color:#848484;line-height:25px " type="text" value="请输入产品关键字，如名称、类型等">
+		        <a href="javascript:search()">
+<img src="./预约方式_files/ser_icon.jpg" alt="搜索">		    	</a>
+		    </td>
+		    <td style="display: none;" title="我的慈铭"><a href="http://book.ciming.com/userhome.html">
+<img src="./预约方式_files/mycm.jpg" alt="我的慈铭">		    	</a></td>
+		  </tr>
+		</tbody></table>
+	</div>
+</div>
+
+
+
+</div>
+
+<!---------顶部登录信息-------end -->
+
+<!---------导航菜单-------start->
+<!--导航菜单-->
+	
+
+
+
+ 
+ 
+<!---------导航-------->
+<div class="cus_nav">
+
+	<div class="nav">
+		<script>
+			$(function() {
+				$('#menuul >li>a').each(function(i, o) {
+					var href = $(this).attr('href');
+					if (location.href.indexOf(href) >= 0) {
+						//$(this).parent('li').addClass('cur');
+					}
+				})
+
+				$('.menuul2 ').hide();
+
+			})
+		</script>
+        
+		<ul>
+			<li id="00000000000000000000000000000027"><a hassubmenu="false" href="http://book.ciming.com/way.html" target="_self">预约服务</a></li>
+			<li id="00000000000000000000000000000028"><a hassubmenu="false" href="http://book.ciming.com/onlineReport.html" target="_blank">报告查询</a></li>
+			<li id="00000000000000000000000000000029"><a hassubmenu="false" href="http://book.ciming.com/checkupnote.html" target="_blank">体检须知</a></li>
+			<li id="00000000000000000000000000000031"><a hassubmenu="false" href="http://book.ciming.com/mybooks.html" target="_blank">预约记录</a></li>
+		</ul>
+	</div>
+
+
+
+</div>
+
+
+<!---------导航菜单-------end->
+	
+<!--当前位置   --->
+
+
+
+
+
+<!---------当前位置-------->
+<div class="curpos">
+<span style="text-align:left;">当前位置：慈铭体检 &gt;&gt;报告查询
+</span></div>
+
+
+
+<!---------当前位置-------end->
+
+<!---------主体内容------ start  -->
+<div class="book_con">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed">
+		<tbody><tr>
+			<td width="224" style="padding-top: 8px;" rowspan="2">
+				<!---------左侧菜单-------->
+				
+<div class="green_widget-tit">
+	<div class="child">
+    	<span class="icon_widget-tit_14">在线报告 </span>
+        
+    </div>
+</div>
+<div class="widget-body">
+	<ul class="widget-list">
+    	<li class="widget-padding-none"><a href="javascript:void(0)" class="add_li_bg"><span>个人报告</span></a>
+        	<ul class="add_sublist">
+            <li><a href="http://book.ciming.com/onlineReport.html"><span class="widget-list-icon2">个人报告查询</span></a></li>
+            <li><a href="http://book.ciming.com/findReportCodePwd.html"><span class="widget-list-icon2">找回报告查询密码</span></a></li>
+            
+            <li><a href="http://book.ciming.com/updateReportCodePwd.html"><span class="widget-list-icon2">修改报告查询密码</span></a></li>
+            
+           </ul>
+        </li>
+    </ul>  
+    		<p style="margin-top:10px;margin-bottom:10px;"><strong style="color: #f00;">温馨提示:报告深度解读请下记健康APP! </strong></p>	
+				<img src="./预约方式_files/reportlogo.jpg" style="margin-left:4px;height:100px;width:100px;">
+				<img src="./预约方式_files/report.png" style="margin-left:4px;height:100px;width:100px;">
+			 
+			 
+</div>
+
+
+
+
+			</td>
+
+			<td style="padding-top: 8px; padding-left: 10px;" colspan="2">
+				<!---------右侧内容-------->
+					
+<script type="text/javascript" src="./预约方式_files/jsMD5.js(1).下载"></script>
+
+
+<script type="text/javascript" src="./预约方式_files/jquery.cookie-min.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/jquery.json.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/jquery.showLoading.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/jquery.tmailsilder.v2.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/jsEncoding.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/message.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/options.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/paper.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/thickbox_plus.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/util.js.下载"></script>
+<script type="text/javascript" src="./预约方式_files/zzsc.js.下载"></script>
+
+
+ <link href="./预约方式_files/order.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+#nav li ul a:link { 
+color:#666; text-decoration:none; 
+} 
+
+
+#content { 
+clear: left; 
+} 
+#container{text-align:center;font-size:12px; color:#4D4D4D;}
+#container table{font-size:12px; color:#4D4D4D;margin: 0 auto;}
+#container select{border:1px solid #E7E8EA;}
+
+#pwdcontainer{text-align:center;font-size:12px; color:#4D4D4D;}
+#pwdcontainer table{font-size:12px; color:#4D4D4D;margin: 0 auto;}
+#pwdcontainer select{border:1px solid #E7E8EA;}
+
+.bg_gray {
+	height: 30px;
+	text-align:right;
+	margin-top:8px;
+	font-size: 14px;
+	font-weight: bold;	
+	vertical-align:middle;
+}
+
+.bg_gray2 {
+	height: 30px;
+	text-align:right;
+	margin-top:8px;
+	font-size: 14px;
+	vertical-align:middle;
+}
+
+ .backbtn{border:1px solid #DDDDDD;background-color:#F7F7F7;height:20px;width:100px;color:#666666;float:right;margin-bottom: 5px;}
+ .saveLinkbtn{border:1px solid #DDDDDD;background-color:#F7F7F7;height:20px;width:150px;margin-left:5px;color:#666666;float:right;margin-bottom: 5px;}
+ 	 
+
+     #saveToLinkDiv{}
+	 #saveToLinkDiv table{font-size:12px;color:#666666;width:90%;}
+	
+	 #saveToLinkDiv table tr{border:1px solid #999999; height:30px;}
+	 #saveToLinkDiv table td{border:0px solid #999999; height:20px;text-align:center;}
+	 #saveToLinkDiv table td button.confi{border:1px solid #DDDDDD;background-color:#F7F7F7;height:20px;width:70px;color:#666666}
+	 #saveToLinkDiv .btnCont{margin-left:42%;}
+
+
+/*下拉列表样式问题  start*/
+
+   body{font-size:12px;}
+    ul,li{list-style-type:none;padding:0;margin:0;}
+    .main_nav{padding:2px;}
+    .main_nav a{display:block;line-height:28px;height:28px;padding-left:10px;overflow:hidden;}
+    .main_nav .navs{width:120px;height:28px;float:left;margin-right:2px;}
+    *html .main_nav .navs{overflow:hidden;} /* only for ie6 */
+    .main_nav .navs .nav_a{background:#ddfdd8;color:#000000;text-decoration:none;}
+    .main_nav .navs .nav_a:hover{background:#6a705e;}
+    .sub_nav{display:none;width:120px;position:relative;z-index:1000;opacity:0.9;filter:Alpha(opacity=90);}
+    .sub_nav li a {color:#000000;text-decoration:none;}
+    .sub_nav li a:link, .sub_nav li a:visited{background:#A0BED5;}
+    .sub_nav li a:hover{color:#FFFFFF;background:#0077BB;}
+    .clear{clear:both;height:1px;line-height:1px;font-size:1px;}
+
+/*下拉列表样式问题  end*/
+
+#adv{
+ width:100px;
+    height:314px;
+    position:fixed;
+    right:60px;
+    top:100px;
+}
+#adv1{
+ width:100px;
+    height:314px;
+    position:fixed;
+    left:60px;
+    top:100px;
+}
+</style>
+
+ 
+<div id="paperContentDiv" style="display:none;width:100%;position: absolute;top:0px;left:0px; z-index: 100000">
+	<div style="background-color: #ccc;text-align: right">
+		<span style="padding:0px 10px;background-color: greenyellow;border:1px solid green;cursor:pointer;" onclick="closeQuestPaper()">关闭</span>
+	</div>
+	<form class="chekcinfo" id="check" method="post">
+    	<div id="paper" class="con_inqu" style="text-align:center;background-color:#fff; border: #fff solid 1px;padding: 0px;height: 100%;width: 100%" data="">
+    	</div>
+    	<div id="postinfo" style="height: 50px; line-height: 50px; text-align: center; display: block; color: red; font-size: 15px"></div>
+    	<input type="hidden" name="guideBarcode" id="guid"> 
+	</form>	 
+    <iframe src="./预约方式_files/saved_resource.html" style="display: none;" id="formIframe" name="formIframe"></iframe>
+	<form id="form" method="post"><input type="hidden" name="json" id="json"></form>
+</div>
+
+
+<script type="text/javascript">
+
+
+//保存调查问卷结果
+function post() {
+  saveResultNew();
+}
+</script>
+<div class="gray_widget-tit">
+	<div class="child">
+    	<span class="icon_widget-tit_14">个人报告查询 </span>
+    </div>
+</div>
+
+
+<div class="widget-body" style="position: relative;z-index: 999">
+<div id="container" align="center" style="width: 100%; display: none;">
+	<form id="checkReportForm">
+		<table cellspacing="10px" cellpadding="0" width="60%">
+				<input type="hidden" value="0" id="isNeedPwd">
+			<tbody><tr>
+				<td class="bg_gray">*查询码: </td>
+				<td align="left"><input style="width: 75%" class="input_normal" name="queryCode1" value="000101019032179429"></td>
+			</tr>
+			<tr>
+
+				<td class="bg_gray">*密码: </td>
+				<td align="left"><input style="width: 75%" class="input_normal" type="password" name="passWord1" id="passWord1">
+				</td>
+			</tr>
+			<tr>
+				<td class="bg_gray">验证码：</td>
+				<td style="vertical-align:middle;">
+					<div style="height: 50px;">
+						<input id="authcode" name="authcode" type="text" class="code" maxlength="4" style="float:left;"> <img id="imageCaptcha" onclick="reloadCaptcha()" src="./预约方式_files/generatImage.html" width="65" height="26" style="margin-left: 8px;margin-top:13px;float:left;vertical-align:middle;">
+
+		       		</div>
+				</td>
+		   </tr>
+		</tbody></table>
+	</form>
+	
+
+	
+	<div id="postdivinfo" style="display:block;">
+			<span id="postinfo" style="margin-left:150px;clear:both;height:20px; line-height:20px; text-align:left; display:block; font-size: 15px">
+			<strong style="color: #f00;">
+				为了保障您个人隐私信息的安全,建议您首次查询体检报告后,尽快修改报告查询的初始密码！
+			</strong>
+			 
+			</span>
+	
+	</div>	
+				
+				
+	
+	<div id="rptGrid" style="float: left; margin: 10px; border: 1px solid rgb(0, 221, 0); width: 700px; font-size: 15px; display: none;">
+		<ul style="clear:both;list-style:none; border-bottom:1px dashed #00dd00;">
+			<li style="padding-top3px;background-color:#F7F7F7;width:50px;height:25px;float:left;"><span class="bg_gray">序号</span></li>
+			<li style="padding-top3px;background-color:#fafafa;width:70px;height:25px;float:left;"><span class="bg_gray">报告名称</span></li>		
+			<li style="padding-top3px;background-color:#fafafa;width:180px;height:25px;float:left;"><span class="bg_gray">体检分院</span></li>		
+			<li style="padding-top3px;background-color:#fafafa;width:150px;height:25px;float:left;"><span class="bg_gray">体检日期</span></li>	
+			<li style="padding-top3px;background-color:#fafafa;width:150px;height:25px;float:left;"><span class="bg_gray">报告生成日期</span></li>
+			<li style="padding-top3px;background-color:#fafafa;width:100px;height:25px;float:left;"> <span class="bg_gray">查看	</span></li>					
+		</ul>
+		<ul id="grdLine1" style="clear:both;list-style:none; margin-top:5px;">
+			<li style="background-color:#F7F7F7;width:50px;float:left;"><span id="l1grd1" class="bg_gray2"></span> </li>
+			<li style="background-color:#fafafa;width:70px;float:left;"><span id="l1grd2" class="bg_gray2"></span></li>		
+			<li style="background-color:#fafafa;width:180px;float:left;"><span id="l1grd3" class="bg_gray2"></span></li>		
+			<li style="background-color:#fafafa;width:150px;float:left;"><span id="l1grd4" class="bg_gray2"></span></li>	
+			<li style="background-color:#fafafa;width:150px;float:left;"><span id="l1grd5" class="bg_gray2"></span></li>
+			<li style="background-color:#fafafa;width:100px;float:left;"><span id="l1grd6" class="bg_gray2"></span>	</li>					
+		</ul>
+		<ul id="grdLine2" style="clear:both;list-style:none;margin-top:5px;">
+			<li style="background-color:#F7F7F7;width:50px;float:left;"><span id="l2grd1" style="bg_gray2"></span> </li>
+			<li style="background-color:#fafafa;width:70px;float:left;"><span id="l2grd2" class="bg_gray2"></span></li>		
+			<li style="background-color:#fafafa;width:180px;float:left;"><span id="l2grd3" class="bg_gray2"></span></li>		
+			<li style="background-color:#fafafa;width:150px;float:left;"><span id="l2grd4" class="bg_gray2"></span></li>	
+			<li style="background-color:#fafafa;width:150px;float:left;"><span id="l2grd5" class="bg_gray2"></span></li>
+			<li style="background-color:#fafafa;width:100px;float:left;"><span id="l2grd6" class="bg_gray2"></span>	</li>					
+		</ul>		
+	</div>				
+	<div style="margin-top: 3px">
+		<input class="bt" type="button" id="submitSelect" value="" style="cursor:pointer;width:66px;height:27px;border:none;background:url(http://book.ciming.com/themes/default/images/ca.png) no-repeat">
+		<!--
+		<input class='bt' type="reset" id="cancel" value=""  style="cursor:pointer;width:66px;height:27px;border:none;background:url(http://book.ciming.com/themes/default/images/fi.png) no-repeat"/>
+		-->
+	</div>
+	 <p style="text-align: center; padding:10px;  background-color: rgb(241, 241, 241);text-align:left;margin-top:8px;">
+	    友情提示 ：查询码和密码是由慈铭通过手机短信发送给您的唯一用于报告查询的方式。请妥善保管查询码和密码。如果您丢失或者忘记，请使用"找回查询码"功能。 
+	 </p>	
+</div>
+</div>
+
+
+
+
+<form id="downLoadForm" style="display: none" method="post">
+<input name="queryCodeDown">
+<input name="filename">
+<input name="guideBarcodeDown">
+</form>
+<div id="saveToLinkDiv" style="position:absolute;top:20%;left:20%; z-index:99999;width:60%;border:1px solid #999999;background-color:#F7F7F7;display:none;padding: 5 auto;">
+	<form id="reportForm" style="margin-top: 5px;">
+		<table cellspacing="0" cellpadding="0">
+			<tbody><tr style="display: none">
+				<td></td>
+				<td colspan="3">
+					<input name="queryCode" type="hidden" id="queryCode_hidden" value="000101019032179429">
+					<input name="rptCode" type="hidden" title="报告内码">
+					<input name="rptType" type="hidden" value="00">
+					<input name="isUse" type="hidden">
+					<input name="personId" type="hidden">
+					<input name="passWord" type="hidden" id="passWord_hidden" value="b9345057e5acb3bf4e0dc4865b726dfc">
+					<input name="resultId" type="hidden" value="" title="问卷结果ID">
+				</td>
+			</tr>
+		</tbody></table>
+	</form>  
+</div>
+<div id="window-like-report" style="position: fixed; overflow: scroll; width: 100%; top: 0px; left: 0px; background-color: white; z-index: 99999; height: 938px; display: block; border: 1px solid green;">
+<!--
+<div id="adv"><a href="http://book.ciming.com/propagate.htm"><img src="http://book.ciming.com/images/ad_100x300.png" width="100px" height="300px"/></a></div>
+<div id="adv1"><a href="http://download.jijiankang.cn/jjk_wx/jjkdown.html" target="_blank"><img src="http://book.ciming.com/images/adv1.png" width="100px" height="300px"/></a></div>
+-->
+<!--
+
+<ul id="navRight" > 
+<li> 功能菜单  
+<ul> 
+<li><a href="#" onclick="questionPaper()">我要填写满意度调查</a></li> 
+<li><a id="guahaowangbutton"  href="#">在线预约挂号</a></li> 
+<li id="healthyTest" style="display:none;" ><a  href="#" onclick="mrbjOpen()">深度体检测评</a></li> 
+<li><a href ="http://book.ciming.com/serviceMailbox.html" id="complain" url="http://book.ciming.com/serviceMailbox.html" target ="_blank">意见反馈</a></li> 
+<li><a href="#" onclick="rptPrint()">打印</a></li> 
+<li><a href="#" onclick="downThisRpt()">下载</a></li> 
+</ul> 
+</li>
+</ul>
+--><!--
+<ul style="position: fixed;right:20px;top:0px;padding:0px;background-color:#DDFDD8;
+	border:1px solid #49D536;cursor: pointer;"> 
+	下拉列表样式 start-->
+<ul style="float:right" id="navRight">
+<li>	<!--下拉列表样式 start-->
+<ul class="main_nav">
+<li class="navs" onmouseover="showSubNav(&#39;subNav_1&#39;);" onmouseout="hideSubNav(&#39;subNav_1&#39;);">
+    <a href="javascript:;" class="nav_a">功能菜单</a>
+    <ul id="subNav_1" class="sub_nav">
+<li><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#" onclick="questionPaper()">我要填写满意度调查</a></li> 
+<!--
+<li id="guahaowangbutton_li"><a id="guahaowangbutton"  href="#">在线预约挂号</a></li> 
+-->
+<li id="healthyTest" style="display:none;"><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#" onclick="mrbjOpen()">深度体检测评</a></li> 
+<li><a href="http://book.ciming.com/serviceMailbox.html" id="complain" url="http://book.ciming.com/serviceMailbox.html" target="_blank">意见反馈</a></li> 
+<li><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#" onclick="rptPrint()">打印</a></li> 
+<li><a href="http://book.ciming.com/onlineReport.html?checkCode=000101019032179429#" onclick="downThisRpt()">下载</a></li> 
+    </ul>
+</li>
+<li class="navs">
+    <a href="javascript:closeReport();" class="nav_a">关闭</a>
+</li>
+<li class="clear"></li><!-- 这个 li 标签必须有，用来清除浮动，这样下面的布局就不会被破坏 -->
+</ul>
+<!--下拉列表样式 end-->
+</li>
+
+</ul>
+<!--下拉列表样式 end-->
+
+	<iframe src="./预约方式_files/getReportInfo.html" id="iframe" name="iframe" frameborder="0" scrolling="no" width="100%" onload="Javascript:SetWinHeight(this);" height="11710"></iframe>
+</div>
+<input type="hidden" id="rptAddr_" value="2R1SCNW5VDJYZW32KOS1PVB02EP6DXIZ">
+<input type="hidden" id="paperCode_">
+<input type="hidden" id="recId_" value="08999000101019032179429">
+<input type="hidden" id="checkName_" value="000100719040201481">
+<input type="hidden" id="checkOrganId_" value="0001007">
+<input type="hidden" id="checkOrganName_" value="北京知春路分院">
+<input type="hidden" id="guideBarcode_" value="000101019032179429">
+<input type="hidden" id="cardNo" value="130302199407239750">
+
+<input type="hidden" id="mrbj123sdfsdfsddsigcheckid_hidden" value="000101019032179429">
+<input type="hidden" id="mrbj123sdfsdfsddpwd_hidden" value="b9345057e5acb3bf4e0dc4865b726dfc">
+ 
+
+<form method="post" name="ghform" id="ghform" action="http://book.ciming.com/guahaopage.html" target="_blank">
+	<input type="hidden" name="sglcheckid" id="ghsglcheckid" value="">
+
+</form>
+<form method="post" name="mrform" id="mrform" action="http://book.ciming.com/mrbjpage.html" target="_blank">
+	<input type="hidden" name="sglcheckid" id="mrsglcheckid" value="">
+	<input type="hidden" name="sglpwd" id="mrsglpwd" value="">
+</form>
+
+
+<script type="text/javascript">
+	var authcodeCheck = false; // 验证码是否正确：true:正确; false:错误
+	var allTime = 60;
+	var taskId = "";
+	var phoneCheckCode = "";
+	function SetWinHeight(obj) 
+		{ 
+			var win=obj; 
+			if (document.getElementById) 
+			{ 
+				if (win && !window.opera) 
+				{ 
+					if (win.contentDocument && win.contentDocument.body.offsetHeight) 
+						win.height = win.contentDocument.body.offsetHeight; 
+					else if(win.Document && win.Document.body.scrollHeight) 
+						win.height = win.Document.body.scrollHeight; 
+				} 
+			} 
+		} 
+	
+	function getRandomCode() {
+		var rr = "";
+		for ( var i = 0; i < 6; i++) {
+			rr += Math.floor(Math.random() * 10) + "";
+		}
+		return rr;
+	}
+	
+$(init);
+function init(){
+	//$("input[name=paperCode]").val();
+	$("#submitSelect").click(post1);
+	$("#fanhui").click(backSelect);	$("#cancel").click(cancel);
+	$("#submitSave").click(confirmSave);
+	$("input[name=passWord1]").val("");
+	
+	$("#rptGrid").hide();
+
+	reloadCaptcha();
+	
+	if (window.postMessage) {
+		addEvent(window, "message", messageHanlder)
+	}
+	
+}
+function cancelRepPwd(){
+	$("#pwdcontainer").css("display","none");
+	$("#container").css("display","block");
+}
+
+function preview(lineNo)
+{
+
+	var lineName = "grdLine"+lineNo;
+
+	var obj = $("#"+lineName).attr("linkAddress");
+	var rptAddStr = obj;
+				
+	$('#mrbj123sdfsdfsddsigcheckid_hidden').val($('input[name=queryCode1]').val());
+	$('#mrbj123sdfsdfsddpwd_hidden').val($('input[name=passWord1]').val());
+    $("#iframe").attr("src","http://book.ciming.com/getReportInfo.html?filename="+rptAddStr);
+    $("input[name=filename]").val(rptAddStr);
+	$("#rptAddr_").val("");
+	$("#rptAddr_").val(rptAddStr);
+	$("#window-like-report").height($(document).height());
+	$("#window-like-report").css("display","block");
+   $('#paperIframe').hide();
+	$this.attr("disabled",false);
+}
+
+function post1(){
+	if(!checkMess()){
+		return false;
+	}	
+	
+	var $this= $("#submitSelect");
+
+		$("input[name=passWord1]").val(hex_md5($("input[name=passWord1]").val()));
+		var para = $('#checkReportForm').serialize();
+		$.ajax({
+				url:"http://book.ciming.com/loginReportPage.html",
+				dataType:'json',
+		        data:para,
+		        type:'post',
+				success:function(result){
+					if(result.isSuccess==0){
+						if(result.datas.length == 2)
+						{
+							$("#rptGrid").show();
+							
+							$.each( result.datas, function(index, content)
+							{ 				
+								if(content.rptType == '00')
+								{
+									$("#l1grd1").html(index+1);	
+									$("#l1grd2").html("体检报告");
+									$("#l1grd3").html(content.organName+" ");
+									$("#l1grd4").html(content.registTime+" ");
+									$("#l1grd5").html(content.crtTime+" ");
+									$("#l1grd6").html("<a   href='javascript:preview(1)' linkAddress='"+content.rptAdd+"'> <strong style='color:red;'>查看</strong> </a>");
+									$("#grdLine1").attr("linkAddress",content.rptAdd);
+									$("#grdLine1").attr("rptCode",content.rptCode);
+									$("#grdLine1").attr("rptPwd",content.rptPwd);
+									$("#grdLine1").attr("rptType",content.rptType);
+									$("#grdLine1").attr("linkAddress",content.rptAdd);
+								}else if(content.rptType == '01'){
+									$("#l2grd1").html(index+1);	
+									$("#l2grd2").html("乙肝报告");
+									$("#l2grd3").html(content.organName+" ");
+									$("#l2grd4").html(content.registTime+" ");
+									$("#l2grd5").html(content.crtTime+" ");
+									$("#l2grd6").html("<a  href='javascript:preview(2)' linkAddress='"+content.rptAdd+"'> <strong style='color:red;'>查看</strong> </a>");
+									$("#grdLine2").attr("linkAddress",content.rptAdd);
+									$("#grdLine2").attr("rptCode",content.rptCode);
+									$("#grdLine2").attr("rptPwd",content.rptPwd);
+									$("#grdLine2").attr("rptType",content.rptType);
+									$("#grdLine2").attr("linkAddress",content.rptAdd);								
+								}							
+							
+							});						
+						
+							return;
+						}else{
+						
+							$("#rptGrid").hide();
+					
+							$('#mrbj123sdfsdfsddsigcheckid_hidden').val($('input[name=queryCode1]').val());
+							$('#mrbj123sdfsdfsddpwd_hidden').val($('input[name=passWord1]').val());
+					  		 var  obj=result.t;
+							$("input[name=queryCode]").val(obj.rptCode);
+							$("input[name=passWord]").val(obj.rptPwd);
+	                        $("input[name=rptType]").val(obj.rptType);
+							  $("#recId_").val(obj.recId);
+							  $("#checkName_").val(obj.crtId);
+							  $("#checkOrganId_").val(obj.organId);
+							  $("#checkOrganName_").val(obj.organName);
+							  $("#guideBarcode_").val(obj.guideBarcode);
+							  $("#cardNo").val(obj.cardNo);
+					
+					
+							 $("#container").css("display","none");
+
+							var rptAddStr = obj.rptAdd;
+							$("input[name=queryCodeDown]").val(obj.rptCode);
+							$("input[name=filename]").val(rptAddStr);
+						      
+							$("#iframe").attr("src","http://book.ciming.com/getReportInfo.html?filename="+rptAddStr);
+	 
+							var houzhuiFile = $.trim(obj.fileExtension);
+							if(houzhuiFile=="html" ||houzhuiFile=="htm" ){
+								$("#rptAddr_").val("");
+								$("#rptAddr_").val(rptAddStr);
+								$("#window-like-report").height($(document).height());
+								//var CmdUrl = "http://book.ciming.com/getReportInfo.html?filename="+rptAddStr;
+								
+								//CmdUrl = encodeURI(CmdUrl);
+								//$("#window-like-report").load("http://book.ciming.com/getReportInfo.html?filename="+rptAddStr);
+								$("#window-like-report").css("display","block");
+								$('#paperIframe').hide();
+					        }
+					
+	                     	$("input[name=resultId]").val("");	                    }              
+	                                  		   
+					}else if(result.isSuccess==2){
+						//alert('您首次查询体检报告，请重新设置报告查询密码后再查询！');
+						
+						$("#postdivinfo").show();
+							
+					}else{
+						$("#passWord1").attr("value","");
+						$("#authcode").attr("value","");
+						
+						reloadCaptcha();
+						
+						alert(result.mesg) ;
+						
+						
+					}
+					$this.attr("disabled",false);
+				},
+				error:function(XMLHttpRequest, textStatus,
+						errorThrown) {
+					
+					alert("网络繁忙请稍后重试！");
+					$this.attr("disabled",false);
+				}
+		});
+		
+}
+
+
+function checkMess(){
+	if($("input[name=queryCode1]").val()==""){
+		alert("查询码不能为空!");
+		return false;
+	}
+	if($("input[name=passWord1]").val()==""){
+		alert("密码不能为空!");
+		
+		$("#passWord1").attr("value","");
+		return false;
+	} 
+	
+	if($("input[name=authcode]").val()==""){
+		alert("验证码不能为空!");
+		return false;
+	}
+	
+	unFocusAuthcode();
+	
+	if (!authcodeCheck) {
+			alert("[验证码]错误");
+			$("#passWord1").attr("value","");
+			$("#authcode").attr("value","");
+			reloadCaptcha();
+			return false;
+		} 
+	
+	return true;
+}
+function backSelect(){
+	$("input[name=queryCode1]").val("");
+	$("input[name=passWord1]").val("");
+	//验证码刷新
+	$("input[name=authcode]").val("");
+	reloadCaptcha()
+	
+	$("#checkCode").val("");
+	$("input[name=queryCode]").css("border","1px solid #DDDDDD");
+	$("input[name=passWord]").css("border","1px solid #DDDDDD");
+	$("#checkCode").css("border","1px solid #DDDDDD");
+	
+	
+	$("#container").css("display","block");
+}
+
+function downThisRpt(){
+	$("#downLoadForm").attr("action","http://book.ciming.com/downloadReport.html");
+	$("#downLoadForm").submit();
+}
+function getCurrTime(){
+	 var d=new Date(); 
+	 var month=d.getMonth()+1;
+	 var day=d.getDate();
+	 var hh=d.getHours();
+	 var min=d.getMinutes();
+	 var ss=d.getSeconds();
+	 if(month.toString().length==1){
+	    	month="0"+month.toString();
+	    }
+	 if(day.toString().length==1){
+		 day="0"+day.toString();
+	    }
+	 if(min.toString().length==1){
+		 min="0"+min.toString();
+	    }
+	 if(hh.toString().length==1){
+		 hh="0"+hh.toString();
+	    }
+	 if(ss.toString().length==1){
+		 ss="0"+ss.toString();
+	    }
+     var str=d.getFullYear()+"-"+month+"-"+day+" "+hh+":"+min+":"+ss;   
+     return str;
+}
+function saveToLink(){
+	if(""==""){
+		return false;
+	}
+	$("input[name=rptCode]").val("");	$("input[name=passWord]").val($("input[name=passWord1]").val());
+	var para = $('#reportForm').serialize();
+		$.ajax({
+				url:rootpath+"/command/dispatcher/org.online.web.customer.report.UcReportCmd/addReport?ajax=yes",
+				dataType:'json',
+		        data:para,
+		        type:'post',
+				success:function(result){
+					if(result.flag==1){					}else if(result.flag==2){					}else{
+						alert("将此查询结果保存到[我的报告]中时发生错误:"+result.msg);
+					}
+		        },
+				error:function(XMLHttpRequest, textStatus,
+						errorThrown) {
+					alert("网络繁忙请稍后重试！");
+				}
+		});
+}
+function cancleSave(){
+	$("#saveToLinkDiv").css("display","none");
+	clearData();
+}
+function confirmSave(){
+	var $this= $("#submitSave"); 
+		$this.attr("disabled",true);
+		var para = $('#reportForm').serialize();//序列化参数 
+		$.ajax({
+				url:rootpath+"/command/dispatcher/org.online.web.customer.report.UcReportCmd/addReport?ajax=yes",
+				dataType:'json',
+		        data:para,
+		        type:'post',
+				success:function(result){
+					if(result.flag==1){//成功
+						alert(result.msg);
+					}else if(result.flag==2){//已有相应数据，无需保存
+						alert(result.msg);
+					}else{//失败，发生错误
+						alert(result.msg);
+					}
+					$this.attr("disabled",false);
+					clearData();
+					$("#saveToLinkDiv").css("display","none");
+		        },
+				error:function(XMLHttpRequest, textStatus,
+						errorThrown) {
+					alert("网络繁忙请稍后重试！");
+					$this.attr("disabled",false);
+					clearData();
+					$("#saveToLinkDiv").css("display","none");
+				}
+		});
+}
+function clearData(){
+	$("input[name=queryCode]").val("");
+	$("select[name=rptType]").val("");
+	$("select[name=isUse]").val("");
+	$("#personId").val("");
+}
+//function rptPrint(){
+//	document.frames("iframe").document.execCommand("Print", false);
+//}
+
+var global_Html = "";   
+
+function rptPrint() {
+
+     if (window.frames['iframe'] == null) {
+        document.getElementById('iframe').focus();
+        document.getElementById('iframe').contentWindow.print();
+     }
+     else {
+        window.frames['iframe'].focus();
+        window.frames['iframe'].print();
+     } 
+
+}
+
+function closeReport(){
+	$("#spanType").html("");
+	$("#iframe").attr("src","");
+	$("#window-like-report").css("display","none");
+	backSelect();
+}
+function DoReport(meth){
+	if(meth == 'Print'){
+		rptPrint();
+	}else if(meth == 'SaveAs'){
+	$("#downLoadForm").attr("action",rootpath+"/command/dispatcher/org.online.web.customer.report.UcReportCmd/downloadReport");
+	$("#downLoadForm").submit();//提交表单
+	//backSelect();
+	}
+}
+function __doPostBack(a,b){
+	$("#window-like-report div").html("");
+	$("#window-like-report").css("display","none");
+	backSelect();
+}
+function questionPaper(){
+	loadPaper();
+	$("#paperContentDiv").height($(document).height());
+	$("#paper").height($(document).height());
+	$("#paperContentDiv").css("display","block");
+	$("#iframe").hide();//报告隐藏
+}
+function closeQuestPaper(){
+	//$("#paperContentDiv").html("");
+	$("#paperContentDiv").css("display","none");
+	$("#iframe").show();//报告隐藏
+}
+
+
+ 
+function loadPaper(){
+
+ 	$.ajax({
+	        url: "http://book.ciming.com/getPaperInfo.html",
+	       	type: 'post',
+	       	 
+	        dataType: 'text',
+	        async: false,
+	        success: function (result) {
+	           $('#paper').html(result);
+ 			},
+	        error: function (XMLHttpRequest, textStatus,errorThrown) {
+	             	alert("网络繁忙，请稍后！");
+	        }
+    });
+    getQuestion();
+//alert($('#paper').html());
+//	$('#paper').load(paperAddress,function(data){
+	//		var recId=$("#recId").val();
+//			 $.getScript("http://book.ciming.com/webhtml/autoselect.js",function(){
+//			 	autoSelect(recId, "http://book.ciming.com/command/dispatcher/ciming.PubDispatcherCommand/queryPaperResult");
+//			 		
+//			 });
+//			}
+//	);
+}
+function getQuestion(){
+var paperCode= $("#paperCode").val();
+ 
+ 
+	$.ajax({
+	        url: "http://book.ciming.com/getQuestionPage.html",
+	       	type: 'post',
+	       	 data : {
+					'paperCode' : paperCode
+		 
+				},
+	        dataType: 'json',
+	        async: false,
+	        success: function (result) {
+	        //	$("#postinfo").html(result.option);
+	        if(result==null){
+	        	alert("加载问卷出错请刷新重试");
+	        	return;
+	        }
+	        	showEdit(result.result);
+ 			},
+	        error: function (XMLHttpRequest, textStatus,errorThrown) {
+	             	alert("网络繁忙，请稍后！");
+	        }
+    });
+}
+function showEdit(res){
+  for (var i = 0; i < res.length; i++) {
+    var code = res[i].optionCode;
+	var value = res[i].optionContent;
+	var ele = $("*[optionCode='" + code + "']");
+	if (ele && ele.length) {
+		var tag = ele[0].tagName.toLowerCase();
+		if (tag == 'input') {
+		var type = ele.attr('type')
+		if (type == 'radio' || type == 'checkbox') {
+			ele.attr('checked', true);
+		} else if (type == 'text') {
+		   ele.val(value);
+		}
+		} else if (tag == 'textarea') {
+		  ele.val(value);
+		} else {
+		  ele.html(value);
+		}
+	}
+  }
+}
+function saveResultNew(){
+var arr=new Array();
+ getInfo(arr);
+ var str=JSON.stringify(arr); 
+if(str == "[]"){
+alert("请至少回答一题");
+ return false;
+}
+ var paperCode= $("#paperCode").val();
+ $.ajax({
+	       url: "http://book.ciming.com/saveQuestion.html",
+	       	type: 'post',
+	        dataType: 'text',
+	        async: false,
+	        data : {
+					'arr' : str,
+					'paperCode':paperCode
+		 
+				},
+	        success: function (result) {
+	        	 if(result=="true"){
+		            closeQuestPaper();
+	        	 }else{
+	        	 	alert("保存出错请重新提交");
+	        	 }
+ 			},
+	        error: function (XMLHttpRequest, textStatus,errorThrown) {
+	             	alert("网络繁忙，请稍后！");
+	        }
+    });
+	
+}
+function getInfo(arr){
+var paperCode= $("#paperCode").val();
+$.ajax({
+	        url: "http://book.ciming.com/getQuestion.html",
+	       	type: 'post',
+	        dataType: 'json',
+	        async: false,
+	        data : {
+					'paperCode' : paperCode
+		 
+				},
+	        success: function (result) {
+	        	 var res=result;
+				 for (var i = 0; i < res.length; i++) {
+				    var code = res[i].optionCode;
+					var value = res[i].optionContent;
+					var titleCode= res[i].titleId;
+					var ele = $("*[optionCode='" + code + "']");
+				     
+					if (ele && ele.length) {
+						var tag = ele[0].tagName.toLowerCase();
+						 
+						if (tag == 'input') {
+							var type = ele.attr('type')
+							if (type == 'radio' || type == 'checkbox') {
+								if(ele.attr('checked')){
+									pushObjectSelect(arr,code,ele,titleCode);
+							    }
+						    } else if (type == 'text') {
+							    if(ele.val()!=""){
+							       pushObjectText(arr,code,ele,titleCode);
+							    }
+						       
+							  }
+						} else if (tag == 'textarea') {
+						     if(ele.val()!=""){
+						     pushObjectText(arr,code,ele,titleCode);
+						     }
+						  
+						} else {
+						if(ele.val()!=""){
+						   pushObjectText(arr,code,ele,titleCode);
+						}
+						  
+						}
+					}
+				 }	
+ 			},
+	        error: function (XMLHttpRequest, textStatus,errorThrown) {
+	             	alert("网络繁忙，请稍后！");
+	        }
+    });
+	 
+}
+ 
+ function pushObjectText(arr,code,ele,titleCode){
+	var o=new Object();
+	o.optionCode=code;
+	o.titleId=titleCode;
+	o.optionContent=ele.val();
+	arr.push(o);
+}
+function pushObjectSelect(arr,code,ele,titleCode){
+	var o=new Object();
+	o.optionCode=code;
+    o.optionContent="";
+    o.titleId=titleCode;
+	arr.push(o);
+}
+
+
+$("#spanType").html("");
+
+ function checkMobilePhone (flag) {
+   var _email = /^[0-9]{11}$/;  
+   if(!_email.test(flag)){
+   		return  false ; 
+	}else{
+		return true;
+	} 
+}
+
+
+function addEvent(sNode, sEventType, oFunc) {
+	var oElement = sNode;
+	if ((typeof oFunc).toLowerCase() != "function") {
+		return;
+	}
+	if (oElement.attachEvent) {
+		oElement.attachEvent('on' + sEventType, oFunc);
+	} else if (oElement.addEventListener) {
+		oElement.addEventListener(sEventType, oFunc, false);
+	} else {
+		oElement['on' + sEventType] = oFunc;
+	}
+	return true;
+}
+var messageHanlder = function(oEvt) {
+	oEvt = oEvt || window.event;
+	var data = oEvt.data;
+	callback && callback(data);
+};
+
+function callback(d) {
+	var data = eval("(" + d + ")");
+	var iframe = document.getElementsByTagName("iframe")[0];
+	var newIframe = document.createElement('iframe');
+	iframe.parentNode.replaceChild(newIframe, iframe);
+	newIframe.setAttribute("width", iframe.getAttribute('width'));
+	newIframe.setAttribute("height", iframe.getAttribute('height'));
+	newIframe.setAttribute("frameborder", iframe.getAttribute('frameborder'));
+	newIframe.setAttribute("scrolling", iframe.getAttribute('scrolling'));
+	newIframe.setAttribute("marginheight", iframe.getAttribute('marginheight'));
+	newIframe.setAttribute("marginwidth", iframe.getAttribute('marginwidth'));
+	newIframe.setAttribute("id", iframe.getAttribute('id'));
+	newIframe.setAttribute("name", iframe.getAttribute('name'));
+	newIframe.setAttribute("src", data['to']);
+	var comp = false;
+	if (newIframe.attachEvent) {
+		newIframe.attachEvent("onload", function() {
+					comp = true;
+				});
+	} else {
+		newIframe.onload = function() {
+			comp = true;
+		};
+	}
+	var timeid = window.setInterval(function() {
+				if (comp) {
+					window.clearInterval(timeid);
+					window.frames[0].postMessage(data['json'], "*")
+				}
+			}, 1);
+
+}
+
+//重置方法
+function cancel(){
+	$('#checkReportForm')[0].reset();
+}
+function reloadCaptcha() {  
+
+    var captchaURL = "http://book.ciming.com/generatImage.html?id=88888";  
+    
+    captchaURL= captchaURL.replace(captchaURL.substring(captchaURL.indexOf("=")+1, captchaURL.length), Math.floor(Math.random()*9999999999));
+      
+    $('#imageCaptcha').attr('src', captchaURL);  
+
+  
+}
+// 验证码失去焦点时进行正确验证
+	function unFocusAuthcode() {
+		var code = $("#authcode").val();
+		
+		//alert(code);
+		var url = "http://book.ciming.com/userRegistAuthcodeCheck.html";
+		$.ajax({
+	        url: url,
+	       	type: 'post',
+	       	 data : {
+					'authcode' : code
+		 
+				},
+	        dataType: 'text',
+	        async: false,
+	        success: function (result) {
+	          if (result == "0") {
+						authcodeCheck = true;
+					} else{
+					authcodeCheck = false;
+					}
+ 			},
+	        error: function (XMLHttpRequest, textStatus,errorThrown) {
+	             	alert("网络繁忙，请稍后！");
+	        }
+        });
+		 
+	}
+		function mrbjOpen(){
+		     var sglcheckid = $("#mrbj123sdfsdfsddsigcheckid_hidden").val();
+		     var sglpwd=  $("#mrbj123sdfsdfsddpwd_hidden").val(); 
+		     
+		     $("#mrsglcheckid").val(sglcheckid);
+		     $("#mrsglpwd").val(sglpwd);
+		     
+		     document.mrform.submit();
+	}
+	
+	function showNav(){
+	$("#navRight").attr("style","display:block;float:right");
+	}
+	function hideNav(){
+	$("#navRight").attr("style","display:none");
+	}
+</script>
+
+
+<script language="javascript">
+    function showSubNav(id){
+        document.getElementById(id).style.display='block';
+    }
+    function hideSubNav(id){
+        document.getElementById(id).style.display='none';
+    }
+</script>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+<!---------主体内容------ end    -->
+	
+<!----------底部 ----- start --->
+<div class="cus_bottom">
+	
+
+
+
+
+
+<div align="center" style="clear:both;line-height:25px;">
+		<p style="margin:0">全国统一服务电话：4007-000-666 集团地址：北京市朝阳区北苑路91号&nbsp;版权所有：慈铭健康体检管理集团有限公司 京ICP备0701777</p>
+</div>
+</div>
+<!--------  	 底部   ---end------->	
+	
+
+	</body></html>

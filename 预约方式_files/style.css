@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/* CSS Document */
+	/*-----------------------------------我的位置---------------------------------*/
+.curpos {
+	background: url(../images/cur_bg.jpg) repeat-x;
+	height: 40px;
+	line-height: 40px;
+	width: 980px;
+	border: 1px solid #ccc;
+	border-top: none;
+	text-align:left;
+	margin: 0 auto
+}
+
+.curpos span {
+	padding-left: 30px;
+}
+
+/*------------------------------------登录主内容---------------------------------*/
+.login {
+	width: 980px;
+	margin: 0 auto;
+	background: url(../images/login_body.png) no-repeat;
+	height: 405px;
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.login_con {
+	width: 980px;
+	margin: 0 auto;
+	background: url(../images/login_bg.png) no-repeat;
+	height: 405px;
+}
+
+.loginwin_con {
+	width: 480px;
+	background: url(../images/logwin.jpg) no-repeat;
+	height: 405px;
+}
+
+.content {
+	position: absolute;
+	top: 70px;
+	left: 600px;
+	width: 203px;
+	height: 179px;
+}
+
+.usr,.psw {
+	background: url(../images/input_bg.jpg) no-repeat;
+	width: 202px;
+	height: 25px;
+	border: 0;
+	line-height: 23px;
+}
+
+.code {
+	background: url(../images/input_bg2.jpg) no-repeat;
+	width: 112px;
+	height: 25px;
+	border: 0;
+	margin-top: 13px;
+	line-height: 23px;
+}
+
+.psw {
+	margin-top: 13px;
+}
+
+.rem {
+	margin-top: 3px;
+}
+
+.smt_btn {
+	margin-top: 13px;
+}
+
+.reg {
+	position: absolute;
+	top: 280px;
+	left: 550px;
+	width: 275px;
+	height: 94px;
+}
+
+.reg_btn {
+	margin-top: 15px;
+	margin-left: 75px;
+}
+
+/*------------------------------注册主内容----------------------	*/
+.regedit {
+	width: 980px;
+	margin: 0 auto;
+	border: 1px solid #cbc9c8;
+	background: url(../images/reg_con.jpg) top center repeat-x #FFFFFF;
+}
+
+.reg_inf {
+	padding: 40px 40px;
+	line-height: 24px;
+}
+
+.reg_inf p {
+	color: #ff7500
+}
+
+.reg_form {
+	padding: 0px;
+	font-size: 14px;
+	line-height: 32px;
+}
+
+.ast {
+	color: #ff7500;
+	float: left;
+	display: block;
+}
+
+.tip_text {
+	font-size: 12px;
+	color: #7c7c7c;
+	padding-left: 10px;
+}
+
+a.xieyi {
+	text-decoration: underline;
+	font-size: 12px;
+	color: #287728
+}
+
+a:hover .xieyi {
+	color: #f00;
+}
+
+/*------------------------------找回密码内容----------------------	*/
+.input_normal{
+	width:160px;
+}
+.code_normal{
+	width:60px;
+}
+.divbutton{
+	padding:0px 100px;
+}
+.find {
+	width: 980px;
+	margin: 0 auto;
+	border: 1px solid #cbc9c8;
+	background: #FFFFFF;
+}
+
+.find_form {
+	margin: 30px 0 20px 260px;
+	font-size: 14px;
+	line-height: 32px;
+}
+
+.find .nex {
+	margin: 20px 0 50px 160px;
+	display: block;
+	zoom: 1;
+	width: 164px;
+	height: 45px;
+}
+
+/*------------------------------收货地址内容----------------------	*/
+.address_con {
+	margin: 0 auto;
+	width: 980px;
+	margin-bottom: 30px;
+}
+
+.add_li_bg {
+	width: 222px;
+	height: 44px;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	background: url(../images/add_li_bg.jpg) no-repeat;
+}
+
+.add_li_bg span {
+	padding: 13px 0 0 20px;
+	display: block;
+	height: 44px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+span.set {
+	color: #fff;
+	margin-top: 10px;
+	display: block;
+	float: right;
+}
+
+.add_sublist {
+	
+}
+
+.add_sublist li {
+	height: 30px;
+	padding-left: 35px;
+}
+
+.add_sublist li:hover {
+	background-color: #e9f9d7;
+}
+
+.add_sublist li span {
+	padding-left: 20px;
+	line-height: 30px;
+	display: block;
+	height: 30px;
+}
+
+.add_content {
+	padding: 20px;
+}
+
+.sub_tit {
+	height: 40px;
+	border: 1px solid #ccc;
+}
+
+.sub_tit_btn {
+	float: right;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+.sub_tit_text {
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	line-height: 40px;
+}
+
+.sub_con {
+	border: 1px solid #ccc;
+	margin-top: -1px;
+	line-height: 30px;
+}
+
+/*------------------------------我关心的人----------------------	*/
+.care_con {
+	margin: 0 auto;
+	width: 980px;
+	margin-bottom: 30px;
+}
+
+.care_content th {
+	text-align: left;
+}
+
+/*------------------------------账户信息----------------------	*/
+.acc_con {
+	margin: 0 auto;
+	width: 980px;
+	margin-bottom: 30px;
+}
+
+.bg_pink {
+	background: #fffcf8;
+	padding: 8px;
+}
+
+.acc_form {
+	padding: 20px;
+	font-size: 14px;
+	line-height: 32px;
+}
+
+.text-other {
+	color: #ff7200;
+}
+
+.filter_gray {
+	filter: alpha(style =   0, opacity =   30, finishopacity =   30);
+}
+
+.middle {
+	height: 4em;
+	line-height: 4em;
+	overflow: hidden;
+}
+
+/*------------------------------------窗口 登录主内容---------------------------------*/
+.login_iframe {
+	width: 306px;
+	margin: 0 auto;
+	background: url(../images/login_body.png) no-repeat;
+	height: 389px;
+	position: relative;
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
+
+.login_main {
+	width: 306px;
+	margin: 0 auto;
+	background: url(../images/login_bg_1.png) no-repeat;
+	height: 389px;
+}
+
+.main_content {
+	position: absolute;
+	top: 65px;
+	left: 70px;
+	width: 203px;
+	height: 179px;
+}
+.main_reg {
+	position: absolute;
+	top: 280px;
+	left: 20px;
+	width: 275px;
+	height: 94px;
+}
+
+.reg_btn {
+	margin-top: 15px;
+	margin-left: 75px;
+}

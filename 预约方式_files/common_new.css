@@ -1,0 +1,331 @@
+.submenu2 a {
+	height: 100%;
+	line-height: 100%;
+}
+
+/* Make HTML 5 elements display block-level for consistent styling */
+header,nav,article,footer,address {
+	display: block;
+}
+
+/* Navigation */
+.hor-list li {
+	display: inline;
+}
+
+.hor-list li li {
+	display: block;
+}
+
+.piped li:before {
+	content: "|";
+	padding: 0 5px;
+}
+
+.piped li:first-child :before {
+	content: "";
+	padding: 0
+}
+
+.breadcrumbs li:before {
+	content: "/";
+	padding: 0 5px;
+}
+
+.breadcrumbs li:first-child :before {
+	content: "";
+	padding: 0
+}
+
+.piped li,.breadcrumbs li { *
+	padding-left: 5px !important;
+}
+
+.piped li:first-child,.breadcrumbs li:first-child { *
+	padding-left: 0 !important
+}
+
+/* Typography */
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.justify {
+	text-align: justify;
+}
+
+strong,b,.bold,.strong {
+	font-weight: bold;
+}
+
+em,i,.italic,cite {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.centered {
+	display: block;
+	margin: 0 auto
+}
+
+img.alignleft {
+	float: left;
+	margin: 4px 10px 4px 0;
+}
+
+img.alignright {
+	float: right;
+	margin: 4px 0 4px 10px;
+}
+
+.block {
+	display: block
+}
+
+ins {
+	font-size: 1em;
+	text-decoration: none;
+	vertical-align: super;
+}
+
+code,pre {
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New",
+		Courier, monospace;
+}
+
+.numbered {
+	list-style: decimal-leading-zero inside;
+}
+
+.disc {
+	list-style: disc inside;
+}
+
+abbr,acronym {
+	border-bottom: 1px dotted #161a1f
+}
+
+pre {
+	padding: 20px 10px;
+	border-radius: 1px 1px 1px 1px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+	display: block;
+	border: 1px solid #E0E0E0;
+	overflow: auto;
+	font-size: 12px;
+	line-height: 20px;
+	margin: 15px 0;
+	white-space: pre-wrap;
+}
+
+dd {
+	margin-left: 2em;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.vAlign {
+	vertical-align: middle;
+}
+
+.vl {
+	font-size: 12px;
+	padding: 0px 4px;
+}
+
+/* Footer */
+html,body {
+	height: 100%;
+}
+
+#wrap {
+	min-height: 100%
+}
+
+#main {
+	overflow: auto;
+	padding-bottom: 50px;
+}  /* must be same height as the footer */
+footer {
+	position: relative;
+	margin-top: -50px;
+	height: 50px;
+	clear: both;
+}
+
+body:before {
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px; /* thank you Erik J - negate effect of float*/
+}
+
+.sw_categorys_nav {
+	position: relative;
+	z-index: 300;
+}
+
+.sw_categorys_nav .container {
+}
+
+.sw_categorys_nav .allcategorys {
+	float: left;
+	height: 43px;
+	width: 150px;
+	position: relative;
+}
+
+.sw_categorys_nav .allcategorys .title-item-hd a {
+	height: 43px;
+	line-height: 43px;
+	width: 150px;
+	text-indent: 20px;
+	display: block;
+	text-decoration: none;
+}
+
+.sw_categorys_nav .allcategorys .title-item-hd a.curr {
+	color: #a21c1d;
+	background: #fff;
+	
+	border-top: 1px solid #25ae1a;
+}
+
+.sw_categorys_nav .allcategorys .sublist {
+	position: absolute;
+	width: 400px;
+	z-index: 300;
+	background: #fff;
+	border:1px solid #25ae1a;
+	border-top:none;
+	display: none;
+	margin-left:-1px;
+}
+
+.allcategorys .sublist li {
+	float: left;
+	width: 168px;
+	padding-right: 24px;
+	padding-bottom: 1px;
+	line-height:24px;
+}
+
+.allcategorys .sublist li h3.mcate-item-hd {
+	font-family: '微软雅黑';
+	padding-left: 12px;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	border-bottom: 1px dashed #666666;
+}
+
+.allcategorys .sublist li p.mcate-item-bd {
+	padding-left: 2px;
+}
+
+.allcategorys .sublist li p.mcate-item-bd a {
+	height: 24px;
+	line-height: 24px;
+	margin-right: 5px;
+	font-size: 12px;
+	color: #666666;
+	font-weight:normal;
+	text-decoration: none;
+	display: inline-block;
+	padding-left:2px;
+}
+
+.allcategorys .sublist li p.mcate-item-bd a:hover {
+	color: #f00;
+	text-decoration: underline;
+}
+
+a { /*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+	blr: expression(this . onFocus =   this . blur () );
+}
+
+*html,*html body
+{
+background-image:url(about:blank);
+background-attachment:fixed;
+}
+:focus {
+	outline: 0
+}
+
+ins {
+	text-decoration: none
+}
+
+.alwaystop {
+	position: fixed;
+	_position: absolute;
+	_top: expression((   document . compatMode ==   'CSS1Compat') ?  
+		documentElement . scrollTop :   document . body . scrollTop );
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000000;
+}
+
+.alwaysbottom {
+	position: fixed;
+	_position: absolute;
+	_top: expression(eval((   document . compatMode &&   document . compatMode ==
+		  'CSS1Compat') ?   documentElement . scrollTop +   documentElement .
+		clientHeight -   this . clientHeight :   document . body . scrollTop +
+		  document . body . clientHeight -   this . clientHeight ) );
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000000;
+}
+
+.sw_main {
+}
+
+.sw_container {
+}
+
+/**
+ * top style
+ */
+.sw_top1 {
+	height: 0px;
+	box-shadow: 0px 1px 3px 0px #000000;
+	background: #000000;
+	filter: alpha(opacity = 40);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+}
+
+.sw_top {
+	height: 0px;
+}
